@@ -1,5 +1,7 @@
 <%@include file="header.jsp" %>
+<%@include file="background.jsp" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<body>
 <html>
 <head>
     <title>Title</title>
@@ -9,17 +11,10 @@
         exceptional combination of magnificent architecture and divine cuisine, in perfect harmony. A Michelin-starred
         restaurant and a beautifully restored town palace joined forces for you!
     </div>
-
-    <style > body {
-        background-size: 100%;
-        background-image: url("${pageContext.request.contextPath}/images/wallbig.png");
-
-    }</style>
     <div>
-        <button type="button" class="btn btn-dark col-3 " style="margin-left: 37%;width: 420px"><h3>Contact</h3></button>
+        <button type="button" class="btn btn-dark col-3 " style="margin-left: 37%;width: 420px"><h3>Contact</h3>
+        </button>
     </div>
 </head>
-<body>
-
-</body>
 </html>
+</body>

@@ -33,7 +33,6 @@ public class Controller extends HttpServlet {
     private void process(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException, SQLException {
         String commandName = request.getParameter("action");
         Command command = CommandContainer.get(commandName);
-
         String page = command.execute(request,response);
         if (page.contains("redirect:")){
             response.sendRedirect(page.replace("redirect:", ""));

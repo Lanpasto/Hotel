@@ -19,6 +19,11 @@
 
     <dependencies>
         <dependency>
+        <groupId>jakarta.servlet.jsp.jstl</groupId>
+        <artifactId>jakarta.servlet.jsp.jstl-api</artifactId>
+        <version>3.0.0</version>
+        </dependency>
+        <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
             <version>8.0.31</version>
@@ -29,6 +34,17 @@
             <version>9.1.0</version>
             <scope>provided</scope>
         </dependency>
+        <dependency>
+            <groupId>org.glassfish.web</groupId>
+            <artifactId>jakarta.servlet.jsp.jstl</artifactId>
+            <version>3.0.1</version>
+        </dependency>
+        <dependency>
+            <groupId>jstl</groupId>
+            <artifactId>jstl</artifactId>
+            <version>1.2</version>
+        </dependency>
+
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-api</artifactId>
@@ -83,6 +99,54 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-war-plugin</artifactId>
                 <version>3.3.2</version>
+            </plugin>
+            <plugin>
+                <groupId>org.glassfish.build</groupId>
+                <artifactId>spec-version-maven-plugin</artifactId>
+                <version>2.1</version>
+                <configuration>
+                    <spec>
+                        <specVersion>3.0</specVersion>
+                        <specImplVersion>${project.version}</specImplVersion>
+                        <apiPackage>jakarta.servlet.jsp.jstl</apiPackage>
+                    </spec>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>set-spec-properties</goal>
+                            <goal>check-module</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>3.3.1</version>
+                <executions>
+                    <execution>
+                        <id>attach-api-javadocs</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                        <configuration>
+                            <source>11</source>
+                            <additionalJOption>-Xdoclint:none</additionalJOption>
+                            <description>Jakarta Standard Tag Library API documentation</description>
+                            <doctitle>Jakarta Standard Tag Library API documentation</doctitle>
+                            <windowtitle>Jakarta Standard Tag Library API documentation</windowtitle>
+                            <header><![CDATA[<br>Jakarta Standard Tag Library API v${project.version}]]></header>
+                            <docfilessubdirs>true</docfilessubdirs>
+                            <groups>
+                                <group>
+                                    <title>Jakarta Standard Tag Library API Documentation</title>
+                                    <packages>jakarta.servlet.jsp.jstl*</packages>
+                                </group>
+                            </groups>
+                        </configuration>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>

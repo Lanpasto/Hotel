@@ -9,7 +9,78 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9e1952fb-3c0a-4d5a-9a8f-e6cc31aa45f7" name="Changes" comment="" />
+    <list default="true" id="9e1952fb-3c0a-4d5a-9a8f-e6cc31aa45f7" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controller/LoginCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controller/LogoutCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controller/RegisterCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controller/commands/PageCommands/AdminReservePageCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controller/commands/PageCommands/OrderTypeOfRoomPageCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controller/commands/PageCommands/RequestPageCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controller/commands/User/MakeOrderCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controller/commands/User/RoomReserveCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/dao/OrdersDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/dao/RoomDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/entity/Orders.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/entity/Room.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/entity/Room_of_type.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/database.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/bootstrapBetter.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/four_room_apartment.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/lux.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/one_room_apartment.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/one_room_apartment_2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/one_room_apartment_3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/room1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/two_room_apartment_2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/jsp/adminReserve.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/jsp/background.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/jsp/orderTypeOfRoom.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/jsp/request.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/cd40200e-f4b5-46af-bfc2-d7733d9fa468.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/cd40200e-f4b5-46af-bfc2-d7733d9fa468/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/cd40200e-f4b5-46af-bfc2-d7733d9fa468/storage_v2/_src_/schema/mysql.osA4Bg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/cd40200e-f4b5-46af-bfc2-d7733d9fa468/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/cd40200e-f4b5-46af-bfc2-d7733d9fa468/storage_v2/_src_/schema/sys.zb4BAA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/webContexts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/Path.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/Path.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/commands/CommandContainer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/commands/CommandContainer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/commands/LoginCommand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/commands/PageCommands/ForgotPageCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/commands/User/MyReserveCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/commands/PageCommands/OrderRoomCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/commands/PageCommands/OrderRoomCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/commands/PageCommands/ReservePageCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/commands/PageCommands/ReservePageCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/db/Configs.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/db/ConnectDB.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/db/Const.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/db/DBUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/database/DBUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/db/DBUtil11.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/dao/UserDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/images/AboutUs.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/images/ImgLogin.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/images/hotel.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/images/reception.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/images/wall.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/images/wall.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/images/wall2.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/aboutUs.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/aboutUs.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/forgotPassword.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/header.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/loginView.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/loginView.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/orderRoom.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/orderRoom.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/register.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/register.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/reserve.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/reserve.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/test.jsp" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -26,6 +97,15 @@
         <option value="Jsp File" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/main/webapp/jsp/adminReserve.jsp" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="JspContextManager">
+    <jsp-to-context jsp-file="file://$PROJECT_DIR$/src/main/webapp/jsp/header.jsp" context-file="file://$PROJECT_DIR$/src/main/webapp/jsp/loginView.jsp" />
   </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
@@ -44,7 +124,12 @@
       </MavenImportingSettings>
     </option>
   </component>
+  <component name="MigrationScriptOptions">
+    <option name="ignoreImplicitObjects" value="true" />
+    <option name="ignoreSourceCode" value="false" />
+  </component>
   <component name="ProjectId" id="2J0knHBjcsT8GO51zBptwiIRQq0" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -53,16 +138,20 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/artem/IdeaProjects/Hotel/src/main/resources/HikariCP-5.0.1.jar&quot;,
+    &quot;extract.method.default.visibility&quot;: &quot;private&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/artem/IdeaProjects/Hotel/src/main/webapp/images&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;,
+    &quot;two.files.diff.last.used.file&quot;: &quot;C:/Users/artem/IdeaProjects/Hotel/src/main/webapp/css/homepage.css&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
   &quot;keyToStringList&quot;: {
@@ -73,31 +162,35 @@
 }</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="controller.commands" />
       <recent name="model.entity" />
       <recent name="controller" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\artem\IdeaProjects\Hotel\src\main\webapp\images" />
+      <recent name="C:\Users\artem\IdeaProjects\Hotel\src\main\resources" />
       <recent name="C:\Users\artem\IdeaProjects\Hotel\src\main\webapp\css" />
       <recent name="C:\Users\artem\IdeaProjects\Hotel\src\main\webapp\image" />
       <recent name="C:\Users\artem\IdeaProjects\Hotel\src\main\java\controller\servlets" />
-      <recent name="C:\Users\artem\IdeaProjects\Hotel\src\main\java\controller" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\artem\IdeaProjects\Hotel\src\main\resources\META-INF" />
       <recent name="C:\Users\artem\IdeaProjects\Hotel\src\main\resources" />
       <recent name="C:\Users\artem\IdeaProjects\Hotel\src\main\webapp\images" />
-      <recent name="C:\Users\artem\IdeaProjects\Hotel\src\main\resources\META-INF" />
       <recent name="C:\Users\artem\IdeaProjects\Hotel\src\main\webapp\jsp" />
       <recent name="C:\Users\artem\IdeaProjects\Hotel\src\main\webapp\WEB-INF" />
+    </key>
+    <key name="ExtractSuperBase.RECENT_KEYS">
+      <recent name="controller.commands.User" />
     </key>
   </component>
   <component name="RunManager" selected="Tomcat Server.Tomcat 10.0.27">
     <configuration name="ConnectDB" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="db.ConnectDB" />
+      <option name="MAIN_CLASS_NAME" value="database.ConnectDB" />
       <module name="Hotel" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="db.*" />
+          <option name="PATTERN" value="database.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -107,6 +200,9 @@
     </configuration>
     <configuration name="mysql-connector-java-8.0.11.jar" type="JarApplication" temporary="true">
       <option name="JAR_PATH" value="$PROJECT_DIR$/src/main/resources/META-INF/mysql-connector-java-8.0.11.jar" />
+      <method v="2" />
+    </configuration>
+    <configuration name="orderTypeOfRoom.jsp" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:8080/Hotel_war_exploded/jsp/orderTypeOfRoom.jsp">
       <method v="2" />
     </configuration>
     <configuration name="Tomcat 10.0.27" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 10.0.27" ALTERNATIVE_JRE_ENABLED="false">
@@ -242,6 +338,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.orderTypeOfRoom.jsp" />
         <item itemvalue="Tomcat Server.testlogin.jsp" />
         <item itemvalue="Application.ConnectDB" />
         <item itemvalue="JAR Application.mysql-connector-java-8.0.11.jar" />
@@ -276,7 +373,15 @@
       <workItem from="1672177486608" duration="733000" />
       <workItem from="1672178235012" duration="10962000" />
       <workItem from="1672264817059" duration="2383000" />
-      <workItem from="1672351347967" duration="2169000" />
+      <workItem from="1672351347967" duration="15283000" />
+      <workItem from="1672396332300" duration="4714000" />
+      <workItem from="1672435832362" duration="12902000" />
+      <workItem from="1672609082978" duration="47747000" />
+      <workItem from="1672872328872" duration="3509000" />
+      <workItem from="1672918050466" duration="11006000" />
+      <workItem from="1672931849598" duration="19772000" />
+      <workItem from="1673040739032" duration="10792000" />
+      <workItem from="1673089852802" duration="15333000" />
     </task>
     <servers />
   </component>

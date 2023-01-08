@@ -1,0 +1,16 @@
+package controller.commands.User;
+
+import controller.commands.Command;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+
+import java.io.IOException;
+import java.sql.SQLException;
+
+public class MyReserveCommand extends Command {
+    @Override
+    public String execute(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException, SQLException {
+        return null;
+    }
+}

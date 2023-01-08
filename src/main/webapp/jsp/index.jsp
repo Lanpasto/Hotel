@@ -1,36 +1,33 @@
 <%@include file="header.jsp" %>
-<!DOCTYPE html>
+<%@include file="background.jsp" %>
+<link href="${pageContext.request.contextPath}/css/homepage.css" rel="stylesheet">
 <html>
-<head>
-    <title>JSP - Hello World</title>
-
-</head>
-<style > body {
-    background-size: 100%;
-    background-image: url("${pageContext.request.contextPath}/images/wallbig.png");
-
-}</style>
-<div>
-    <div>
-        <button style="background: transparent; border: transparent" href="controller?action=registerPage">
-            <img src="${pageContext.request.contextPath}/images/the-shady-rest-hotel.jpg" alt="buttonpng"
-                 style="width: 471px;height: 227px;border-radius: 15px;"/>
-        </button>
+<body >
+<div class="container d-flex align-items-center justify-content-center position-relative flex-wrap">
+    <div class="card d-flex position-relative flex-column">
+        <div class='imgContainer'>
+            <img src='${pageContext.request.contextPath}/images/hilton-port-moresby.jpg'>
+        </div>
+        <div class="content">
+            <h2>Family Rooms</h2>
+        </div>
     </div>
-<div>
-    <button style="background: transparent; border: transparent">
-
-        <img src="${pageContext.request.contextPath}/images/hilton-port-moresby.jpg" alt="buttonpng"
-             style="width: 472px;height: 227px;border-radius: 15px;"/>
-    </button>
+    <div class="card d-flex position-relative flex-column">
+        <div class='imgContainer'>
+            <img src='${pageContext.request.contextPath}/images/the-shady-rest-hotel.jpg'>
+        </div>
+        <div class="content">
+            <h2>Cheep Rooms</h2>
+        </div>
+    </div>
+    <div class="card d-flex position-relative flex-column">
+        <div class='imgContainer'>
+            <img src='${pageContext.request.contextPath}/images/lux.jpg'>
+        </div>
+        <div class="content">
+            <h2>Luxury Rooms</h2>
+        </div>
+    </div>
 </div>
-<div>
-    <button style="background: transparent; border: transparent">
-        <img src="${pageContext.request.contextPath}/images/aboutus.png"
-             style="width: 472px;height: 227px;border-radius: 15px;"/>
-    </button>
-</div>
-<body>
-
 </body>
 </html>

@@ -1,5 +1,6 @@
-package controller;
+package controller.commands;
 
+import controller.Path;
 import controller.commands.Command;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;

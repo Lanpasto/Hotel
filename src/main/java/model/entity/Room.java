@@ -8,9 +8,9 @@ public class Room {
     private int id;
     private int typeId;
     private String typeName;
-    private int guests;
-    private int price;
+    private Integer guests;
+    private Integer price;
     private String status;
     private String image;
-    private int count;
+
 }

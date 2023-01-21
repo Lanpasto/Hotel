@@ -1,4 +1,5 @@
 <%@include file="header.jsp" %>
+<%@ taglib prefix="c" uri="jakarta.tags.core" %>
 <html lang="eng">
 <body class="text-center">
 <div class="mask d-flex align-items-center h-100 gradient-custom-3">
@@ -20,7 +21,8 @@
                                 <label class="form-label text-white" for="password">Last Name</label>
                             </div>
                             <div class="form-outline mb-4">
-                                <input type="email" id="email" placeholder="zelenskiy666@gmail.com" name="email" class="form-control form-control-lg"/>
+                                <input type="email" id="email" placeholder="zelenskiy666@gmail.com" name="email"
+                                       class="form-control form-control-lg"/>
                                 <label class="form-label text-white" for="email">Your Email</label>
                             </div>
                             <div class="form-outline mb-4">
@@ -30,7 +32,8 @@
                             </div>
 
                             <div class="form-outline mb-4">
-                                <input type="repeatPassword" id="repeatPassword" placeholder="Repeat password" name="repeatPassword"
+                                <input type="password" id="repeatPassword" placeholder="Repeat password"
+                                       name="repeatPassword"
                                        class="form-control form-control-lg"/>
                                 <label class="form-label text-white" for="password">Repeat Password</label>
                             </div>
@@ -41,7 +44,10 @@
                             </div>
                             <p class="text-center text-muted mt-5 mb-0 bg-dark">Have already an
                                 account? <a href="controller?action=loginpage"
-                                            class="fw-bold text-info"><u>Login here</u></a></p></form>
+                                            class="fw-bold text-info"><u>Login here</u></a></p>
+                        </form>
+                        <c:set var="message" value="${message}"/>
+                        <p style="font-size: 16px;font-style: italic;color: red" id="message">${message}</p>
                     </div>
                 </div>
             </div>

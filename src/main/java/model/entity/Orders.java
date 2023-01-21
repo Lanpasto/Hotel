@@ -3,7 +3,7 @@ package model.entity;
 import lombok.Builder;
 import lombok.Data;
 
-import java.util.Date;
+import java.sql.Timestamp;
 
 @Data
 @Builder
@@ -11,9 +11,13 @@ public class Orders {
 
     private int id;
     private int userId;
-    private Date dateOfSettlement;
-    private Date dateOfOut;
-    private Date dateOfCreateOrder;
+    private Timestamp dateOfSettlement;
+    private Timestamp dateOfOut;
+    private Timestamp dateOfCreateOrder;
+    private String image;
+    private String statusRoom;
     private int roomId;
-    private String paymentStatus;
-    private String typeOfRoom;}
+    private int totalPrice;
+    private String status;
+    private int orderRequestId;
+}

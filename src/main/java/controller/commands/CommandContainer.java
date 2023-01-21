@@ -1,10 +1,9 @@
 package controller.commands;
 
-import controller.LoginCommand;
-import controller.LogoutCommand;
-import controller.RegisterCommand;
+import controller.commands.Admin.ConfirmOrderAdminCommand;
+import controller.commands.Admin.UpdateRoomStatusCommand;
 import controller.commands.PageCommands.*;
-import controller.commands.User.RoomReserveCommand;
+import controller.commands.User.*;
 
 import java.util.Map;
 import java.util.TreeMap;
@@ -17,16 +16,30 @@ public class CommandContainer {
         commands.put("aboutUsPage", new AboutUsPageCommand());
         commands.put("indexPage", new IndexPageCommand());
         commands.put("registerPage", new RegisterPageCommand());
-        commands.put("reservePage", new ReservePageCommand());
-        commands.put("orderRoomPage", new OrderRoomCommand());
+        commands.put("orderRoomPage", new OrderRoomPageCommand());
+        commands.put("myReservePage",new LIstOfReserveRoomPageCommand());
+        commands.put("ListOfRequest",new ListOfRequestRoomPageCommand());
+        commands.put("adminReservePage", new AdminReservePageCommand());
+        commands.put("adminRequestPage", new AdminRequestPageCommand());
+        commands.put("requestPage", new RequestPageCommand());
+
+
+
         commands.put("loginCommand", new LoginCommand());
         commands.put("registerCommand", new RegisterCommand());
         commands.put("logout", new LogoutCommand());
-        commands.put("myReservePage",new ReservePageCommand());
         commands.put("reserve",new RoomReserveCommand());
-        commands.put("adminReservePage", new AdminReservePageCommand());
-        commands.put("orderTypeOfRoomPage", new OrderTypeOfRoomPageCommand());
-        commands.put("requestPage", new RequestPageCommand());
+        commands.put("makeOrder", new MakeOrderCommand());
+        commands.put("changeLang", new ChangeLangCommand());
+        commands.put("makeRequest",new MakeOrderRequestCommand());
+        commands.put("confirmRequestUser",new ConfirmOrderCommand());
+        commands.put("rejectRequestUser",new RejectOrderCommand());
+        commands.put("payForm", new PayFormPageCommand());
+        commands.put("payment",new PaymentCommand());
+
+
+        commands.put("confirmCommand", new ConfirmOrderAdminCommand());
+        commands.put("updateStatus", new UpdateRoomStatusCommand());
     }
 
     public static Command get(String commandName) {

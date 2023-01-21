@@ -1,7 +1,7 @@
-package controller;
+package controller.commands;
 
 
-import controller.commands.Command;
+import controller.Path;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -10,6 +10,8 @@ import model.entity.User;
 
 import java.io.IOException;
 import java.sql.SQLException;
+
+import static controller.validation.Validation.RegisterValidation;
 
 public class RegisterCommand extends Command{
     @Override
@@ -20,7 +22,7 @@ public class RegisterCommand extends Command{
         String lastName = request.getParameter("lastName");
         String email = request.getParameter("email");
         String password = request.getParameter("password");
-        String number = request.getParameter("contact");
+        String confirmPassword = request.getParameter("repeatPassword");
 
         User user = User.builder()
                 .first_name(firstName)
@@ -31,7 +33,9 @@ public class RegisterCommand extends Command{
                 .build();
 
         UserDao userDao = new UserDao();
-
+        if(RegisterValidation(request,firstName,lastName,email,password,confirmPassword,user)){
+            return Path.PAGE_REGISTER;
+        }
 
 
         userDao.insert(user);

@@ -1,4 +1,4 @@
-package controller.commands.User;
+package controller.commands.Admin;
 
 import controller.Path;
 import controller.commands.Command;
@@ -19,61 +19,52 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.Instant;
 import java.util.Date;
-import java.util.Objects;
 
-public class MakeOrderCommand extends Command {
+public class ConfirmOrderAdminCommand extends Command {
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException, SQLException {
-        String forward;
+        HttpSession session= request.getSession();
+        OrdersDao ordersDao = new OrdersDao();
         RoomDao roomDao = new RoomDao();
-        HttpSession session = request.getSession();
-        String allDate = request.getParameter("datefilter");
-        String delimiter = " - ";
-        String[] temp = allDate.split(delimiter);
-        System.out.println(allDate);
-        String firstDate = temp[0];
-        String secondDate = temp[1];
+        int requestId= Integer.parseInt(request.getParameter("idRequest"));
+        ordersDao.updateOrderRequest(requestId);
 
 
-        int daysOfReserve = nDaysBetweenTwoDate(firstDate, secondDate);
-
-        Timestamp DateOfSettlement = date(firstDate);
-        Timestamp DateOfOut = date(secondDate);
-
-        int idUser = (int) session.getAttribute("currentUserId");
-        int idRoom = Integer.parseInt(request.getParameter("room"));
-        Room room = roomDao.findRoomById(idRoom);
 
 
+        String dateOfSettlement= request.getParameter("dateOfSettlement");
+        String dateOfOut= request.getParameter("dateOfOut");
+        Timestamp firstDate = date(dateOfSettlement);
+        Timestamp  secondDate = date(dateOfOut);
+        int roomId= Integer.parseInt(request.getParameter("roomId"));
+        System.out.println("ddssssssssss"+roomId);
+        int userId= Integer.parseInt((request.getParameter("userId"))) ;
+        int daysOfReserve = nDaysBetweenTwoDate(dateOfSettlement, dateOfOut);
+        Room room = roomDao.findRoomById(roomId);
         int priceRoomForOneDay = room.getPrice();
-
-        int TotalBill = daysOfReserve * priceRoomForOneDay;
-
+        int totalPrice=priceRoomForOneDay*daysOfReserve;
+        System.out.println(totalPrice);
         Orders orders = Orders.builder()
-                .userId(idUser)
+                .userId(userId)
 
-                .roomId(idRoom)
+                .roomId(roomId)
 
-                .dateOfSettlement(DateOfSettlement)
+                .dateOfSettlement(firstDate)
 
-                .dateOfOut(DateOfOut)
+                .dateOfOut(secondDate)
 
                 .dateOfCreateOrder(Timestamp.from(Instant.now()))
 
-                .totalPrice(TotalBill)
+                .totalPrice(totalPrice)
 
-                .status("Successful")
+                .status("Waiting for confirmation")
 
                 .build();
-        OrdersDao ordersDao = new OrdersDao();
-        int roomId = Integer.parseInt(request.getParameter("room"));
-        if(Objects.equals(room.getStatus(), "available")) {
-            ordersDao.addOrder(orders);
-            roomDao.updateRoom(roomId);
-        }
-        forward = Path.PAGE_INDEX;
 
-        return forward;
+        ordersDao.addOrder(orders);
+
+
+        return Path.PAGE_INDEX;
     }
 
     public static int nDaysBetweenTwoDate(String firstString, String secondString) {
@@ -103,8 +94,8 @@ public class MakeOrderCommand extends Command {
         }
         Timestamp timeStampDateFirst = new Timestamp(date.getTime());
         return timeStampDateFirst;
-    }
-}
+    }}
+
 
 
 

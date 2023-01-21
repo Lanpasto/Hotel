@@ -81,6 +81,17 @@
             <version>5.0.1</version>
         </dependency>
         <dependency>
+            <groupId>org.quartz-scheduler</groupId>
+            <artifactId>quartz</artifactId>
+            <version>2.3.2</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.apache.struts/struts2-core -->
+        <dependency>
+            <groupId>org.apache.struts</groupId>
+            <artifactId>struts2-core</artifactId>
+            <version>6.1.1</version>
+        </dependency>
+        <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <version>1.18.24</version>
@@ -92,6 +103,7 @@
             <version>1.0.0</version>
         </dependency>
     </dependencies>
+
 
     <build>
         <plugins>
@@ -133,7 +145,6 @@
                         <configuration>
                             <source>11</source>
                             <additionalJOption>-Xdoclint:none</additionalJOption>
-                            <description>Jakarta Standard Tag Library API documentation</description>
                             <doctitle>Jakarta Standard Tag Library API documentation</doctitle>
                             <windowtitle>Jakarta Standard Tag Library API documentation</windowtitle>
                             <header><![CDATA[<br>Jakarta Standard Tag Library API v${project.version}]]></header>

@@ -16,9 +16,26 @@ import static controller.Path.PAGE_ADMINRESERVE;
 public class AdminReservePageCommand extends Command {
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException, SQLException {
-        RoomDao orderDao = new RoomDao();
-        List<Room> listCategory = orderDao.roomList();
-        request.setAttribute("listCategory", listCategory);
+        RoomDao roomDao = new RoomDao();
+        String status = "";
+        Room room;
+        String status1 = request.getParameter("statusForSorting");
+        System.out.println("121231231231231");
+        System.out.println(status1);
+        if (request.getParameter("statusForSorting") != null && !request.getParameter("statusForSorting").isEmpty())
+        {
+            status = request.getParameter("statusForSorting");
+        }
+        room = Room.builder()
+                .status(status)
+                .build();
+
+
+        List<Room> AllListRoom = roomDao.sortingRoomByStatus(room);
+        //System.out.println(AllListRoom.get(0).getStatus());
+        request.setAttribute("AllListRoom", AllListRoom);
         return PAGE_ADMINRESERVE;
     }
+
 }
+

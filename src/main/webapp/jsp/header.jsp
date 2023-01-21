@@ -1,3 +1,8 @@
+<%@ taglib prefix="fmt" uri="jakarta.tags.fmt" %>
+<fmt:requestEncoding value="UTF-8" />
+<fmt:setLocale value="${sessionScope.lang}" />
+<fmt:setBundle basename="locale" var="lang"/>
+
 <html lang="en">
 <link href="${pageContext.request.contextPath}/css/bootstrap.min.css" rel="stylesheet">
 <%
@@ -9,6 +14,12 @@
     <div class="collapse navbar-collapse navbar-nav">
         <img src="${pageContext.request.contextPath}/images/hotel1.png"
              alt="Logo image" style="height:50px;width: 90px ">
+        <div>
+            <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                <li><a href="controller?action=changeLang&lang=en" class="nav-link px-2 text-white" >en</a></li>
+                <li><a href="controller?action=changeLang&lang=ua" class="nav-link px-2 text-white" >ua</a></li>
+            </ul>
+        </div>
     </div>
     <div class="collapse navbar-collapse">
     <div class="navbar-nav" style="font-size: 24px">
@@ -18,7 +29,7 @@
         <a class="nav-link text-white" href="controller?action=aboutUsPage">About us</a>
     </div>
     <div class="navbar-nav" style="font-size: 16px">
-        <a class="nav-link text-white" href="controller?action=orderTypeOfRoomPage">Choose room</a></div>
+        <a class="nav-link text-white" href="controller?action=orderRoomPage">Choose room</a></div>
     <%if (userSession != null) {%>
     <div class="navbar-nav" style="font-size: 16px">
         <a class="nav-link text-white" href="controller?action=requestPage">Make request</a></div>

@@ -1,6 +1,9 @@
 <%@ taglib prefix="c" uri="jakarta.tags.core" %>
 <%@include file="header.jsp" %>
 <%@include file="background.jsp" %>
+<%--
+<tf:title titleName="MyRequest"/>
+--%>
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,9 +17,11 @@
     <div class="bg-warning">
         <div class="navbar-nav">
             <div class="navbar-nav">
-                <label class="text-dark border-0 h1 text-center">Your Request</label></div>
+                <label class="text-dark border-0 h1 text-center"><fmt:message key="requestUser.AllRequest"
+                                                                              bundle="${lang}"/></label></div>
             <div class="navbar-nav"><a class="text-white text-start" href="controller?action=myReservePage">
-                <h3 class="badge text-white  bg-danger text-wrap fs-5">My Reserve</h3>
+                <h3 class="badge text-white  bg-danger text-wrap fs-5"><fmt:message key="requestUser.myreserve"
+                                                                                    bundle="${lang}"/></h3>
             </a>
             </div>
         </div>
@@ -49,14 +54,16 @@
                     <div class="btn-group">
                         <form method="post" action="controller?action=confirmRequestUser" class="register-form">
                             <div>
-                                <button class="bg-success" name="roomId" value="${orders.roomId}">Confirm</button>
+                                <button class="bg-success" name="roomId" value="${orders.roomId}"><fmt:message key="requestUser.confirm"
+                                                                                                               bundle="${lang}"/></button>
                                 <input name="orderIdForConfirm" value="${orders.id}" hidden="hidden">
                             </div>
                         </form>
                         <form method="post" action="controller?action=rejectRequestUser" class="register-form">
                             <div>
 
-                                <button class="bg-danger" name="orderId" value="${orders.id}">Reject</button>
+                                <button class="bg-danger" name="orderId" value="${orders.id}"><fmt:message key="requestUser.reject"
+                                                                                                           bundle="${lang}"/></button>
                             </div>
 
                         </form>
@@ -75,11 +82,13 @@
                 <div>Price:${orders.totalPrice}</div>
             </td>
             <td>
-                <div class="badge bg-warning text-wrap ">Status: ${orders.status}</div>
+                <div class="badge bg-warning text-wrap "><fmt:message key="statusOrder.status"
+                                                                      bundle="${lang}"/>: ${orders.status}</div>
             </td>
             <td>
                 <form method="post" action="controller?action=payForm" class="register-form">
-                    <button class="bg-success" name="roomId" value="${orders.roomId}">Confirm</button>
+                    <button class="bg-success" name="roomId" value="${orders.roomId}"><fmt:message key="requestUser.confirm"
+                                                                                                   bundle="${lang}"/></button>
                     <input name="orderIdForConfirm" value="${orders.id}" hidden="hidden">
                     <input name="statusPay" value="process" hidden="hidden">
                 </form>

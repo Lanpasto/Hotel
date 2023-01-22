@@ -169,44 +169,45 @@ public class RoomDao {
         return list;
     }
 
-    public List<Room> sortingRoomByStatus(Room room) {
+    public List<Room> sortingRoomByStatus(Room room, int offset, int noOfRecords) throws SQLException {
         String surQuery = "";
         if (!(room.getStatus() == null) && !room.getStatus().isEmpty()) {
             surQuery += "and r.status = '" + room.getStatus() + "'";
         }
-        String query = "SELECT r.id, r.guests, r.typeId,r.price,r.image,r.status, a.type_of_room as typeName" +
+        String query = "SELECT SQL_CALC_FOUND_ROWS r.id, r.guests, r.typeId,r.price,r.image,r.status, a.type_of_room as typeName" +
                 " FROM room as r JOIN type_of_room as a on a.id = r.typeId " +
-                 surQuery + "group by r.id, r.image, r.guests, r.typeId,r.price";
+                surQuery + "group by r.id, r.image, r.guests, r.typeId,r.price" + "" +
+                " ORDER BY  r.id DESC limit " + offset + ", " + noOfRecords + ";";
         ArrayList<Room> list = new ArrayList<>();
         Room newRoom = null;
-        try {
-            Connection con = DBUtil.getConnection();
-            PreparedStatement pst = con.prepareStatement(query);
 
-            ResultSet rs = pst.executeQuery();
-            while (rs.next()) {
-                newRoom = Room.builder()
-                        .id(rs.getInt("id"))
-                        .guests(rs.getInt("guests"))
-                        .typeId(rs.getInt("typeId"))
-                        .price(rs.getInt("price"))
-                        .image(rs.getString("image"))
-                        .typeName(rs.getString("typeName"))
-                        .status(rs.getString("status"))
-                        .build();
-                list.add(newRoom);
-            }
-            rs.close();
+        Connection con = DBUtil.getConnection();
+        PreparedStatement pst = con.prepareStatement(query);
 
-            con.close();
-        } catch (SQLException e) {
-            e.printStackTrace();
+        ResultSet rs = pst.executeQuery();
+        while (rs.next()) {
+            newRoom = Room.builder()
+                    .id(rs.getInt("id"))
+                    .guests(rs.getInt("guests"))
+                    .typeId(rs.getInt("typeId"))
+                    .price(rs.getInt("price"))
+                    .image(rs.getString("image"))
+                    .typeName(rs.getString("typeName"))
+                    .status(rs.getString("status"))
+                    .build();
+            list.add(newRoom);
         }
+        rs.close();
+        rs = pst.executeQuery("SELECT FOUND_ROWS()");
+
+        if (rs.next())
+            this.noOfRecords = rs.getInt(1);
+        con.close();
         return list;
     }
 
 
-    public List<Room> sortingRoomByClassGuestsPrice(Room room/*, int offset, int noOfRecords*/) {
+    public List<Room> sortingRoomByClassGuestsPrice(Room room, int offset, int noOfRecords) throws SQLException {
         String surQuery = "";
         if (!(room.getTypeName() == null) && !room.getTypeName().isEmpty()) {
             surQuery += " and a.type_of_room = '" + room.getTypeName() + "'";
@@ -216,48 +217,48 @@ public class RoomDao {
             surQuery += " and r.guests = " + room.getGuests() + "  ";
 
         }
-        if (room.getPrice() != null && room.getPrice()!=0) {
-             int fromPrice = room.getPrice();;
-             int byPrice =  room.getPrice();
-             surQuery += " and (r.price > '" + fromPrice + "' and  '" + byPrice + "' > r.price)";
-             System.out.println(surQuery+"dsdsdsds");
-         }
+        if (room.getFromPrice() != 0) {
+            int fromPrice = room.getFromPrice();
+
+            surQuery += "  and " + fromPrice + " <= r.price ";
+        }
+        if (room.getByPrice() != 0) {
+            int byPrice = room.getByPrice();
+            surQuery += " and  " + byPrice + " >= r.price ";
+        }
 
 
-        String query = "SELECT r.id, r.guests, r.typeId,r.price,r.image, a.type_of_room as typeName" +
+        String query = "SELECT SQL_CALC_FOUND_ROWS r.id, r.guests, r.typeId,r.price,r.image, a.type_of_room as typeName" +
                 " FROM room as r JOIN type_of_room as a on a.id = r.typeId " +
-                "AND r.status = 'available'" + surQuery + "group by r.id, r.image, r.guests, r.typeId,r.price";
-        //"ORDER BY o.id DESC limit " + offset + ", " + noOfRecords + ";";//
+                "AND r.status = 'available'" + surQuery + " group by r.id, r.image, r.guests, r.typeId,r.price" +
+                " ORDER BY  r.id DESC limit " + offset + ", " + noOfRecords + ";";
         ArrayList<Room> list = new ArrayList<>();
         Room newRoom = null;
-        try {
-            Connection con = DBUtil.getConnection();
-            PreparedStatement pst = con.prepareStatement(query);
+        Connection con = DBUtil.getConnection();
+        PreparedStatement pst = con.prepareStatement(query);
 
-            ResultSet rs = pst.executeQuery();
-            while (rs.next()) {
-                newRoom = Room.builder()
-                        .id(rs.getInt("id"))
-                        .guests(rs.getInt("guests"))
-                        .typeId(rs.getInt("typeId"))
-                        .price(rs.getInt("price"))
-                        .image(rs.getString("image"))
-                        .typeName(rs.getString("typeName"))
-                        .build();
-                list.add(newRoom);
-            }
-            rs.close();
-
-          //  rs = pst.executeQuery("SELECT FOUND_ROWS()");
-
-          //  if (rs.next())
-            //    this.noOfRecords = rs.getInt(1);
-            con.close();
-        } catch (SQLException e) {
-            e.printStackTrace();
+        ResultSet rs = pst.executeQuery();
+        while (rs.next()) {
+            newRoom = Room.builder()
+                    .id(rs.getInt("id"))
+                    .guests(rs.getInt("guests"))
+                    .typeId(rs.getInt("typeId"))
+                    .price(rs.getInt("price"))
+                    .image(rs.getString("image"))
+                    .typeName(rs.getString("typeName"))
+                    .build();
+            list.add(newRoom);
         }
+        rs.close();
+
+        rs = pst.executeQuery("SELECT FOUND_ROWS()");
+
+        if (rs.next())
+            this.noOfRecords = rs.getInt(1);
+        con.close();
         return list;
     }
+
     public int getNoOfRecords() {
         return noOfRecords;
     }

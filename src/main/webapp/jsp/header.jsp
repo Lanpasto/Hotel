@@ -1,7 +1,10 @@
 <%@ taglib prefix="fmt" uri="jakarta.tags.fmt" %>
-<fmt:requestEncoding value="UTF-8" />
-<fmt:setLocale value="${sessionScope.lang}" />
+<fmt:requestEncoding value="UTF-8"/>
+<fmt:setLocale value="${sessionScope.lang}"/>
+<%--<%@ taglib prefix="tf" tagdir="/WEB-INF/tags"%>--%>
 <fmt:setBundle basename="locale" var="lang"/>
+
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <html lang="en">
 <link href="${pageContext.request.contextPath}/css/bootstrap.min.css" rel="stylesheet">
@@ -23,39 +26,49 @@
     </div>
     <div class="collapse navbar-collapse">
     <div class="navbar-nav" style="font-size: 24px">
-        <a class="nav-link text-white" href="controller?action=indexPage">Hotel</a>
+        <a class="nav-link text-white" href="controller?action=indexPage"><fmt:message key="header.hotel"
+                                                                                       bundle="${lang}"/></a>
     </div>
     <div class="navbar-nav" style="font-size: 16px">
-        <a class="nav-link text-white" href="controller?action=aboutUsPage">About us</a>
+        <a class="nav-link text-white" href="controller?action=aboutUsPage"><fmt:message key="header.aboutUs"
+                                                                                         bundle="${lang}"/></a>
     </div>
     <div class="navbar-nav" style="font-size: 16px">
-        <a class="nav-link text-white" href="controller?action=orderRoomPage">Choose room</a></div>
+        <a class="nav-link text-white" href="controller?action=orderRoomPage"><fmt:message key="header.chooseRoom"
+                                                                                           bundle="${lang}"/></a></div>
     <%if (userSession != null) {%>
     <div class="navbar-nav" style="font-size: 16px">
-        <a class="nav-link text-white" href="controller?action=requestPage">Make request</a></div>
+        <a class="nav-link text-white" href="controller?action=requestPage"><fmt:message key="header.makeRequest"
+                                                                                         bundle="${lang}"/></a></div>
     <%}%>
 </div>
     <div class="navbar-nav ">
         <%if (userSession == null) {%>
         <a href="controller?action=loginpage">
-            <button type="button" class="btn btn-outline-light me-2">Login</button>
+            <button type="button" class="btn btn-outline-light me-2"><fmt:message key="header.login"
+                                                                                  bundle="${lang}"/></button>
         </a>
         <a href="controller?action=registerPage">
-            <button type="button" class="btn btn-outline-light me-2">Sign-up</button>
+            <button type="button" class="btn btn-outline-light me-2"><fmt:message key="header.signIn"
+                                                                                  bundle="${lang}"/></button>
         </a>
         <%} else if (userSession == 2) {%>
         <a href="controller?action=adminReservePage">
-            <button type="button" class="btn btn-outline-light me-2">Admin Reserve</button>
+            <button type="button" class="btn btn-outline-light me-2"><fmt:message key="header.adminReserve"
+                                                                                  bundle="${lang}"/></button>
         </a>
         <a href="controller?action=logout">
-            <button type="button" class="btn btn-outline-light me-2">Logout</button>
+            <button type="button" class="btn btn-outline-light me-2"><fmt:message key="header.logout"
+                                                                                  bundle="${lang}"/></button>
         </a>
         <%} else {%>
         <a href="controller?action=myReservePage">
-            <button type="button" class="btn btn-outline-light me-2">Reserve</button>
+            <button type="button" class="btn btn-outline-light me-2"><fmt:message key="header.myReserve"
+                                                                                  bundle="${lang}"/></button>
         </a>
         <a href="controller?action=logout">
-            <button type="button" class="btn btn-outline-light me-2">Logout</button>
+            <button type="button" class="btn btn-outline-light me-2"><fmt:message key="header.logout"
+                                                                                  bundle="${lang}"/></button>
         </a>
         <%}%>
 

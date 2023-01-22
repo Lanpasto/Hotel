@@ -1,6 +1,9 @@
 <%@ taglib prefix="c" uri="jakarta.tags.core" %>
 <%@include file="header.jsp" %>
 <%@include file="background.jsp" %>
+<%--
+<tf:title titleName="MakeRequest"/>
+--%>
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css"/>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
@@ -10,12 +13,15 @@
 <div class="container mt-sm-auto bg-secondary bg-opacity-25">
     <div class="card bg-dark text-white">
         <div class="payment-details">
-            <h3>Make your request</h3>
+            <h3><fmt:message key="classSelect.previous"
+                             bundle="${lang}"/></h3>
 
             <div class="billing">
-                <span>Select Class</span>
+                <span><fmt:message key="requestOrd.selectClass"
+                                   bundle="${lang}"/></span>
                 <select name="classOfRoom">
-                    <option>Choose your class</option>
+                    <option><fmt:message key="classSelect.chooseRom"
+                                         bundle="${lang}"/></option>
                     <c:forEach items="${listCategory}" var="type_of_room">
                         <option value="${type_of_room.id}">${type_of_room.type_of_room}</option>
                     </c:forEach>
@@ -32,14 +38,17 @@
                 <option value="3">3</option>
                 <option value="4">4</option>
             </select>
-            <span>Number of guests</span>
+            <span><fmt:message key="classSelect.numberOfPerson"
+                               bundle="${lang}"/></span>
         </div>
 
         <div class="input-text">
             <input type="text" name="datefilter" value="" placeholder="DD/MM/YY - DD/MM/YY">
-            <span>Length of stay</span>
+            <span><fmt:message key="classSelect.stay"
+                               bundle="${lang}"/></span>
         </div>
-            <button type="submit" name="room" style="margin-top: 40px" class="btn btn-warning">Claim</button>
+            <button type="submit" name="room" style="margin-top: 40px" class="btn btn-warning"><fmt:message key="requestOrd.claim"
+                                                                                                            bundle="${lang}"/></button>
     </div>
 </div>
 </form>

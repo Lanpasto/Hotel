@@ -40,7 +40,7 @@ public class LoginCommand extends Command {
         }else {
             session.setAttribute("currentUserId",newUser.getId());
             session.setAttribute("role",newUser.getRoleId());
-            return Path.PAGE_INDEX;
+            return Path.PAGE_LOGIN;
         }
 
     }

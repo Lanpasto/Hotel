@@ -13,4 +13,7 @@ public class Room {
     private String status;
     private String image;
 
+    private int fromPrice;
+
+    private int byPrice;
 }

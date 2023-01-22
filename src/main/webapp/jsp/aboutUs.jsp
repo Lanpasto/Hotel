@@ -1,6 +1,9 @@
 <%@include file="header.jsp" %>
 <%@include file="background.jsp" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%--
+<tf:title titleName="AboutUs"/>
+--%>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 <body>
@@ -8,15 +11,14 @@
 <head>
     <title>Title</title>
     <div class="p-3 bg-info bg-opacity-10 border border-info border-start-0 rounded-end text-white bg-dark">
-        (HN) welcomes you in a real cosmopolitan, pulsing milieu, at the same time offering peace and intimate
-        retirement, just in the heart of the city centre. Timeless elegance tailored for the demands of our time;
-        exceptional combination of magnificent architecture and divine cuisine, in perfect harmony. A Michelin-starred
-        restaurant and a beautifully restored town palace joined forces for you!
+       <fmt:message key="aboutUs.text"
+                    bundle="${lang}"/>
     </div>
     <div class="container mt-3">
         <button type="button" class="btn btn-dark col-3" style="margin-left: 37%;width: 420px" data-bs-toggle="modal"
                 data-bs-target="#myModal">
-            <h3>Contact</h3>
+            <h3><fmt:message key="aboutUs.contact"
+                             bundle="${lang}"/></h3>
         </button>
     </div>
     <div class="modal" id="myModal">

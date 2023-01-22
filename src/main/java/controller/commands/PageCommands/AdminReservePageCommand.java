@@ -17,11 +17,16 @@ public class AdminReservePageCommand extends Command {
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException, SQLException {
         RoomDao roomDao = new RoomDao();
+        String action = request.getParameter("action1");
+        int page = 1;
+
+        int recordsPerPage = 5;
+        if (request.getParameter("page") != null)
+            page = Integer.parseInt(
+                    request.getParameter("page"));
+
         String status = "";
         Room room;
-        String status1 = request.getParameter("statusForSorting");
-        System.out.println("121231231231231");
-        System.out.println(status1);
         if (request.getParameter("statusForSorting") != null && !request.getParameter("statusForSorting").isEmpty())
         {
             status = request.getParameter("statusForSorting");
@@ -30,11 +35,37 @@ public class AdminReservePageCommand extends Command {
                 .status(status)
                 .build();
 
-
-        List<Room> AllListRoom = roomDao.sortingRoomByStatus(room);
-        //System.out.println(AllListRoom.get(0).getStatus());
+        List<Room> AllListRoom = roomDao.sortingRoomByStatus(room, 0, recordsPerPage);
         request.setAttribute("AllListRoom", AllListRoom);
-        return PAGE_ADMINRESERVE;
+        int noOfRecords = roomDao.getNoOfRecords();
+        int noOfPages = (int) Math.ceil(noOfRecords * 1.0
+                / recordsPerPage);
+
+        request.setAttribute("noOfPages", noOfPages);
+        request.setAttribute("currentPage", page);
+
+        AllListRoom = roomDao.sortingRoomByStatus(room, 0,
+                recordsPerPage);
+        request.setAttribute("listOrders", AllListRoom);
+
+
+        if(action == null) {
+
+           AllListRoom = roomDao.sortingRoomByStatus(room,0,
+                    recordsPerPage);
+            request.setAttribute("AllListRoom", AllListRoom);
+            return PAGE_ADMINRESERVE;
+        }
+        else{
+             AllListRoom = roomDao.sortingRoomByStatus(room, (Integer.parseInt(action)-1)*recordsPerPage,
+                    recordsPerPage);
+            request.setAttribute("AllListRoom", AllListRoom);
+            return PAGE_ADMINRESERVE;
+        }
+
+        //System.out.println(AllListRoom.get(0).getStatus());
+
+
     }
 
 }

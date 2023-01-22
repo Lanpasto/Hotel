@@ -1,6 +1,7 @@
 <%@ taglib prefix="c" uri="jakarta.tags.core" %>
 <%@include file="header.jsp" %>
 <%@include file="background.jsp" %>
+<%--<tf:title titleName="MyReserve"/>--%>
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,9 +15,11 @@
         <div class="bg-warning">
             <div class="navbar-nav">
                 <div class="navbar-nav">
-                    <label class="text-dark border-0 h1 text-center">Your Reserve</label></div>
+                    <label class="text-dark border-0 h1 text-center"> <fmt:message key="reserveUser.yourReserve"
+                                                                                   bundle="${lang}"/></label></div>
                 <div class="navbar-nav"><a class="text-white text-end" href="controller?action=ListOfRequest">
-                    <h3 class="badge text-white  bg-danger text-wrap fs-5">My Request</h3>
+                    <h3 class="badge text-white  bg-danger text-wrap fs-5"><fmt:message key="reserveUser.myRequest"
+                                                                                        bundle="${lang}"/></h3>
                 </a>
                 </div>
             </div>
@@ -39,8 +42,11 @@
                     <td><img src="${pageContext.request.contextPath}${orders.image}"
                              style="height: 200px; width: 400px" alt="#"></td>
                     <td>
-                        <div>Price:${orders.totalPrice}$</div>
-                        <div>Reserve date:<fmt:formatDate
+                        <div><fmt:message key="reserveUser.price"
+                                          bundle="${lang}"/>${orders.totalPrice}$
+                        </div>
+                        <div><fmt:message key="reserveUser.reservedate"
+                                          bundle="${lang}"/><fmt:formatDate
                                 value="${orders.dateOfSettlement}" pattern=" MM/dd/yyyy"/> -
                             <fmt:formatDate value="${orders.dateOfOut}" pattern="MM/dd/yyyy"/></div>
                         <div>${orders.status}</div>

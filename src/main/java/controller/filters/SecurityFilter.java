@@ -14,11 +14,11 @@ import java.util.Arrays;
 @WebFilter(urlPatterns = "/controller")
 public class SecurityFilter implements Filter {
     private static final ArrayList<String> guestRequired = new ArrayList<>
-            (Arrays.asList("loginpage","logout","indexPage","registerCommand","registerPage","loginCommand","aboutUsPage","changeLang","orderRoomPage"));
+            (Arrays.asList("loginpage","logout","indexPage","registerCommand","registerPage","loginCommand","aboutUsPage","changeLang","orderRoomPage","changeLanguage"));
     private static final ArrayList<String> userRequires = new ArrayList<>
-            (Arrays.asList("makeOrder","payForm", "makeRequest",  "confirmRequestUser",  "rejectRequestUser","myReservePage", "requestPage","ListOfRequest","payForm","payment"));
+            (Arrays.asList("makeOrder","payForm", "makeRequest",  "confirmRequestUser",  "rejectRequestUser","myReservePage", "requestPage","ListOfRequest","payForm","payment","changeLanguage"));
     private static final ArrayList<String> managerRequired = new ArrayList<>
-            (Arrays.asList("adminRequestPage","adminReservePage","changeLanguage","updateStatus","confirmRequestUser"));
+            (Arrays.asList("adminRequestPage","adminReservePage","changeLanguage","updateStatus","confirmRequestUser","changeLanguage"));
 
     private boolean isAuthorized(HttpServletRequest req) {
         String command = req.getParameter("action");

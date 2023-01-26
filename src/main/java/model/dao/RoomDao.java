@@ -189,7 +189,6 @@ public class RoomDao {
             surQuery += " and  " + byPrice + " >= r.price ";
         }
 
-
         String query = "SELECT SQL_CALC_FOUND_ROWS r.id, r.guests, r.typeId,r.price,r.image, a.type_of_room as typeName" + " FROM room as r JOIN type_of_room as a on a.id = r.typeId " + "AND r.status = 'available'" + surQuery + " group by r.id, r.image, r.guests, r.typeId,r.price" + " ORDER BY  r.id DESC limit " + offset + ", " + noOfRecords + ";";
         ArrayList<Room> list = null;
         try {

@@ -46,24 +46,24 @@ public class OrderRoomPageCommand extends Command {
         if (request.getParameter("classOfRoom") != null && !request.getParameter("classOfRoom").isEmpty()) {
             classRoom = request.getParameter("classOfRoom");
         }
+        System.out.println(request.getParameter("fromPrice")+"REQUEST PED" );
 
         if (request.getParameter("fromPrice") != null && !request.getParameter("fromPrice").isEmpty()) {
             fromPrice = Integer.parseInt(request.getParameter("fromPrice"));
-
         }
         if (request.getParameter("priceTo") != null && !request.getParameter("priceTo").isEmpty()) {
             priceTo = Integer.parseInt(request.getParameter("priceTo"));
-
         }
 
 
+            room = Room.builder()
+                    .guests(guest)
+                    .typeName(classRoom)
+                    .fromPrice((fromPrice))
+                    .byPrice(priceTo)
+                    .build();
 
-        room = Room.builder()
-                .guests(guest)
-                .typeName(classRoom)
-                .fromPrice(fromPrice)
-                .byPrice(priceTo)
-                .build();
+
 
         List<Room> listOrders = roomDao.sortingRoomByClassGuestsPrice(room, 0, recordsPerPage);
         request.setAttribute("listOrders", listOrders);
@@ -76,8 +76,8 @@ public class OrderRoomPageCommand extends Command {
         request.setAttribute("currentPage", page);
         System.out.println(fromPrice);
         request.setAttribute("classRoom", classRoom);
-        request.setAttribute("fromPrice", fromPrice);
-        request.setAttribute("priceTo", priceTo);
+        request.setAttribute("fromPrice", (fromPrice));
+        request.setAttribute("priceTo", (priceTo));
 
         listOrders = roomDao.sortingRoomByClassGuestsPrice(room, 0,
                 recordsPerPage);

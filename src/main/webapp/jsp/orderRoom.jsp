@@ -26,7 +26,7 @@
 %>
 
 <div class="container mt-md-0">
-    <form method="post" id="search" action="controller?action=orderRoomPage" class="order">
+    <form method="post" id="search" action="controller?action=orderRoomPage&fromPrice=${fromPrice}&priceTo=${priceTo}" class="order">
         <table class="table table-secondary">
             <c:set var="message" value="${message}"/>
             <p style="font-size: 16px;font-style: italic;color: red" id="message">${message}</p>
@@ -42,8 +42,14 @@
                         <option>4</option>
                     </datalist>
                     <span> <fmt:message key="classSelect.price" bundle="${lang}"/></span>
+
+
                     <label>
-                        <input type="text" name="fromPrice" style="width: 60px" placeholder="0$">
+                        <%if (fromPrice == 0) {%>
+                        <input type="text" name="fromPrice" id="fromPrice" style="width: 60px" placeholder="0$" value="">
+                        <%} else {%>
+                        <input type="text" name="fromPrice" id="fromPrice" style="width: 60px" placeholder="0$" value="${fromPrice}">
+                        <%}%>
                     </label>
                     <label>
                         <%if (priceTo == 0) {%>
@@ -52,6 +58,9 @@
                         <input type="text" name="priceTo" id="priceTo" style="width: 60px" placeholder="3000$" value="${priceTo}">
                         <%}%>
                     </label>
+
+
+
                 <th class="input-text">
                     <span> <fmt:message key="classSelect.class" bundle="${lang}"/></span>
                 <label for="classOfRoom"></label><input list="classOfRoomAb" value="" name="classOfRoom" id="classOfRoom" placeholder="Class">

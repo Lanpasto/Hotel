@@ -16,6 +16,15 @@
     <title></title>
 </head>
 <body>
+<%
+    int fromPrice;
+    int priceTo;
+
+        fromPrice = (int) session.getAttribute("fromPrice");
+        priceTo = (int) session.getAttribute("priceTo");
+
+%>
+
 <div class="container mt-md-0">
     <form method="post" id="search" action="controller?action=orderRoomPage" class="order">
         <table class="table table-secondary">
@@ -37,7 +46,11 @@
                         <input type="text" name="fromPrice" style="width: 60px" placeholder="0$">
                     </label>
                     <label>
-                        <input type="text" name="priceTo" style="width: 60px" placeholder="3000$">
+                        <%if (priceTo == 0) {%>
+                        <input type="text" name="priceTo" id="priceTo" style="width: 60px" placeholder="3000$" value="">
+                        <%} else {%>
+                        <input type="text" name="priceTo" id="priceTo" style="width: 60px" placeholder="3000$" value="${priceTo}">
+                        <%}%>
                     </label>
                 <th class="input-text">
                     <span> <fmt:message key="classSelect.class" bundle="${lang}"/></span>

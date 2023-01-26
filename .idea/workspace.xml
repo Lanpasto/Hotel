@@ -9,64 +9,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9e1952fb-3c0a-4d5a-9a8f-e6cc31aa45f7" name="Changes" comment="localisation and pagination">
-      <change afterPath="$PROJECT_DIR$/src/main/java/controller/commands/PageCommands/SelectRoomForRequestPageCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/controller/filters/EncodingFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/TLDs/message.tld" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tags/title.tag" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/jsp/selectRoomForRequest.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/filters/TestEncodingFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/utils/MyRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/utils/MySession.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/webContexts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
+    <list default="true" id="9e1952fb-3c0a-4d5a-9a8f-e6cc31aa45f7" name="Changes" comment="patch1">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/commands/Admin/ConfirmOrderAdminCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/commands/Admin/ConfirmOrderAdminCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/commands/Admin/UpdateRoomStatusCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/commands/Admin/UpdateRoomStatusCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/commands/ChangeLangCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/commands/ChangeLanguageCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/commands/CommandContainer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/commands/CommandContainer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/commands/LoginCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/commands/LoginCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/commands/LogoutCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/commands/LogoutCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/commands/PageCommands/AboutUsPageCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/commands/PageCommands/AboutUsPageCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/commands/PageCommands/AdminRequestPageCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/commands/PageCommands/AdminRequestPageCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/commands/PageCommands/AdminReservePageCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/commands/PageCommands/AdminReservePageCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/commands/PageCommands/IndexPageCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/commands/PageCommands/IndexPageCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/commands/PageCommands/LIstOfReserveRoomPageCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/commands/PageCommands/LIstOfReserveRoomPageCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/commands/PageCommands/ListOfRequestRoomPageCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/commands/PageCommands/ListOfRequestRoomPageCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/commands/PageCommands/LoginPageCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/commands/PageCommands/LoginPageCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/commands/PageCommands/OrderRoomPageCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/commands/PageCommands/OrderRoomPageCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/commands/PageCommands/PayFormPageCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/commands/PageCommands/PayFormPageCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/commands/PageCommands/RegisterPageCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/commands/PageCommands/RegisterPageCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/commands/PageCommands/RequestPageCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/commands/PageCommands/RequestPageCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/commands/RegisterCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/commands/RegisterCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/commands/User/ConfirmOrderCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/commands/User/ConfirmOrderCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/commands/User/MakeOrderCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/commands/User/MakeOrderCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/commands/User/MakeOrderRequestCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/commands/User/MakeOrderRequestCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/commands/User/PaymentCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/commands/User/PaymentCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/commands/User/RejectOrderCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/commands/User/RejectOrderCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/commands/User/RoomReserveCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/commands/User/RoomReserveCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/filters/SecurityFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/filters/SecurityFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/listener/LocaleFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/filters/LocaleFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/listenerUtil/DateCheck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/listenerUtil/DateCheck.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/validation/Validation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/validation/Validation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/dao/OrdersDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/dao/OrdersDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/dao/RoomDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/dao/RoomDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/dao/UserDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/entity/Orders.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/entity/Orders.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/locale_en.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/locale_en.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/locale_ua.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/locale_ua.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/aboutUs.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/aboutUs.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/adminRequestRooms.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/adminRequestRooms.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/adminReserveRooms.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/adminReserveRooms.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/header.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/listOfRequestRoom.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/listOfRequestRoom.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/listOfReserveRoom.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/listOfReserveRoom.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/orderRoom.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/orderRoom.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/payForm.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/payForm.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/register.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/register.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/request.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/request.jsp" afterDir="false" />
+    </list>
+    <list id="4efdf5ce-cfd2-4410-b09f-e00e65973a64" name="Changes by levc4" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/commands/PageCommands/OrderRoomPageCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/commands/PageCommands/OrderRoomPageCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/dao/RoomDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/dao/RoomDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/orderRoom.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/orderRoom.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,6 +50,29 @@
   </component>
   <component name="JspContextManager">
     <jsp-to-context jsp-file="file://$PROJECT_DIR$/src/main/webapp/jsp/header.jsp" context-file="file://$PROJECT_DIR$/src/main/webapp/jsp/loginView.jsp" />
+  </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/src/main/java/controller/commands/PageCommands/OrderRoomPageCommand.java">
+      <ranges>
+        <range start1="48" end1="48" start2="48" end2="49" changelist="4efdf5ce-cfd2-4410-b09f-e00e65973a64" />
+        <range start1="51" end1="52" start2="52" end2="52" changelist="4efdf5ce-cfd2-4410-b09f-e00e65973a64" />
+        <range start1="55" end1="56" start2="55" end2="55" changelist="4efdf5ce-cfd2-4410-b09f-e00e65973a64" />
+        <range start1="57" end1="58" start2="56" end2="56" changelist="4efdf5ce-cfd2-4410-b09f-e00e65973a64" />
+        <range start1="60" end1="66" start2="58" end2="66" changelist="4efdf5ce-cfd2-4410-b09f-e00e65973a64" />
+        <range start1="75" end1="75" start2="75" end2="77" changelist="9e1952fb-3c0a-4d5a-9a8f-e6cc31aa45f7" />
+        <range start1="76" end1="78" start2="78" end2="80" changelist="4efdf5ce-cfd2-4410-b09f-e00e65973a64" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/src/main/webapp/jsp/orderRoom.jsp">
+      <ranges>
+        <range start1="18" end1="18" start2="18" end2="27" changelist="9e1952fb-3c0a-4d5a-9a8f-e6cc31aa45f7" />
+        <range start1="19" end1="20" start2="28" end2="29" changelist="4efdf5ce-cfd2-4410-b09f-e00e65973a64" />
+        <range start1="35" end1="35" start2="44" end2="46" changelist="4efdf5ce-cfd2-4410-b09f-e00e65973a64" />
+        <range start1="36" end1="37" start2="47" end2="52" changelist="4efdf5ce-cfd2-4410-b09f-e00e65973a64" />
+        <range start1="39" end1="40" start2="54" end2="59" changelist="9e1952fb-3c0a-4d5a-9a8f-e6cc31aa45f7" />
+        <range start1="41" end1="41" start2="60" end2="63" changelist="4efdf5ce-cfd2-4410-b09f-e00e65973a64" />
+      </ranges>
+    </file>
   </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
@@ -415,7 +389,7 @@
       <workItem from="1674588673159" duration="8784000" />
       <workItem from="1674642909289" duration="133000" />
       <workItem from="1674643047035" duration="17293000" />
-      <workItem from="1674698946980" duration="10986000" />
+      <workItem from="1674698946980" duration="15675000" />
     </task>
     <task id="LOCAL-00001" summary="update1">
       <created>1673138251826</created>
@@ -445,7 +419,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674354220608</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="patch1">
+      <created>1674711650722</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1674711650722</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -467,7 +448,8 @@
     <MESSAGE value="update2" />
     <MESSAGE value="update211" />
     <MESSAGE value="localisation and pagination" />
-    <option name="LAST_COMMIT_MESSAGE" value="localisation and pagination" />
+    <MESSAGE value="patch1" />
+    <option name="LAST_COMMIT_MESSAGE" value="patch1" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -73,6 +73,8 @@ public class OrderRoomPageCommand extends Command {
 
         request.setAttribute("noOfPages", noOfPages);
         request.setAttribute("guest", guest);
+        request.setAttribute("currentPage", page);
+        System.out.println(fromPrice);
         request.setAttribute("classRoom", classRoom);
         request.setAttribute("fromPrice", fromPrice);
         request.setAttribute("priceTo", priceTo);

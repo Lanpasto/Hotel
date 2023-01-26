@@ -6,6 +6,7 @@ import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
+import lombok.extern.log4j.Log4j;
 import model.dao.OrdersDao;
 import model.entity.Orders_request;
 
@@ -15,10 +16,11 @@ import java.sql.Timestamp;
 import java.time.Instant;
 
 import static controller.commands.User.MakeOrderCommand.date;
-
+@Log4j
 public class MakeOrderRequestCommand extends Command {
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException, SQLException {
+        log.info("MakeOrderRequestCommand started");
         String forward;
         HttpSession session = request.getSession();
         String allDate = request.getParameter("datefilter");
@@ -51,7 +53,7 @@ public class MakeOrderRequestCommand extends Command {
 
         ordersDao.addOrderRequest(ordersRequest);
         forward = Path.PAGE_INDEX;
-
+        log.info("MakeOrderRequestCommand successfully added");
         return forward;
     }
 }

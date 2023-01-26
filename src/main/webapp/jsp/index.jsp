@@ -7,7 +7,7 @@
 <div class="container d-flex align-items-center justify-content-center position-relative flex-wrap">
     <div class="card d-flex position-relative flex-column">
         <div class='imgContainer'>
-            <img src='${pageContext.request.contextPath}/images/hilton-port-moresby.jpg'>
+            <img src='${pageContext.request.contextPath}/images/hilton-port-moresby.jpg' alt="">
         </div>
         <div class="content">
             <h2>Family Rooms</h2>
@@ -15,7 +15,7 @@
     </div>
     <div class="card d-flex position-relative flex-column">
         <div class='imgContainer'>
-            <img src='${pageContext.request.contextPath}/images/the-shady-rest-hotel.jpg'>
+            <img src='${pageContext.request.contextPath}/images/the-shady-rest-hotel.jpg' alt="">
         </div>
         <div class="content">
             <h2>Cheep Rooms</h2>
@@ -23,7 +23,7 @@
     </div>
     <div class="card d-flex position-relative flex-column">
         <div class='imgContainer'>
-            <img src='${pageContext.request.contextPath}/images/lux.jpg'>
+            <img src='${pageContext.request.contextPath}/images/lux.jpg' alt="">
         </div>
         <div class="content">
             <h2>Luxury Rooms</h2>

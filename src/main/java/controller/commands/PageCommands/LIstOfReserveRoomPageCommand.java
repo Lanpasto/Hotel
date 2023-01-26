@@ -5,6 +5,7 @@ import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
+import lombok.extern.log4j.Log4j;
 import model.dao.OrdersDao;
 import model.entity.Orders;
 
@@ -13,11 +14,12 @@ import java.sql.SQLException;
 import java.util.List;
 
 import static controller.Path.PAGE_LISTOFRESERVE;
-
+@Log4j
 public class LIstOfReserveRoomPageCommand extends Command {
 
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException, SQLException {
+        log.info("page loaded");
         HttpSession session = request.getSession();
         int idUser = (int) session.getAttribute("currentUserId");
         OrdersDao orderDao = new OrdersDao();

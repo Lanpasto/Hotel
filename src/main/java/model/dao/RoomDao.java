@@ -1,6 +1,7 @@
 package model.dao;
 
 import database.DBUtil;
+import lombok.extern.log4j.Log4j;
 import model.entity.Room;
 import model.entity.Room_of_type;
 
@@ -11,17 +12,23 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+@Log4j
 public class RoomDao {
     private int noOfRecords;
 
-    public void updateRoom(int id) throws SQLException {
+    public void updateRoom(int id) {
         String query = "UPDATE room SET status = 'booked' WHERE id = ?";
-        Connection con = DBUtil.getConnection();
-        PreparedStatement pst = con.prepareStatement(query);
-        pst.setInt(1, id);
-        pst.executeUpdate();
-        pst.close();
-        con.close();
+        try {
+            Connection con = DBUtil.getConnection();
+            PreparedStatement pst = con.prepareStatement(query);
+            pst.setInt(1, id);
+            pst.executeUpdate();
+            pst.close();
+            con.close();
+        } catch (SQLException e) {
+            log.error("update Room error");
+            e.printStackTrace();
+        }
     }
 
     public Room findRoomById(int idRoom) {
@@ -34,180 +41,135 @@ public class RoomDao {
             ResultSet rs = pst.executeQuery();
 
             if (rs.next()) {
-                newRoom = Room.builder()
-                        .id(rs.getInt("id"))
-                        .typeId(rs.getInt("typeId"))
-                        .guests(rs.getInt("guests"))
-                        .price(rs.getInt("price"))
-                        .status(rs.getString("status"))
-                        .build();
+                newRoom = Room.builder().id(rs.getInt("id")).typeId(rs.getInt("typeId")).guests(rs.getInt("guests")).price(rs.getInt("price")).status(rs.getString("status")).build();
             }
             rs.close();
             con.close();
         } catch (SQLException e) {
+            log.error("find Room By Id error");
             e.printStackTrace();
         }
         return newRoom;
     }
 
-    public void updateRoomStatusManager(int id, String status) throws SQLException {
+    public void updateRoomStatusManager(int id, String status) {
         String query = "UPDATE room SET status = ? WHERE id = ?";
-        Connection con = DBUtil.getConnection();
-        PreparedStatement pst = con.prepareStatement(query);
-        pst.setString(1, status);
-        pst.setInt(2, id);
-        pst.executeUpdate();
-        pst.close();
-        con.close();
+        try {
+            Connection con = DBUtil.getConnection();
+            PreparedStatement pst = con.prepareStatement(query);
+            pst.setString(1, status);
+            pst.setInt(2, id);
+            pst.executeUpdate();
+            pst.close();
+            con.close();
+        } catch (SQLException e) {
+            log.error("update Room Status Manager error");
+            e.printStackTrace();
+        }
     }
 
-    public void RequestManager(int id) throws SQLException {
+    public void RequestManager(int id) {
         String query = "UPDATE room SET status = 'Waiting for confirmation' WHERE id = ?";
-        Connection con = DBUtil.getConnection();
-        PreparedStatement pst = con.prepareStatement(query);
-        pst.setInt(1, id);
-        pst.executeUpdate();
-        pst.close();
-        con.close();
+        try {
+            Connection con = DBUtil.getConnection();
+            PreparedStatement pst = con.prepareStatement(query);
+            pst.setInt(1, id);
+            pst.executeUpdate();
+            pst.close();
+            con.close();
+        } catch (SQLException e) {
+            log.error("cargo add order error");
+            e.printStackTrace();
+        }
     }
 
-    public List<Room> roomList() throws SQLException {
-        String query = "SELECT r.id, r.guests, r.typeId,r.price,r.image, a.type_of_room" +
-                " FROM room as r JOIN type_of_room as a on a.id = r.typeId " +
-                "AND r.status = 'available' group by r.id, r.image, r.guests, r.typeId,r.price";
-        ArrayList<Room> list = new ArrayList<>();
-        Room newRoom = null;
-        Connection con = DBUtil.getConnection();
-        PreparedStatement pst = con.prepareStatement(query);
-        ResultSet rs = pst.executeQuery();
-        while (rs.next()) {
-            newRoom = Room.builder()
-                    .id(rs.getInt("id"))
-                    .guests(rs.getInt("guests"))
-                    .typeName(rs.getString("type_of_room"))
-                    .typeId(rs.getInt("typeId"))
-                    .price(rs.getInt("price"))
-                    .image(rs.getString("image"))
-                    .build();
-            list.add(newRoom);
+
+    public List<Room> roomAllAvailableRoomForRequest(String DateOfSet, String DateOfOut){
+        String query = "SELECT * FROM room, orders where" +
+                " (room.id=orders.roomId AND ( (orders.dateOfSettlement BETWEEN '" + DateOfSet + "' AND '" + DateOfOut + "') " +
+                "OR(orders.dateOfOut BETWEEN '" + DateOfSet + "' AND '" + DateOfOut + "') " +
+                "OR(orders.dateOfSettlement < '" + DateOfSet + "' AND orders.dateOfOut > '" + DateOfOut + "'))";
+        ArrayList<Room> list = null;
+        try {
+            list = new ArrayList<>();
+            Room newRoom;
+            Connection con = DBUtil.getConnection();
+            PreparedStatement pst = con.prepareStatement(query);
+            ResultSet rs = pst.executeQuery();
+            while (rs.next()) {
+                newRoom = Room.builder().
+                        id(rs.getInt("id")).
+                        guests(rs.getInt("guests")).
+                        typeId(rs.getInt("typeId")).
+                        status(rs.getString("status")).
+                        price(rs.getInt("price")).
+                        image(rs.getString("image")).build();
+                list.add(newRoom);
+            }
+            rs.close();
+            con.close();
+        } catch (SQLException e) {
+           // log.error("room All Available Room For Request error");
+            e.printStackTrace();
         }
-        rs.close();
-        con.close();
         return list;
     }
 
-    public List<Room> roomAllList() throws SQLException {
-        String query = "SELECT b.id,b.guests,b.typeId,b.status,b.price,b.image, a.type_of_room " +
-                "as typeName FROM room as b, type_of_room as " +
-                "a where a.id=b.typeId";
-        ArrayList<Room> list = new ArrayList<>();
-        Room newRoom = null;
-        Connection con = DBUtil.getConnection();
-        PreparedStatement pst = con.prepareStatement(query);
-        ResultSet rs = pst.executeQuery();
-        while (rs.next()) {
-            newRoom = Room.builder()
-                    .id(rs.getInt("id"))
-                    .guests(rs.getInt("guests"))
-                    .typeId(rs.getInt("typeId"))
-                    .typeName(rs.getString("typeName"))
-                    .status(rs.getString("status"))
-                    .price(rs.getInt("price"))
-                    .image(rs.getString("image"))
-                    .build();
-            list.add(newRoom);
-        }
-        rs.close();
-        con.close();
-        return list;
-    }
-
-    public List<Room> roomAllAvailableRoomForRequest() throws SQLException {
-        String query = "SELECT b.id,b.guests,b.typeId,b.status,b.price,b.image, a.type_of_room " +
-                "as typeName FROM room as b, type_of_room as " +
-                "a where b.status = 'available' and b.typeId =a.id";
-        ArrayList<Room> list = new ArrayList<>();
-        Room newRoom = null;
-        Connection con = DBUtil.getConnection();
-        PreparedStatement pst = con.prepareStatement(query);
-        ResultSet rs = pst.executeQuery();
-        while (rs.next()) {
-            newRoom = Room.builder()
-                    .id(rs.getInt("id"))
-                    .guests(rs.getInt("guests"))
-                    .typeId(rs.getInt("typeId"))
-                    .typeName(rs.getString("typeName"))
-                    .status(rs.getString("status"))
-                    .price(rs.getInt("price"))
-                    .image(rs.getString("image"))
-                    .build();
-            list.add(newRoom);
-        }
-        rs.close();
-        con.close();
-        return list;
-    }
-
-    public List<Room_of_type> roomOfTypesList() throws SQLException {
+    public List<Room_of_type> roomOfTypesList() {
         String query = "SELECT * FROM type_of_room ";
-        ArrayList<Room_of_type> list = new ArrayList<>();
-        Room_of_type newRoom = null;
-        Connection con = DBUtil.getConnection();
-        PreparedStatement pst = con.prepareStatement(query);
-        ResultSet rs = pst.executeQuery();
-        while (rs.next()) {
-            newRoom = Room_of_type.builder()
-                    .id(rs.getInt("id"))
-                    .guests(rs.getString("guests"))
-                    .type_of_room(rs.getString("type_of_room"))
-                    .image(rs.getString("image"))
-                    .build();
-            list.add(newRoom);
+        ArrayList<Room_of_type> list = null;
+        try {
+            list = new ArrayList<>();
+            Room_of_type newRoom;
+            Connection con = DBUtil.getConnection();
+            PreparedStatement pst = con.prepareStatement(query);
+            ResultSet rs = pst.executeQuery();
+            while (rs.next()) {
+                newRoom = Room_of_type.builder().id(rs.getInt("id")).guests(rs.getString("guests")).type_of_room(rs.getString("type_of_room")).image(rs.getString("image")).build();
+                list.add(newRoom);
+            }
+            rs.close();
+            con.close();
+        } catch (SQLException e) {
+            log.error("room Of Types List error");
+            e.printStackTrace();
         }
-        rs.close();
-        con.close();
         return list;
     }
 
-    public List<Room> sortingRoomByStatus(Room room, int offset, int noOfRecords) throws SQLException {
+    public List<Room> sortingRoomByStatus(Room room, int offset, int noOfRecords) {
         String surQuery = "";
         if (!(room.getStatus() == null) && !room.getStatus().isEmpty()) {
             surQuery += "and r.status = '" + room.getStatus() + "'";
         }
-        String query = "SELECT SQL_CALC_FOUND_ROWS r.id, r.guests, r.typeId,r.price,r.image,r.status, a.type_of_room as typeName" +
-                " FROM room as r JOIN type_of_room as a on a.id = r.typeId " +
-                surQuery + "group by r.id, r.image, r.guests, r.typeId,r.price" + "" +
-                " ORDER BY  r.id DESC limit " + offset + ", " + noOfRecords + ";";
-        ArrayList<Room> list = new ArrayList<>();
-        Room newRoom = null;
+        String query = "SELECT SQL_CALC_FOUND_ROWS r.id, r.guests, r.typeId,r.price,r.image,r.status, a.type_of_room as typeName" + " FROM room as r JOIN type_of_room as a on a.id = r.typeId " + surQuery + "group by r.id, r.image, r.guests, r.typeId,r.price" + "" + " ORDER BY  r.id DESC limit " + offset + ", " + noOfRecords + ";";
+        ArrayList<Room> list = null;
+        try {
+            list = new ArrayList<>();
+            Room newRoom;
+            Connection con = DBUtil.getConnection();
+            PreparedStatement pst = con.prepareStatement(query);
 
-        Connection con = DBUtil.getConnection();
-        PreparedStatement pst = con.prepareStatement(query);
+            ResultSet rs = pst.executeQuery();
+            while (rs.next()) {
+                newRoom = Room.builder().id(rs.getInt("id")).guests(rs.getInt("guests")).typeId(rs.getInt("typeId")).price(rs.getInt("price")).image(rs.getString("image")).typeName(rs.getString("typeName")).status(rs.getString("status")).build();
+                list.add(newRoom);
+            }
+            rs.close();
 
-        ResultSet rs = pst.executeQuery();
-        while (rs.next()) {
-            newRoom = Room.builder()
-                    .id(rs.getInt("id"))
-                    .guests(rs.getInt("guests"))
-                    .typeId(rs.getInt("typeId"))
-                    .price(rs.getInt("price"))
-                    .image(rs.getString("image"))
-                    .typeName(rs.getString("typeName"))
-                    .status(rs.getString("status"))
-                    .build();
-            list.add(newRoom);
+            rs = pst.executeQuery("SELECT FOUND_ROWS()");
+
+            if (rs.next()) this.noOfRecords = rs.getInt(1);
+            con.close();
+        } catch (SQLException e) {
+            log.error("sorting Room By Status error");
+            e.printStackTrace();
         }
-        rs.close();
-        rs = pst.executeQuery("SELECT FOUND_ROWS()");
-
-        if (rs.next())
-            this.noOfRecords = rs.getInt(1);
-        con.close();
         return list;
     }
 
 
-    public List<Room> sortingRoomByClassGuestsPrice(Room room, int offset, int noOfRecords) throws SQLException {
+    public List<Room> sortingRoomByClassGuestsPrice(Room room, int offset, int noOfRecords) {
         String surQuery = "";
         if (!(room.getTypeName() == null) && !room.getTypeName().isEmpty()) {
             surQuery += " and a.type_of_room = '" + room.getTypeName() + "'";
@@ -228,34 +190,29 @@ public class RoomDao {
         }
 
 
-        String query = "SELECT SQL_CALC_FOUND_ROWS r.id, r.guests, r.typeId,r.price,r.image, a.type_of_room as typeName" +
-                " FROM room as r JOIN type_of_room as a on a.id = r.typeId " +
-                "AND r.status = 'available'" + surQuery + " group by r.id, r.image, r.guests, r.typeId,r.price" +
-                " ORDER BY  r.id DESC limit " + offset + ", " + noOfRecords + ";";
-        ArrayList<Room> list = new ArrayList<>();
-        Room newRoom = null;
-        Connection con = DBUtil.getConnection();
-        PreparedStatement pst = con.prepareStatement(query);
+        String query = "SELECT SQL_CALC_FOUND_ROWS r.id, r.guests, r.typeId,r.price,r.image, a.type_of_room as typeName" + " FROM room as r JOIN type_of_room as a on a.id = r.typeId " + "AND r.status = 'available'" + surQuery + " group by r.id, r.image, r.guests, r.typeId,r.price" + " ORDER BY  r.id DESC limit " + offset + ", " + noOfRecords + ";";
+        ArrayList<Room> list = null;
+        try {
+            list = new ArrayList<>();
+            Room newRoom;
+            Connection con = DBUtil.getConnection();
+            PreparedStatement pst = con.prepareStatement(query);
 
-        ResultSet rs = pst.executeQuery();
-        while (rs.next()) {
-            newRoom = Room.builder()
-                    .id(rs.getInt("id"))
-                    .guests(rs.getInt("guests"))
-                    .typeId(rs.getInt("typeId"))
-                    .price(rs.getInt("price"))
-                    .image(rs.getString("image"))
-                    .typeName(rs.getString("typeName"))
-                    .build();
-            list.add(newRoom);
+            ResultSet rs = pst.executeQuery();
+            while (rs.next()) {
+                newRoom = Room.builder().id(rs.getInt("id")).guests(rs.getInt("guests")).typeId(rs.getInt("typeId")).price(rs.getInt("price")).image(rs.getString("image")).typeName(rs.getString("typeName")).build();
+                list.add(newRoom);
+            }
+            rs.close();
+
+            rs = pst.executeQuery("SELECT FOUND_ROWS()");
+
+            if (rs.next()) this.noOfRecords = rs.getInt(1);
+            con.close();
+        } catch (SQLException e) {
+            log.error("sorting Room By Class Guests Price error");
+            e.printStackTrace();
         }
-        rs.close();
-
-        rs = pst.executeQuery("SELECT FOUND_ROWS()");
-
-        if (rs.next())
-            this.noOfRecords = rs.getInt(1);
-        con.close();
         return list;
     }
 

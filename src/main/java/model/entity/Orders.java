@@ -20,4 +20,6 @@ public class Orders {
     private int totalPrice;
     private String status;
     private int orderRequestId;
+    private String statusOfPay;
+
 }

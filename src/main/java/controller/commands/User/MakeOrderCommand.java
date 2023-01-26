@@ -6,6 +6,7 @@ import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
+import lombok.extern.log4j.Log4j;
 import model.dao.OrdersDao;
 import model.dao.RoomDao;
 import model.entity.Orders;
@@ -18,37 +19,35 @@ import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.Instant;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.Date;
-import java.util.Objects;
-
+@Log4j
 public class MakeOrderCommand extends Command {
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException, SQLException {
+        log.info("MakeOrderCommand started");
         String forward;
+        forward = Path.PAGE_INDEX;
         RoomDao roomDao = new RoomDao();
+        OrdersDao ordersdao = new OrdersDao();
         HttpSession session = request.getSession();
         String allDate = request.getParameter("datefilter");
+       // if(CheckDate(request,allDate)){
+           // return Path.PAGE_LOGIN;
+      //  }
         String delimiter = " - ";
         String[] temp = allDate.split(delimiter);
-        System.out.println(allDate);
         String firstDate = temp[0];
         String secondDate = temp[1];
-
-
         int daysOfReserve = nDaysBetweenTwoDate(firstDate, secondDate);
-
         Timestamp DateOfSettlement = date(firstDate);
         Timestamp DateOfOut = date(secondDate);
-
         int idUser = (int) session.getAttribute("currentUserId");
         int idRoom = Integer.parseInt(request.getParameter("room"));
         Room room = roomDao.findRoomById(idRoom);
-
-
         int priceRoomForOneDay = room.getPrice();
-
         int TotalBill = daysOfReserve * priceRoomForOneDay;
-
         Orders orders = Orders.builder()
                 .userId(idUser)
 
@@ -62,17 +61,26 @@ public class MakeOrderCommand extends Command {
 
                 .totalPrice(TotalBill)
 
-                .status("Successful")
+                .status("Waiting for paid")
+
 
                 .build();
         OrdersDao ordersDao = new OrdersDao();
-        int roomId = Integer.parseInt(request.getParameter("room"));
-        if(Objects.equals(room.getStatus(), "available")) {
+        String all=dateFlippers(firstDate);
+        String all1=dateFlippers(secondDate);
+        Orders dateCompare =ordersdao.findOrdersByRoom(idRoom,all,all1);
+        System.out.println(dateCompare);
+        if(dateCompare == null){
+            log.info("MakeOrdersCommand successfully added");
             ordersDao.addOrder(orders);
-            roomDao.updateRoom(roomId);
-        }
-        forward = Path.PAGE_INDEX;
+            System.out.println("SASASa");
+            return forward;
 
+        }else{
+            log.info("MakeOrdersCommand failed");
+                  request.setAttribute("message", "Wrong information please \n" +
+                    "check it out");
+        }
         return forward;
     }
 
@@ -103,6 +111,12 @@ public class MakeOrderCommand extends Command {
         }
         Timestamp timeStampDateFirst = new Timestamp(date.getTime());
         return timeStampDateFirst;
+    }
+    public static String dateFlippers(String startDateString){
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM/dd/yyyy");
+        DateTimeFormatter formatter2 = DateTimeFormatter.ofPattern("yyyy/MM/dd");
+        String startDateBack = LocalDate.parse(startDateString, formatter).format(formatter2);
+        return startDateBack;
     }
 }
 

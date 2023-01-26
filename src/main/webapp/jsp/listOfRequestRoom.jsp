@@ -9,6 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="${pageContext.request.contextPath}/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <title></title>
 </head>
 <body>
 <div class="container mt-3">
@@ -29,6 +30,7 @@
 
         <table class="table ">
             <tbody class="">
+            <%--@elvariable id="ordersList" type="java.util.List"--%>
             <c:forEach items="${ordersList}" var="orders">
             <c:set var="status" value="${orders.status}"/>
             <%
@@ -56,7 +58,9 @@
                             <div>
                                 <button class="bg-success" name="roomId" value="${orders.roomId}"><fmt:message key="requestUser.confirm"
                                                                                                                bundle="${lang}"/></button>
-                                <input name="orderIdForConfirm" value="${orders.id}" hidden="hidden">
+                                <label>
+                                    <input name="orderIdForConfirm" value="${orders.id}" hidden="hidden">
+                                </label>
                             </div>
                         </form>
                         <form method="post" action="controller?action=rejectRequestUser" class="register-form">
@@ -71,7 +75,7 @@
                 </td>
             </tr>
             </tbody>
-                    <%}if(status.equalsIgnoreCase("Waiting for paid")){%>
+                    <%}if(status.equalsIgnoreCase("Waiting for paid request")){%>
             <td class="table-info">
                 <div> CreateRequest <fmt:formatDate value="${orders.dateOfCreateOrder}"
                                                     pattern="MM/dd/yyyy"/></div>
@@ -89,24 +93,16 @@
                 <form method="post" action="controller?action=payForm" class="register-form">
                     <button class="bg-success" name="roomId" value="${orders.roomId}"><fmt:message key="requestUser.confirm"
                                                                                                    bundle="${lang}"/></button>
-                    <input name="orderIdForConfirm" value="${orders.id}" hidden="hidden">
-                    <input name="statusPay" value="process" hidden="hidden">
+                    <label>
+                        <input name="orderIdForConfirm" value="${orders.id}" hidden="hidden">
+                    </label>
+                    <label>
+                        <input name="statusPay" value="process" hidden="hidden">
+                    </label>
                 </form>
             </td>
     </div>
 </div>
-</form>
-</div>
-</div>
-</div>
-</div>
-</div>
-</td>
-
-</tr>
 <%}%>
 </c:forEach>
-</table>
-</div>
-</div>
 </body>

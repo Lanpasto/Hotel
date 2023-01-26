@@ -9,27 +9,62 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9e1952fb-3c0a-4d5a-9a8f-e6cc31aa45f7" name="Changes" comment="update211">
-      <change afterPath="$PROJECT_DIR$/.idea/resourceBundles.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/controller/listener/LocaleFilter.java" afterDir="false" />
+    <list default="true" id="9e1952fb-3c0a-4d5a-9a8f-e6cc31aa45f7" name="Changes" comment="localisation and pagination">
+      <change afterPath="$PROJECT_DIR$/src/main/java/controller/commands/PageCommands/SelectRoomForRequestPageCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controller/filters/EncodingFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/TLDs/message.tld" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tags/title.tag" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/jsp/selectRoomForRequest.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/filters/TestEncodingFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/utils/MyRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/utils/MySession.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/webContexts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/commands/Admin/ConfirmOrderAdminCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/commands/Admin/ConfirmOrderAdminCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/commands/Admin/UpdateRoomStatusCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/commands/Admin/UpdateRoomStatusCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/commands/ChangeLangCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/commands/ChangeLanguageCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/commands/CommandContainer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/commands/CommandContainer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/commands/LoginCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/commands/LoginCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/commands/LogoutCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/commands/LogoutCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/commands/PageCommands/AboutUsPageCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/commands/PageCommands/AboutUsPageCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/commands/PageCommands/AdminRequestPageCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/commands/PageCommands/AdminRequestPageCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/commands/PageCommands/AdminReservePageCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/commands/PageCommands/AdminReservePageCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/commands/PageCommands/IndexPageCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/commands/PageCommands/IndexPageCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/commands/PageCommands/LIstOfReserveRoomPageCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/commands/PageCommands/LIstOfReserveRoomPageCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/commands/PageCommands/ListOfRequestRoomPageCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/commands/PageCommands/ListOfRequestRoomPageCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/commands/PageCommands/LoginPageCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/commands/PageCommands/LoginPageCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/commands/PageCommands/OrderRoomPageCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/commands/PageCommands/OrderRoomPageCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/commands/PageCommands/PayFormPageCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/commands/PageCommands/PayFormPageCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/commands/PageCommands/RegisterPageCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/commands/PageCommands/RegisterPageCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/commands/PageCommands/RequestPageCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/commands/PageCommands/RequestPageCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/commands/RegisterCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/commands/RegisterCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/commands/User/ConfirmOrderCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/commands/User/ConfirmOrderCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/commands/User/MakeOrderCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/commands/User/MakeOrderCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/commands/User/MakeOrderRequestCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/commands/User/MakeOrderRequestCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/commands/User/PaymentCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/commands/User/PaymentCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/commands/User/RejectOrderCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/commands/User/RejectOrderCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/commands/User/RoomReserveCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/commands/User/RoomReserveCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/filters/SecurityFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/filters/SecurityFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/listener/LocaleFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/filters/LocaleFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/listenerUtil/DateCheck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/listenerUtil/DateCheck.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/validation/Validation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/validation/Validation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/dao/OrdersDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/dao/OrdersDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/model/dao/RoomDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/dao/RoomDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/entity/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/entity/Room.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/dao/UserDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/entity/Orders.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/entity/Orders.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/locale_en.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/locale_en.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/locale_ua.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/locale_ua.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/aboutUs.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/aboutUs.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/adminRequestRooms.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/adminRequestRooms.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/adminReserveRooms.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/adminReserveRooms.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/header.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/index.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/listOfRequestRoom.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/listOfRequestRoom.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/listOfReserveRoom.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/listOfReserveRoom.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/loginView.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/loginView.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/orderRoom.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/orderRoom.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/payForm.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/payForm.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/register.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/register.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/request.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/request.jsp" afterDir="false" />
     </list>
@@ -86,40 +121,43 @@
     <option name="ignoreImplicitObjects" value="true" />
     <option name="ignoreSourceCode" value="false" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectId" id="2J0knHBjcsT8GO51zBptwiIRQq0" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "TODO_SCOPE": "All Places",
-    "WebServerToolWindowFactoryState": "false",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "extract.method.default.visibility": "private",
-    "last_opened_file_path": "C:/Users/artem/IdeaProjects/Hotel",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
-    "two.files.diff.last.used.file": "C:/Users/artem/IdeaProjects/Hotel/src/main/webapp/css/homepage.css",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;TODO_SCOPE&quot;: &quot;All Places&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;extract.method.default.visibility&quot;: &quot;private&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/artem/IdeaProjects/Hotel&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;,
+    &quot;two.files.diff.last.used.file&quot;: &quot;C:/Users/artem/IdeaProjects/Hotel/src/main/webapp/css/homepage.css&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="controller.commands" />
@@ -158,6 +196,14 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="All in Hotel" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Hotel" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="mysql-connector-java-8.0.11.jar" type="JarApplication" temporary="true">
       <option name="JAR_PATH" value="$PROJECT_DIR$/src/main/resources/META-INF/mysql-connector-java-8.0.11.jar" />
       <method v="2" />
@@ -175,7 +221,7 @@
       </deployment>
       <server-settings>
         <option name="BASE_DIRECTORY_NAME" value="c8887dea-581f-4476-9c45-89ed038ed920" />
-        <option name="JNDI_PORT" value="1088" />
+        <option name="JNDI_PORT" value="1077" />
       </server-settings>
       <predefined_log_file enabled="true" id="Tomcat" />
       <predefined_log_file enabled="true" id="Tomcat Catalina" />
@@ -252,45 +298,6 @@
         </option>
       </method>
     </configuration>
-    <configuration name="header.jsp" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" temporary="true" APPLICATION_SERVER_NAME="Tomcat 10.0.27" ALTERNATIVE_JRE_ENABLED="false">
-      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/jsp/header.jsp" />
-      <deployment>
-        <artifact name="Hotel:war exploded">
-          <settings>
-            <option name="CONTEXT_PATH" value="/Hotel_war_exploded" />
-          </settings>
-        </artifact>
-      </deployment>
-      <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="63e8dc48-f97e-4daa-a3d9-b4d4e5546955" />
-      </server-settings>
-      <predefined_log_file enabled="true" id="Tomcat" />
-      <predefined_log_file enabled="true" id="Tomcat Catalina" />
-      <predefined_log_file id="Tomcat Manager" />
-      <predefined_log_file id="Tomcat Host Manager" />
-      <predefined_log_file id="Tomcat Localhost Access" />
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-      <method v="2">
-        <option name="Make" enabled="true" />
-        <option name="BuildArtifacts" enabled="true">
-          <artifact name="Hotel:war exploded" />
-        </option>
-      </method>
-    </configuration>
     <configuration name="testlogin.jsp" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" temporary="true" APPLICATION_SERVER_NAME="Tomcat 10.0.27" ALTERNATIVE_JRE_ENABLED="false">
       <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/jsp/testlogin.jsp" />
       <deployment>
@@ -334,17 +341,17 @@
       <item itemvalue="Application.ConnectDB" />
       <item itemvalue="JAR Application.mysql-connector-java-8.0.11.jar" />
       <item itemvalue="JavaScript Debug.orderTypeOfRoom.jsp" />
+      <item itemvalue="JUnit.All in Hotel" />
       <item itemvalue="Tomcat Server.Tomcat 10.0.27" />
-      <item itemvalue="Tomcat Server.header.jsp" />
       <item itemvalue="Tomcat Server.testlogin.jsp" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.All in Hotel" />
         <item itemvalue="JavaScript Debug.orderTypeOfRoom.jsp" />
         <item itemvalue="Tomcat Server.testlogin.jsp" />
         <item itemvalue="Application.ConnectDB" />
         <item itemvalue="JAR Application.mysql-connector-java-8.0.11.jar" />
-        <item itemvalue="Tomcat Server.header.jsp" />
       </list>
     </recent_temporary>
   </component>
@@ -402,7 +409,13 @@
       <workItem from="1674243052235" duration="11793000" />
       <workItem from="1674289848624" duration="6483000" />
       <workItem from="1674303800080" duration="20112000" />
-      <workItem from="1674350216723" duration="3679000" />
+      <workItem from="1674350216723" duration="50346000" />
+      <workItem from="1674523869374" duration="58000" />
+      <workItem from="1674523946509" duration="3876000" />
+      <workItem from="1674588673159" duration="8784000" />
+      <workItem from="1674642909289" duration="133000" />
+      <workItem from="1674643047035" duration="17293000" />
+      <workItem from="1674698946980" duration="10986000" />
     </task>
     <task id="LOCAL-00001" summary="update1">
       <created>1673138251826</created>
@@ -425,7 +438,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674302782271</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="localisation and pagination">
+      <created>1674354220608</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1674354220608</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -446,7 +466,8 @@
     <MESSAGE value="update1" />
     <MESSAGE value="update2" />
     <MESSAGE value="update211" />
-    <option name="LAST_COMMIT_MESSAGE" value="update211" />
+    <MESSAGE value="localisation and pagination" />
+    <option name="LAST_COMMIT_MESSAGE" value="localisation and pagination" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

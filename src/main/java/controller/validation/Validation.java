@@ -8,20 +8,21 @@ import java.sql.SQLException;
 
 public class Validation {
     public static boolean LoginValidation(HttpServletRequest request, String email) {
-        if (email.isEmpty() || !email.matches("^[a-zA-Z0-9_!#$%&amp;'*+/=?`{|}~^.-]+@[a-zA-Z0-9.-]+$")){
+        if (email.isEmpty() || !email.matches("^[a-zA-Z0-9_!#$%&amp;'*+/=?`{|}~^.-]+@[a-zA-Z0-9.-]+$")) {
             request.setAttribute("message", "Please write your email in correct way");
             return true;
         }
         return false;
     }
-    public static boolean RegisterValidation(HttpServletRequest request,String name,String lastName, String email,String password,
+
+    public static boolean RegisterValidation(HttpServletRequest request, String name, String lastName, String email, String password,
                                              String confirmPassword, User users) throws SQLException {
         UserDao userDao = new UserDao();
-        if (name.isEmpty() || !name.matches("^[A-Za-z]+$")){
+        if (name.isEmpty() || !name.matches("^[A-Za-z]+$")) {
             request.setAttribute("message", "Please write your first name in correct way");
             return true;
         }
-        if (lastName.isEmpty() || !lastName.matches("^[A-Za-z]+$")){
+        if (lastName.isEmpty() || !lastName.matches("^[A-Za-z]+$")) {
             request.setAttribute("message", "Please write your last name in correct way");
             return true;
         }
@@ -29,15 +30,15 @@ public class Validation {
             request.setAttribute("message", "Your first name or last name is too long");
             return true;
         }
-        if (email.isEmpty() || !email.matches("^[a-zA-Z0-9_!#$%&amp;'*+/=?`{|}~^.-]+@[a-zA-Z0-9.-]+$")){
+        if (email.isEmpty() || !email.matches("^[a-zA-Z0-9_!#$%&amp;'*+/=?`{|}~^.-]+@[a-zA-Z0-9.-]+$")) {
             request.setAttribute("message", "Please write your email in correct way");
             return true;
         }
-        if (password.length() < 4 || password.length() > 16){
+        if (password.length() < 4 || password.length() > 16) {
             request.setAttribute("message", "Your password must have at least 4 length and not be larger than 16");
             return true;
         }
-        if (!password.equals(confirmPassword)){
+        if (!password.equals(confirmPassword)) {
             request.setAttribute("message", "Passwords don't match");
             return true;
         }
@@ -47,59 +48,54 @@ public class Validation {
         }
         return false;
     }
-    public static boolean PayValidation(HttpServletRequest request, String name, String email,
-                                        String address, String city, String state, String zip, String nameOnCard,
-                                        String card, String month,String year, String cvv) {
 
-        if (name.isEmpty() || !name.matches("^[A-Z][a-zA-Z]{3,}(?: [A-Z][a-zA-Z]*){0,2}$")){
+    public static boolean PayValidation(HttpServletRequest request, String name,
+                                        String card, String yearAndMonth, String cvv) {
+
+        if (name.isEmpty() || !name.matches("^[A-Z][a-zA-Z]{3,}(?: [A-Z][a-zA-Z]*){0,2}$")) {
             request.setAttribute("message", "Please write your name in correct way");
             return true;
         }
-        if (email.isEmpty() || !email.matches("^[a-zA-Z0-9_!#$%&amp;'*+/=?`{|}~^.-]+@[a-zA-Z0-9.-]+$")){
-            request.setAttribute("message", "Please write your email in correct way");
-            return true;
-        }
-        if (address.isEmpty()){
-            request.setAttribute("message", "Please write your address in correct way");
-            return true;
-        }
-        if (city.isEmpty() || !city.matches("^[a-zA-Z]{3,}+$")){
-            request.setAttribute("message", "Please write your city in correct way");
-            return true;
-        }
-        if (state.isEmpty() || !state.matches("^[a-zA-Z]{3,}+$")){
-            request.setAttribute("message", "Please write your country state in correct way");
-            return true;
-        }
-        if (zip.isEmpty() || !zip.matches("^\\d{5}$")){
-            request.setAttribute("message", "Please write your zip code in correct way");
-            return true;
-        }
-        if (nameOnCard.isEmpty() || !nameOnCard.matches("^[a-zA-Z\\.\\s]{3,}+$")){
-            request.setAttribute("message", "Please write your name on card in correct way");
-            return true;
-        }
-        if (card.isEmpty() || !card.matches("^\\d{15}$")){
+        if (card.isEmpty() || !card.matches("^\\d{15}$")) {
             request.setAttribute("message", "Please write your card number in correct way");
             return true;
         }
-        if (month.isEmpty() || !month.matches("^[A-Za-z]+$")){
-            request.setAttribute("message", "Please write your exp month in correct way");
-            return true;
-        }
-        if (year.isEmpty() || !year.matches("^[2][0][2]\\d{1}$")){
+        if (yearAndMonth.isEmpty() || !yearAndMonth.matches("^(0?[1-9]|1[012])[/](19|20)?[0-9]{2}$")) {
             request.setAttribute("message", "Please write your exp year in correct way");
             return true;
         }
-        if (cvv.isEmpty() || !cvv.matches("^\\d{3}$")){
+        if (cvv.isEmpty() || !cvv.matches("^\\d{3}$")) {
             request.setAttribute("message", "Please write your cvv in correct way");
             return true;
         }
         return false;
     }
-    public static boolean CheckDate(HttpServletRequest request, String date){
-        if (date.isEmpty() ) {
+
+    public static boolean CheckDate(HttpServletRequest request, String date) {
+        if (date.isEmpty() || !date.matches("^(0?[1-9]|[12][0-9]|3[01])[ /](0?[1-9]|1[012])[ /](19|20)?[0-9]{2}-(0?[1-9]|[12][0-9]|3[01])[ /](0?[1-9]|1[012])[ /](19|20)?[0-9]{2}$")) {
             request.setAttribute("message", "User with same email already exists");
+            return true;
+        }
+        return false;
+    }
+
+    public static boolean SearchRoomValid(HttpServletRequest request, String guest, String classOfRoom,
+                                          String fromPrice, String priceTo) {
+
+        if ( !guest.matches("^[0-9]*$")) {
+            request.setAttribute("message", "Please select correct number of person");
+            return true;
+        }
+        if (!classOfRoom.matches("^[A-Za-z]+$")) {
+            request.setAttribute("message", "Please select class of room");
+            return true;
+        }
+        if ( !fromPrice.matches("^[0-9]*$")) {
+            request.setAttribute("message", "Please write correct price");
+            return true;
+        }
+        if ( !priceTo.matches("^^[0-9]*$")) {
+            request.setAttribute("message", "Please write correct price");
             return true;
         }
         return false;

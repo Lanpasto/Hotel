@@ -15,14 +15,14 @@
                                                                                                     bundle="${lang}"/></h2>
                         <form method="post" action="controller?action=registerCommand" class="register-form">
                             <div class="form-outline mb-4">
-                                <input type="firstName" placeholder="Danylo" id="firstName" name="firstName"
-                                       class="form-control form-control-lg"/>
+                                <label for="firstName"></label><input type="firstName" placeholder="Danylo" id="firstName" name="firstName"
+                                                                      class="form-control form-control-lg"/>
                                 <label class="form-label text-white" for="password"><fmt:message key="register.fname"
                                                                                                  bundle="${lang}"/></label>
                             </div>
                             <div class="form-outline mb-4">
-                                <input type="lastName" placeholder="Vincent" id="lastName" name="lastName"
-                                       class="form-control form-control-lg"/>
+                                <label for="lastName"></label><input type="lastName" placeholder="Vincent" id="lastName" name="lastName"
+                                                                     class="form-control form-control-lg"/>
                                 <label class="form-label text-white" for="password"><fmt:message key="register.lname"
                                                                                                  bundle="${lang}"/></label>
                             </div>
@@ -40,9 +40,9 @@
                             </div>
 
                             <div class="form-outline mb-4">
-                                <input type="password" id="repeatPassword" placeholder="Repeat password"
-                                       name="repeatPassword"
-                                       class="form-control form-control-lg"/>
+                                <label for="repeatPassword"></label><input type="password" id="repeatPassword" placeholder="Repeat password"
+                                                                           name="repeatPassword"
+                                                                           class="form-control form-control-lg"/>
                                 <label class="form-label text-white" for="password"><fmt:message key="register.repeat"
                                                                                                  bundle="${lang}"/></label>
                             </div>
@@ -57,6 +57,7 @@
                                             class="fw-bold text-info"><u><fmt:message key="register.here"
                                                                                       bundle="${lang}"/></u></a></p>
                         </form>
+                        <%--@elvariable id="message" type=""--%>
                         <c:set var="message" value="${message}"/>
                         <p style="font-size: 16px;font-style: italic;color: red" id="message">${message}</p>
                     </div>

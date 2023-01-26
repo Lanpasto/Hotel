@@ -9,8 +9,11 @@
         <entry key="file://$PROJECT_DIR$/src/main/webapp/jsp/adminReserveRooms.jsp" value="file://$PROJECT_DIR$/src/main/webapp/jsp" />
         <entry key="file://$PROJECT_DIR$/src/main/webapp/jsp/header.jsp" value="file://$PROJECT_DIR$/src/main/webapp/jsp" />
         <entry key="file://$PROJECT_DIR$/src/main/webapp/jsp/index.jsp" value="file://$PROJECT_DIR$/src/main/webapp/jsp" />
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/jsp/listOfRequestRoom.jsp" value="file://$PROJECT_DIR$/src/main/webapp/jsp" />
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/jsp/listOfReserveRoom.jsp" value="file://$PROJECT_DIR$/src/main/webapp/jsp" />
         <entry key="file://$PROJECT_DIR$/src/main/webapp/jsp/loginView.jsp" value="file://$PROJECT_DIR$/src/main/webapp/jsp" />
         <entry key="file://$PROJECT_DIR$/src/main/webapp/jsp/orderRoom.jsp" value="file://$PROJECT_DIR$/src/main/webapp/jsp" />
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/jsp/payForm.jsp" value="file://$PROJECT_DIR$/src/main/webapp/jsp" />
         <entry key="file://$PROJECT_DIR$/src/main/webapp/jsp/register.jsp" value="file://$PROJECT_DIR$/src/main/webapp/jsp" />
         <entry key="file://$PROJECT_DIR$/src/main/webapp/jsp/request.jsp" value="file://$PROJECT_DIR$/src/main/webapp/jsp" />
         <entry key="file://$PROJECT_DIR$/src/main/webapp/jsp/test.jsp" value="file://$PROJECT_DIR$/src/main/webapp/jsp" />

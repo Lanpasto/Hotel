@@ -4,16 +4,18 @@ import controller.commands.Command;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import lombok.extern.log4j.Log4j;
 
 import java.io.IOException;
 import java.sql.SQLException;
 
 import static controller.Path.PAGE_LOGIN;
-
+@Log4j
 public class LoginPageCommand extends Command {
 
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException, SQLException {
-        return PAGE_LOGIN;
+        log.info("page loaded");
+            return PAGE_LOGIN;
     }
 }

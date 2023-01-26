@@ -1,6 +1,8 @@
-<%@include file="header.jsp" %>
+<%@ include file="header.jsp" %>
 <%@include file="background.jsp" %>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="jakarta.tags.core" %>
+<%@ taglib prefix="tf" tagdir="/WEB-INF/tags"%>
+<tf:title titleName="Pay"/>
 <link href="${pageContext.request.contextPath}/css/payform.css" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -18,15 +20,17 @@
                                 <h3>Payment</h3>
                                 <hr>
                             </div>
-                            <div class="card-details"> <input type="text" placeholder="0000 0000 0000 0000" data-slots="0" data-accept="\d" size="19"> <span>Card Number</span> <i class="fa fa-credit-card"></i> </div>
+                            <div class="card-details"> <input name="card" type="text" placeholder="1111-2222-3333-4444" data-slots="0" data-accept="\d" size="19"> <span>Card Number</span> <i class="fa fa-credit-card"></i> </div>
                             <div class="exp-cvv">
-                                <div class="card-details"> <input type="text" placeholder="mm/yyyy" data-slots="my"> <span>Expiry date</span> <i class="fa fa-calendar"></i> </div>
-                                <div class="card-details"> <input type="text" placeholder="000" data-slots="0" data-accept="\d" size="3"> <span>CVV</span> <i class="fa fa-info-circle"></i> </div>
+                                <div class="card-details"> <input name="yearAndMonth" type="text" placeholder="mm/yyyy" data-slots="my"> <span>Expiry date</span> <i class="fa fa-calendar"></i> </div>
+                                <div class="card-details"> <input name="cvv" type="text" placeholder="000" data-slots="0" data-accept="\d" size="3"> <span>CVV</span> <i class="fa fa-info-circle"></i> </div>
                             </div>
-                            <div style="margin-bottom: 20px" class="card-details mt-25"> <input type="text" placeholder="Enter cardholder's full name"> <span>Card Holder Name</span> </div>
+                            <div style="margin-bottom: 20px" class="card-details mt-25"> <input name="name" type="text" placeholder="Poncho Rider"> <span>Card Holder Name</span> </div>
 
                             <div class="button"> <button>Pay</button> </div>
                         </div>
+                    <c:set var="message" value="${message}"/>
+                    <p style="font-size: 16px;font-style: italic;color: red;  text-align: center;" id="message">${message}</p>
                 </form></div>
         </div>
     </div>

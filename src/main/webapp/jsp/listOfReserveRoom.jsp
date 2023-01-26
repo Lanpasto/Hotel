@@ -7,11 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="${pageContext.request.contextPath}/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <title></title>
 </head>
 <body>
 <div class="container mt-3">
-
-    <form>
         <div class="bg-warning">
             <div class="navbar-nav">
                 <div class="navbar-nav">
@@ -25,7 +24,6 @@
             </div>
             <tbody class="">
             <table class="table">
-
                 <c:forEach items="${ordersRequestListUser}" var="orders">
                     <c:set var="status" value="${orders.status}"/>
                         <%
@@ -34,14 +32,39 @@
                         %>
                         <%if (status.equals("Waiting for confirmation")) {%>
 
-                        <%}if (status.equals("Pending")) {%>
+                            <%}if(status.equalsIgnoreCase("Waiting for paid")){%>
+                    <tr class="table table-warning">
+                    <td><img src="${pageContext.request.contextPath}${orders.image}"
+                             style="height: 200px; width: 400px" alt="#"></td>
+                    <td class="text-bg-primary">
+                        <div><fmt:message key="reserveUser.price"
+                                          bundle="${lang}"/>${orders.totalPrice}$
+                        </div>
+                        <div><fmt:message key="reserveUser.reservedate"
+                                          bundle="${lang}"/><fmt:formatDate
+                                value="${orders.dateOfSettlement}" pattern=" MM/dd/yyyy"/> -
+                            <fmt:formatDate value="${orders.dateOfOut}" pattern="MM/dd/yyyy"/></div>
+                        <div>${orders.status}</div>
+                    </td>
 
-                        <%} if (status.equals("Successful")){%>
+                    <td class="text-end">
+                        <form method="post" action="controller?action=payForm">
+                            <button style="width: 100px" class="bg-success" name="roomId" value="${orders.roomId}"><fmt:message key="payment.paid" bundle="${lang}"/></button>
+                            <label>
+                                <input name="orderIdForConfirm" value="${orders.id}" hidden="hidden">
+                            </label>
+                            <label>
+                                <input name="statusPay" value="process" hidden="hidden">
+                            </label>
+                        </form>
+                    </td>
+                    </tr>
+                        <%} if (status.equals("Paid")){%>
 
                 <tr class="table table-warning">
                     <td><img src="${pageContext.request.contextPath}${orders.image}"
                              style="height: 200px; width: 400px" alt="#"></td>
-                    <td>
+                    <td class="text-bg-danger">
                         <div><fmt:message key="reserveUser.price"
                                           bundle="${lang}"/>${orders.totalPrice}$
                         </div>
@@ -58,8 +81,6 @@
                         <%}%>
 
                 </c:forEach>
-    </form>
-    </tbody>
-    </table>
+</div>
 </div>
 </body>

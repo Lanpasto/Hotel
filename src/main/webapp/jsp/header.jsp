@@ -1,10 +1,10 @@
 <%@ taglib prefix="fmt" uri="jakarta.tags.fmt" %>
 <fmt:requestEncoding value="UTF-8"/>
 <fmt:setLocale value="${sessionScope.lang}"/>
-<%--<%@ taglib prefix="tf" tagdir="/WEB-INF/tags"%>--%>
+<%@ taglib prefix="tf" tagdir="/WEB-INF/tags"%>
 <fmt:setBundle basename="locale" var="lang"/>
 
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html;charset=UTF-8" %>
 
 <html lang="en">
 <link href="${pageContext.request.contextPath}/css/bootstrap.min.css" rel="stylesheet">

@@ -10,47 +10,54 @@
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
 <link href="${pageContext.request.contextPath}/css/bootstrapBetter.css" rel="stylesheet">
 <form method="post" id="reserve" action="controller?action=makeRequest">
-<div class="container mt-sm-auto bg-secondary bg-opacity-25">
-    <div class="card bg-dark text-white">
-        <div class="payment-details">
-            <h3><fmt:message key="classSelect.previous"
-                             bundle="${lang}"/></h3>
-
-            <div class="billing">
+    <div class="container mt-sm-auto bg-secondary bg-opacity-25">
+        <div class="card bg-dark text-white">
+            <div class="payment-details">
+                <h3><fmt:message key="requestOrd.label"
+                                 bundle="${lang}"/></h3>
+                <div class="billing">
                 <span><fmt:message key="requestOrd.selectClass"
                                    bundle="${lang}"/></span>
-                <select name="classOfRoom">
-                    <option><fmt:message key="classSelect.chooseRom"
-                                         bundle="${lang}"/></option>
-                    <c:forEach items="${listCategory}" var="type_of_room">
-                        <option value="${type_of_room.id}">${type_of_room.type_of_room}</option>
-                    </c:forEach>
-                </select>
+
+                    <select name="classOfRoom">
+                        <option><fmt:message key="classSelect.class"
+                                             bundle="${lang}"/></option>
+                        <%--@elvariable id="listCategory" type="java.util.List"--%>
+                        <c:forEach items="${listCategory}" var="type_of_room">
+                            <option value="${type_of_room.id}">${type_of_room.type_of_room}</option>
+                        </c:forEach>
+                    </select>
+
+                </div>
+
             </div>
 
-        </div>
+            <div class="billing">
 
-        <div class="billing" >
-            <select name="numberOfPerson">
-                <option>Guest</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-            </select>
-            <span><fmt:message key="classSelect.numberOfPerson"
-                               bundle="${lang}"/></span>
-        </div>
+                <select name="numberOfPerson">
+                    <option><fmt:message key="classSelect.numberOfPerson" bundle="${lang}"/></option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select>
 
-        <div class="input-text">
-            <input type="text" name="datefilter" value="" placeholder="DD/MM/YY - DD/MM/YY">
-            <span><fmt:message key="classSelect.stay"
-                               bundle="${lang}"/></span>
+                <span><fmt:message key="classSelect.numberOfPerson"
+                                   bundle="${lang}"/></span>
+            </div>
+
+            <div class="input-text">
+
+                <input type="text" name="datefilter" value="" placeholder="DD/MM/YY - DD/MM/YY">
+
+                <span><fmt:message key="classSelect.stay"
+                                   bundle="${lang}"/></span>
+            </div>
+            <button type="submit" name="room" style="margin-top: 40px" class="btn btn-warning"><fmt:message
+                    key="requestOrd.claim"
+                    bundle="${lang}"/></button>
         </div>
-            <button type="submit" name="room" style="margin-top: 40px" class="btn btn-warning"><fmt:message key="requestOrd.claim"
-                                                                                                            bundle="${lang}"/></button>
     </div>
-</div>
 </form>
 <script type="text/javascript">
     $(function () {

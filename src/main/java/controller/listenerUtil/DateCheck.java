@@ -11,11 +11,14 @@ public class DateCheck implements Job {
     @Override
     public void execute(JobExecutionContext jobExecutionContext) throws JobExecutionException {
         OrdersDao orderDao = new OrdersDao();
+        orderDao.checkDateOut();
         try {
-            orderDao.checkDateOut();
+            orderDao.checkDateBooked();
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
+
+
     }
 
 }

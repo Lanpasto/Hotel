@@ -6,6 +6,7 @@ import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
+import lombok.extern.log4j.Log4j;
 import model.dao.OrdersDao;
 import model.dao.RoomDao;
 import model.entity.Orders;
@@ -19,31 +20,25 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.Instant;
 import java.util.Date;
-
+@Log4j
 public class ConfirmOrderAdminCommand extends Command {
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException, SQLException {
-        HttpSession session= request.getSession();
+        HttpSession session = request.getSession();
+        String dateOfOut = (String) session.getAttribute("dateOfOut");
+        String dateOfSettlement= (String) session.getAttribute("dateOfSettlement");
+        int requestId= (int) session.getAttribute("idRequest");
+        int userId= (int) session.getAttribute("userId");
         OrdersDao ordersDao = new OrdersDao();
         RoomDao roomDao = new RoomDao();
-        int requestId= Integer.parseInt(request.getParameter("idRequest"));
         ordersDao.updateOrderRequest(requestId);
-
-
-
-
-        String dateOfSettlement= request.getParameter("dateOfSettlement");
-        String dateOfOut= request.getParameter("dateOfOut");
         Timestamp firstDate = date(dateOfSettlement);
         Timestamp  secondDate = date(dateOfOut);
-        int roomId= Integer.parseInt(request.getParameter("roomId"));
-        System.out.println("ddssssssssss"+roomId);
-        int userId= Integer.parseInt((request.getParameter("userId"))) ;
+        int roomId= Integer.parseInt(request.getParameter("room"));
         int daysOfReserve = nDaysBetweenTwoDate(dateOfSettlement, dateOfOut);
         Room room = roomDao.findRoomById(roomId);
         int priceRoomForOneDay = room.getPrice();
         int totalPrice=priceRoomForOneDay*daysOfReserve;
-        System.out.println(totalPrice);
         Orders orders = Orders.builder()
                 .userId(userId)
 
@@ -58,6 +53,8 @@ public class ConfirmOrderAdminCommand extends Command {
                 .totalPrice(totalPrice)
 
                 .status("Waiting for confirmation")
+
+                .statusOfPay("process")
 
                 .build();
 

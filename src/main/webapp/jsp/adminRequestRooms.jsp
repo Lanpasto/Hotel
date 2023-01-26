@@ -30,8 +30,8 @@
             <%--@elvariable id="requestList" type="java.util.List"--%>
             <c:forEach items="${requestList}" var="request">
 
-
-                <form method="post" action="controller?action=confirmCommand" class="register-form">
+                <form method="post" action="controller?action=selectRoomReq" class="register-form">
+               <%-- <form method="post" action="controller?action=confirmCommand" class="register-form">--%>
                     <tbody class="bg-opacity-25 bg-white">
                     <tr>
                         <td>
@@ -75,18 +75,12 @@
                         </td>
                         <td>
                             <%if (status.equalsIgnoreCase("Pending")) {%>
-                            <input list="roomList" value="" name="roomId" id="roomId">
-                            <datalist id="roomList">
-                                <c:forEach items="${AllListRoom}" var="room">
-                                    <option id="${room.typeName}/${room.price}$/Person:${room.guests}" value="${room.id}"></option>
-                                </c:forEach>
-                            </datalist>
-
-
                             <button type="submit">Selects room</button>
+
                             <%}%>
                         </td>
-                </form>
+                        </form>
+               <%-- </form>--%>
 
             </c:forEach>
         </table>

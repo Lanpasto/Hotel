@@ -22,6 +22,7 @@ public class CommandContainer {
         commands.put("adminReservePage", new AdminReservePageCommand());
         commands.put("adminRequestPage", new AdminRequestPageCommand());
         commands.put("requestPage", new RequestPageCommand());
+        commands.put("selectRoomReq", new SelectRoomForRequestPageCommand());
 
 
 
@@ -30,7 +31,7 @@ public class CommandContainer {
         commands.put("logout", new LogoutCommand());
         commands.put("reserve",new RoomReserveCommand());
         commands.put("makeOrder", new MakeOrderCommand());
-        commands.put("changeLang", new ChangeLangCommand());
+        commands.put("changeLang", new ChangeLanguageCommand());
         commands.put("makeRequest",new MakeOrderRequestCommand());
         commands.put("confirmRequestUser",new ConfirmOrderCommand());
         commands.put("rejectRequestUser",new RejectOrderCommand());

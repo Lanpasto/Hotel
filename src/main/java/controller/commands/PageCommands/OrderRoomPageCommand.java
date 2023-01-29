@@ -4,6 +4,7 @@ import controller.commands.Command;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
 import lombok.extern.log4j.Log4j;
 import model.dao.RoomDao;
 import model.entity.Room;
@@ -19,6 +20,7 @@ public class OrderRoomPageCommand extends Command {
 
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException, SQLException {
+        HttpSession session= request.getSession();
         log.info("page loaded");
         RoomDao roomDao = new RoomDao();
         List<Room_of_type> listCategoryForSorting = roomDao.roomOfTypesList();
@@ -72,12 +74,14 @@ public class OrderRoomPageCommand extends Command {
                 / recordsPerPage);
 
         request.setAttribute("noOfPages", noOfPages);
-        request.setAttribute("guest", guest);
+        session.setAttribute("guest", guest);
         request.setAttribute("currentPage", page);
         System.out.println(fromPrice);
-        request.setAttribute("classRoom", classRoom);
-        request.setAttribute("fromPrice", (fromPrice));
-        request.setAttribute("priceTo", (priceTo));
+        session.setAttribute("classRoom", classRoom);
+        session.setAttribute("fromPrice", (fromPrice));
+        session.setAttribute("priceToParameter", (priceTo));
+
+        System.out.println(session.getAttribute("fromPrice") + " Atrribute");
 
         listOrders = roomDao.sortingRoomByClassGuestsPrice(room, 0,
                 recordsPerPage);

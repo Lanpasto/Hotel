@@ -9,14 +9,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9e1952fb-3c0a-4d5a-9a8f-e6cc31aa45f7" name="Changes" comment="patch1">
+    <list default="true" id="9e1952fb-3c0a-4d5a-9a8f-e6cc31aa45f7" name="Changes" comment="patch2">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/commands/PageCommands/OrderRoomPageCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/commands/PageCommands/OrderRoomPageCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/entity/Payment.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/orderRoom.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/orderRoom.jsp" afterDir="false" />
     </list>
-    <list id="4efdf5ce-cfd2-4410-b09f-e00e65973a64" name="Changes by levc4" comment="">
+    <list id="4efdf5ce-cfd2-4410-b09f-e00e65973a64" name="Changes by levc4" comment="Changes by levc4">
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/commands/PageCommands/OrderRoomPageCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/commands/PageCommands/OrderRoomPageCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/dao/RoomDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/dao/RoomDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/orderRoom.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/orderRoom.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -52,25 +52,29 @@
     <jsp-to-context jsp-file="file://$PROJECT_DIR$/src/main/webapp/jsp/header.jsp" context-file="file://$PROJECT_DIR$/src/main/webapp/jsp/loginView.jsp" />
   </component>
   <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/src/main/java/controller/commands/PageCommands/OrderRoomPageCommand.java">
-      <ranges>
-        <range start1="48" end1="48" start2="48" end2="49" changelist="4efdf5ce-cfd2-4410-b09f-e00e65973a64" />
-        <range start1="51" end1="52" start2="52" end2="52" changelist="4efdf5ce-cfd2-4410-b09f-e00e65973a64" />
-        <range start1="55" end1="56" start2="55" end2="55" changelist="4efdf5ce-cfd2-4410-b09f-e00e65973a64" />
-        <range start1="57" end1="58" start2="56" end2="56" changelist="4efdf5ce-cfd2-4410-b09f-e00e65973a64" />
-        <range start1="60" end1="66" start2="58" end2="66" changelist="4efdf5ce-cfd2-4410-b09f-e00e65973a64" />
-        <range start1="75" end1="75" start2="75" end2="77" changelist="9e1952fb-3c0a-4d5a-9a8f-e6cc31aa45f7" />
-        <range start1="76" end1="78" start2="78" end2="80" changelist="4efdf5ce-cfd2-4410-b09f-e00e65973a64" />
-      </ranges>
-    </file>
     <file path="$PROJECT_DIR$/src/main/webapp/jsp/orderRoom.jsp">
       <ranges>
-        <range start1="18" end1="18" start2="18" end2="27" changelist="9e1952fb-3c0a-4d5a-9a8f-e6cc31aa45f7" />
-        <range start1="19" end1="20" start2="28" end2="29" changelist="4efdf5ce-cfd2-4410-b09f-e00e65973a64" />
-        <range start1="35" end1="35" start2="44" end2="46" changelist="4efdf5ce-cfd2-4410-b09f-e00e65973a64" />
-        <range start1="36" end1="37" start2="47" end2="52" changelist="4efdf5ce-cfd2-4410-b09f-e00e65973a64" />
-        <range start1="39" end1="40" start2="54" end2="59" changelist="9e1952fb-3c0a-4d5a-9a8f-e6cc31aa45f7" />
-        <range start1="41" end1="41" start2="60" end2="63" changelist="4efdf5ce-cfd2-4410-b09f-e00e65973a64" />
+        <range start1="0" end1="0" start2="0" end2="1" changelist="4efdf5ce-cfd2-4410-b09f-e00e65973a64" />
+        <range start1="6" end1="6" start2="7" end2="15" changelist="4efdf5ce-cfd2-4410-b09f-e00e65973a64" />
+        <range start1="18" end1="26" start2="27" end2="27" changelist="4efdf5ce-cfd2-4410-b09f-e00e65973a64" />
+        <range start1="28" end1="29" start2="29" end2="30" changelist="4efdf5ce-cfd2-4410-b09f-e00e65973a64" />
+        <range start1="46" end1="48" start2="47" end2="48" changelist="4efdf5ce-cfd2-4410-b09f-e00e65973a64" />
+        <range start1="52" end1="55" start2="52" end2="55" changelist="9e1952fb-3c0a-4d5a-9a8f-e6cc31aa45f7" />
+        <range start1="59" end1="60" start2="59" end2="60" changelist="9e1952fb-3c0a-4d5a-9a8f-e6cc31aa45f7" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/src/main/java/controller/commands/PageCommands/OrderRoomPageCommand.java">
+      <ranges>
+        <range start1="6" end1="6" start2="6" end2="7" changelist="9e1952fb-3c0a-4d5a-9a8f-e6cc31aa45f7" />
+        <range start1="21" end1="21" start2="22" end2="23" changelist="9e1952fb-3c0a-4d5a-9a8f-e6cc31aa45f7" />
+        <range start1="38" end1="40" start2="40" end2="42" changelist="4efdf5ce-cfd2-4410-b09f-e00e65973a64" />
+        <range start1="45" end1="45" start2="47" end2="48" changelist="4efdf5ce-cfd2-4410-b09f-e00e65973a64" />
+        <range start1="48" end1="49" start2="51" end2="52" changelist="4efdf5ce-cfd2-4410-b09f-e00e65973a64" />
+        <range start1="51" end1="52" start2="54" end2="55" changelist="4efdf5ce-cfd2-4410-b09f-e00e65973a64" />
+        <range start1="54" end1="55" start2="57" end2="58" changelist="4efdf5ce-cfd2-4410-b09f-e00e65973a64" />
+        <range start1="61" end1="63" start2="64" end2="66" changelist="4efdf5ce-cfd2-4410-b09f-e00e65973a64" />
+        <range start1="74" end1="75" start2="77" end2="78" changelist="9e1952fb-3c0a-4d5a-9a8f-e6cc31aa45f7" />
+        <range start1="77" end1="80" start2="80" end2="85" changelist="9e1952fb-3c0a-4d5a-9a8f-e6cc31aa45f7" />
       </ranges>
     </file>
   </component>
@@ -389,7 +393,11 @@
       <workItem from="1674588673159" duration="8784000" />
       <workItem from="1674642909289" duration="133000" />
       <workItem from="1674643047035" duration="17293000" />
-      <workItem from="1674698946980" duration="15675000" />
+      <workItem from="1674698946980" duration="16687000" />
+      <workItem from="1674781863885" duration="1304000" />
+      <workItem from="1674806034276" duration="2797000" />
+      <workItem from="1674808857314" duration="3157000" />
+      <workItem from="1674957658023" duration="825000" />
     </task>
     <task id="LOCAL-00001" summary="update1">
       <created>1673138251826</created>
@@ -426,7 +434,21 @@
       <option name="project" value="LOCAL" />
       <updated>1674711650722</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="patch2">
+      <created>1674752158580</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1674752158580</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Changes by levc4">
+      <created>1674752174748</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1674752174748</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -449,7 +471,9 @@
     <MESSAGE value="update211" />
     <MESSAGE value="localisation and pagination" />
     <MESSAGE value="patch1" />
-    <option name="LAST_COMMIT_MESSAGE" value="patch1" />
+    <MESSAGE value="patch2" />
+    <MESSAGE value="Changes by levc4" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changes by levc4" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

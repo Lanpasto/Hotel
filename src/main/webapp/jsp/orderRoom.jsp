@@ -50,14 +50,14 @@
                         <%} else {%>
                         <input type="text" name="fromPrice" id="fromPrice" style="width: 60px" placeholder="0$" value="${fromPrice}">
                         <%}%>
-                    </label>
-                    <label>
-                        <%if (priceTo == 0) {%>
+
+
+                        <%if (Objects.equals(priceTo, "0")) {%>
                         <input type="text" name="priceTo" id="priceTo" style="width: 60px" placeholder="3000$" value="">
                         <%} else {%>
                         <input type="text" name="priceTo" id="priceTo" style="width: 60px" placeholder="3000$" value="${priceTo}">
                         <%}%>
-                    </label>
+
 
 
 

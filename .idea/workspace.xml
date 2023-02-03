@@ -9,15 +9,73 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9e1952fb-3c0a-4d5a-9a8f-e6cc31aa45f7" name="Changes" comment="patch2">
+    <list default="true" id="9e1952fb-3c0a-4d5a-9a8f-e6cc31aa45f7" name="Changes" comment="tests">
+      <change afterPath="$PROJECT_DIR$/src/test/java/testCommand/CommandContainerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/testCommand/ListOfReserveRoomPageCommandTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/testCommand/PaymentCommandTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/testCommand/RoomReserveCommandTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/testCommand/TestChangeLanguageCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/testCommand/TestConfirmOrderCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/testCommand/TestRejectOrderCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/testCommand/UpdateRoomStatusCommandTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/utils/DateCheckTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/resourceBundles.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/commands/PageCommands/OrderRoomPageCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/commands/PageCommands/OrderRoomPageCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/entity/Payment.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/commands/Admin/UpdateRoomStatusCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/commands/Admin/UpdateRoomStatusCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/commands/User/MakeOrderCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/commands/User/MakeOrderCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/dao/OrdersDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/dao/OrdersDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/dao/RoomDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/dao/RoomDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/beans.xml" beforeDir="false" afterPath="$PROJECT_DIR$/META-INF/beans.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/META-INF/persistence.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/aboutUs.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/aboutUs.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/adminReserveRooms.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/adminReserveRooms.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/listOfRequestRoom.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/listOfRequestRoom.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/orderRoom.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/orderRoom.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/utils/MySession.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/utils/MySession.java" afterDir="false" />
     </list>
-    <list id="4efdf5ce-cfd2-4410-b09f-e00e65973a64" name="Changes by levc4" comment="Changes by levc4">
+    <list id="4efdf5ce-cfd2-4410-b09f-e00e65973a64" name="Changes by levc4" comment="tests">
+      <change afterPath="$PROJECT_DIR$/src/main/java/controller/tags/MessageTag.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/testCommand/TestAboutUsPageCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/testCommand/TestAdminRequestPageCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/testCommand/TestIndexPageCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/testCommand/TestListOfRequestRoomPageCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/testCommand/TestLoginCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/testCommand/TestLoginPageCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/testCommand/TestLogoutCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/testCommand/TestPayFormPageCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/testCommand/TestRegisterCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/testCommand/TestRegisterPageCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/testCommand/TestRequestPageCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/testCommand/TestSelectRoomForRequestPageCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/testDao/TestOrdersDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/testDao/TestRoomDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/testDao/TestUserDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/validation/TestValidation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/commands/PageCommands/AdminRequestPageCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/commands/PageCommands/AdminRequestPageCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/commands/PageCommands/AdminReservePageCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/commands/PageCommands/AdminReservePageCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/commands/PageCommands/OrderRoomPageCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/commands/PageCommands/OrderRoomPageCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/commands/PageCommands/RequestPageCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/commands/PageCommands/RequestPageCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/commands/PageCommands/SelectRoomForRequestPageCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/commands/PageCommands/SelectRoomForRequestPageCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/commands/User/MakeOrderCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/commands/User/MakeOrderCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/listenerUtil/DateCheck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/listenerUtil/DateCheck.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/validation/Validation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/validation/Validation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/dao/OrdersDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/dao/OrdersDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/dao/RoomDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/dao/RoomDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/dao/UserDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/log4j.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/log4j.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/TLDs/message.tld" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/TLDs/message.tld" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/aboutUs.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/aboutUs.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/adminReserveRooms.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/adminReserveRooms.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/header.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/loginView.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/loginView.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/orderRoom.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/orderRoom.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/filters/TestEncodingFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/filters/TestEncodingFilter.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,35 +104,94 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="jar://$MAVEN_REPOSITORY$/jakarta/platform/jakarta.jakartaee-web-api/9.1.0/jakarta.jakartaee-web-api-9.1.0-sources.jar!/jakarta/servlet/jsp/SkipPageException.java" root0="SKIP_INSPECTION" />
+    <setting file="jar://$MAVEN_REPOSITORY$/jakarta/platform/jakarta.jakartaee-web-api/9.1.0/jakarta.jakartaee-web-api-9.1.0-sources.jar!/jakarta/servlet/jsp/tagext/SimpleTagSupport.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/main/webapp/jsp/adminReserveRooms.jsp" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="FORCE_HIGHLIGHTING" />
   </component>
   <component name="JspContextManager">
     <jsp-to-context jsp-file="file://$PROJECT_DIR$/src/main/webapp/jsp/header.jsp" context-file="file://$PROJECT_DIR$/src/main/webapp/jsp/loginView.jsp" />
   </component>
   <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/pom.xml">
+      <ranges>
+        <range start1="20" end1="20" start2="20" end2="25" changelist="9e1952fb-3c0a-4d5a-9a8f-e6cc31aa45f7" />
+        <range start1="21" end1="24" start2="26" end2="29" changelist="9e1952fb-3c0a-4d5a-9a8f-e6cc31aa45f7" />
+        <range start1="65" end1="77" start2="70" end2="70" changelist="4efdf5ce-cfd2-4410-b09f-e00e65973a64" />
+        <range start1="96" end1="102" start2="89" end2="89" changelist="4efdf5ce-cfd2-4410-b09f-e00e65973a64" />
+        <range start1="107" end1="107" start2="94" end2="127" changelist="4efdf5ce-cfd2-4410-b09f-e00e65973a64" />
+        <range start1="108" end1="108" start2="128" end2="164" changelist="9e1952fb-3c0a-4d5a-9a8f-e6cc31aa45f7" />
+        <range start1="164" end1="164" start2="220" end2="228" changelist="4efdf5ce-cfd2-4410-b09f-e00e65973a64" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml">
+      <ranges>
+        <range start1="3" end1="3" start2="3" end2="7" changelist="4efdf5ce-cfd2-4410-b09f-e00e65973a64" />
+        <range start1="31" end1="32" start2="35" end2="36" changelist="9e1952fb-3c0a-4d5a-9a8f-e6cc31aa45f7" />
+        <range start1="43" end1="43" start2="47" end2="48" changelist="9e1952fb-3c0a-4d5a-9a8f-e6cc31aa45f7" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/src/main/java/controller/commands/User/MakeOrderCommand.java">
+      <ranges>
+        <range start1="35" end1="38" start2="35" end2="35" changelist="9e1952fb-3c0a-4d5a-9a8f-e6cc31aa45f7" />
+        <range start1="71" end1="72" start2="68" end2="68" changelist="4efdf5ce-cfd2-4410-b09f-e00e65973a64" />
+        <range start1="75" end1="76" start2="71" end2="71" changelist="4efdf5ce-cfd2-4410-b09f-e00e65973a64" />
+      </ranges>
+    </file>
     <file path="$PROJECT_DIR$/src/main/webapp/jsp/orderRoom.jsp">
       <ranges>
         <range start1="0" end1="0" start2="0" end2="1" changelist="4efdf5ce-cfd2-4410-b09f-e00e65973a64" />
-        <range start1="6" end1="6" start2="7" end2="15" changelist="4efdf5ce-cfd2-4410-b09f-e00e65973a64" />
-        <range start1="18" end1="26" start2="27" end2="27" changelist="4efdf5ce-cfd2-4410-b09f-e00e65973a64" />
-        <range start1="28" end1="29" start2="29" end2="30" changelist="4efdf5ce-cfd2-4410-b09f-e00e65973a64" />
-        <range start1="46" end1="48" start2="47" end2="48" changelist="4efdf5ce-cfd2-4410-b09f-e00e65973a64" />
-        <range start1="52" end1="55" start2="52" end2="55" changelist="9e1952fb-3c0a-4d5a-9a8f-e6cc31aa45f7" />
-        <range start1="59" end1="60" start2="59" end2="60" changelist="9e1952fb-3c0a-4d5a-9a8f-e6cc31aa45f7" />
+        <range start1="6" end1="6" start2="7" end2="13" changelist="4efdf5ce-cfd2-4410-b09f-e00e65973a64" />
+        <range start1="18" end1="26" start2="25" end2="25" changelist="4efdf5ce-cfd2-4410-b09f-e00e65973a64" />
+        <range start1="28" end1="29" start2="27" end2="28" changelist="4efdf5ce-cfd2-4410-b09f-e00e65973a64" />
+        <range start1="35" end1="37" start2="34" end2="41" changelist="9e1952fb-3c0a-4d5a-9a8f-e6cc31aa45f7" />
+        <range start1="46" end1="49" start2="50" end2="52" changelist="4efdf5ce-cfd2-4410-b09f-e00e65973a64" />
+        <range start1="50" end1="51" start2="53" end2="55" changelist="4efdf5ce-cfd2-4410-b09f-e00e65973a64" />
+        <range start1="55" end1="56" start2="59" end2="60" changelist="4efdf5ce-cfd2-4410-b09f-e00e65973a64" />
+        <range start1="57" end1="58" start2="61" end2="63" changelist="4efdf5ce-cfd2-4410-b09f-e00e65973a64" />
+        <range start1="61" end1="63" start2="66" end2="66" changelist="4efdf5ce-cfd2-4410-b09f-e00e65973a64" />
+        <range start1="64" end1="64" start2="67" end2="68" changelist="9e1952fb-3c0a-4d5a-9a8f-e6cc31aa45f7" />
+        <range start1="65" end1="66" start2="69" end2="76" changelist="4efdf5ce-cfd2-4410-b09f-e00e65973a64" />
+        <range start1="72" end1="73" start2="82" end2="84" changelist="9e1952fb-3c0a-4d5a-9a8f-e6cc31aa45f7" />
+        <range start1="74" end1="74" start2="85" end2="86" changelist="9e1952fb-3c0a-4d5a-9a8f-e6cc31aa45f7" />
+        <range start1="81" end1="81" start2="93" end2="94" changelist="9e1952fb-3c0a-4d5a-9a8f-e6cc31aa45f7" />
+        <range start1="84" end1="85" start2="97" end2="99" changelist="4efdf5ce-cfd2-4410-b09f-e00e65973a64" />
+        <range start1="91" end1="95" start2="105" end2="109" changelist="4efdf5ce-cfd2-4410-b09f-e00e65973a64" />
+        <range start1="99" end1="100" start2="113" end2="115" changelist="4efdf5ce-cfd2-4410-b09f-e00e65973a64" />
+        <range start1="101" end1="102" start2="116" end2="117" changelist="4efdf5ce-cfd2-4410-b09f-e00e65973a64" />
+        <range start1="105" end1="108" start2="120" end2="123" changelist="4efdf5ce-cfd2-4410-b09f-e00e65973a64" />
+        <range start1="166" end1="167" start2="181" end2="191" changelist="9e1952fb-3c0a-4d5a-9a8f-e6cc31aa45f7" />
+        <range start1="188" end1="188" start2="212" end2="236" changelist="9e1952fb-3c0a-4d5a-9a8f-e6cc31aa45f7" />
       </ranges>
     </file>
-    <file path="$PROJECT_DIR$/src/main/java/controller/commands/PageCommands/OrderRoomPageCommand.java">
+    <file path="$PROJECT_DIR$/src/main/java/model/dao/RoomDao.java">
       <ranges>
-        <range start1="6" end1="6" start2="6" end2="7" changelist="9e1952fb-3c0a-4d5a-9a8f-e6cc31aa45f7" />
-        <range start1="21" end1="21" start2="22" end2="23" changelist="9e1952fb-3c0a-4d5a-9a8f-e6cc31aa45f7" />
-        <range start1="38" end1="40" start2="40" end2="42" changelist="4efdf5ce-cfd2-4410-b09f-e00e65973a64" />
-        <range start1="45" end1="45" start2="47" end2="48" changelist="4efdf5ce-cfd2-4410-b09f-e00e65973a64" />
-        <range start1="48" end1="49" start2="51" end2="52" changelist="4efdf5ce-cfd2-4410-b09f-e00e65973a64" />
-        <range start1="51" end1="52" start2="54" end2="55" changelist="4efdf5ce-cfd2-4410-b09f-e00e65973a64" />
-        <range start1="54" end1="55" start2="57" end2="58" changelist="4efdf5ce-cfd2-4410-b09f-e00e65973a64" />
-        <range start1="61" end1="63" start2="64" end2="66" changelist="4efdf5ce-cfd2-4410-b09f-e00e65973a64" />
-        <range start1="74" end1="75" start2="77" end2="78" changelist="9e1952fb-3c0a-4d5a-9a8f-e6cc31aa45f7" />
-        <range start1="77" end1="80" start2="80" end2="85" changelist="9e1952fb-3c0a-4d5a-9a8f-e6cc31aa45f7" />
+        <range start1="43" end1="44" start2="43" end2="50" changelist="9e1952fb-3c0a-4d5a-9a8f-e6cc31aa45f7" />
+        <range start1="70" end1="85" start2="76" end2="76" changelist="4efdf5ce-cfd2-4410-b09f-e00e65973a64" />
+        <range start1="87" end1="91" start2="78" end2="82" changelist="4efdf5ce-cfd2-4410-b09f-e00e65973a64" />
+        <range start1="111" end1="112" start2="102" end2="103" changelist="4efdf5ce-cfd2-4410-b09f-e00e65973a64" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/src/main/webapp/jsp/aboutUs.jsp">
+      <ranges>
+        <range start1="0" end1="0" start2="0" end2="1" changelist="9e1952fb-3c0a-4d5a-9a8f-e6cc31aa45f7" />
+        <range start1="3" end1="5" start2="4" end2="6" changelist="4efdf5ce-cfd2-4410-b09f-e00e65973a64" />
+        <range start1="11" end1="12" start2="12" end2="13" changelist="9e1952fb-3c0a-4d5a-9a8f-e6cc31aa45f7" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/src/main/webapp/jsp/adminReserveRooms.jsp">
+      <ranges>
+        <range start1="0" end1="0" start2="0" end2="1" changelist="4efdf5ce-cfd2-4410-b09f-e00e65973a64" />
+        <range start1="10" end1="29" start2="11" end2="14" changelist="4efdf5ce-cfd2-4410-b09f-e00e65973a64" />
+        <range start1="54" end1="58" start2="39" end2="49" changelist="4efdf5ce-cfd2-4410-b09f-e00e65973a64" />
+        <range start1="69" end1="71" start2="60" end2="64" changelist="9e1952fb-3c0a-4d5a-9a8f-e6cc31aa45f7" />
+        <range start1="182" end1="182" start2="175" end2="185" changelist="9e1952fb-3c0a-4d5a-9a8f-e6cc31aa45f7" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/src/main/java/model/dao/OrdersDao.java">
+      <ranges>
+        <range start1="62" end1="63" start2="62" end2="63" changelist="4efdf5ce-cfd2-4410-b09f-e00e65973a64" />
+        <range start1="185" end1="186" start2="185" end2="185" changelist="4efdf5ce-cfd2-4410-b09f-e00e65973a64" />
+        <range start1="198" end1="199" start2="197" end2="198" changelist="9e1952fb-3c0a-4d5a-9a8f-e6cc31aa45f7" />
       </ranges>
     </file>
   </component>
@@ -150,186 +267,100 @@
       <recent name="C:\Users\artem\IdeaProjects\Hotel\src\main\java\controller\servlets" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\artem\IdeaProjects\Hotel" />
+      <recent name="C:\Users\artem\IdeaProjects\Hotel\src\main\java\controller" />
       <recent name="C:\Users\artem\IdeaProjects\Hotel\src\main\resources" />
       <recent name="C:\Users\artem\IdeaProjects\Hotel\src\main\resources\META-INF" />
       <recent name="C:\Users\artem\IdeaProjects\Hotel\src\main\webapp\images" />
-      <recent name="C:\Users\artem\IdeaProjects\Hotel\src\main\webapp\jsp" />
-      <recent name="C:\Users\artem\IdeaProjects\Hotel\src\main\webapp\WEB-INF" />
     </key>
     <key name="ExtractSuperBase.RECENT_KEYS">
       <recent name="controller.commands.User" />
     </key>
   </component>
   <component name="RunManager" selected="Tomcat Server.Tomcat 10.0.27">
-    <configuration name="ConnectDB" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="database.ConnectDB" />
+    <configuration name="CommandContainerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Hotel" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="database.*" />
+          <option name="PATTERN" value="testCommand.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="testCommand" />
+      <option name="MAIN_CLASS_NAME" value="testCommand.CommandContainerTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="All in Hotel" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="DateCheckTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Hotel" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="TEST_OBJECT" value="package" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="utils.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="utils" />
+      <option name="MAIN_CLASS_NAME" value="utils.DateCheckTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="mysql-connector-java-8.0.11.jar" type="JarApplication" temporary="true">
-      <option name="JAR_PATH" value="$PROJECT_DIR$/src/main/resources/META-INF/mysql-connector-java-8.0.11.jar" />
-      <method v="2" />
-    </configuration>
-    <configuration name="orderTypeOfRoom.jsp" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:8080/Hotel_war_exploded/jsp/orderTypeOfRoom.jsp">
-      <method v="2" />
-    </configuration>
-    <configuration name="Tomcat 10.0.27" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 10.0.27" ALTERNATIVE_JRE_ENABLED="false">
-      <deployment>
-        <artifact name="Hotel:war exploded">
-          <settings>
-            <option name="CONTEXT_PATH" value="/Hotel_war_exploded" />
-          </settings>
-        </artifact>
-      </deployment>
-      <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="c8887dea-581f-4476-9c45-89ed038ed920" />
-        <option name="JNDI_PORT" value="1077" />
-      </server-settings>
-      <predefined_log_file enabled="true" id="Tomcat" />
-      <predefined_log_file enabled="true" id="Tomcat Catalina" />
-      <predefined_log_file id="Tomcat Manager" />
-      <predefined_log_file id="Tomcat Host Manager" />
-      <predefined_log_file id="Tomcat Localhost Access" />
-      <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="62367" />
-      </RunnerSettings>
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Profile">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
+    <configuration name="LocaleFilterTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Hotel" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="filters.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="filters" />
+      <option name="MAIN_CLASS_NAME" value="filters.LocaleFilterTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
-        <option name="BuildArtifacts" enabled="true">
-          <artifact name="Hotel:war exploded" />
-        </option>
       </method>
     </configuration>
-    <configuration name="testlogin.jsp" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" temporary="true" APPLICATION_SERVER_NAME="Tomcat 10.0.27" ALTERNATIVE_JRE_ENABLED="false">
-      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/jsp/testlogin.jsp" />
-      <deployment>
-        <artifact name="Hotel:war">
-          <settings>
-            <option name="CONTEXT_PATH" value="/Hotel_war" />
-          </settings>
-        </artifact>
-      </deployment>
-      <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="e52db5ea-2407-4465-b1d5-0743b72e4ecd" />
-      </server-settings>
-      <predefined_log_file enabled="true" id="Tomcat" />
-      <predefined_log_file enabled="true" id="Tomcat Catalina" />
-      <predefined_log_file id="Tomcat Manager" />
-      <predefined_log_file id="Tomcat Host Manager" />
-      <predefined_log_file id="Tomcat Localhost Access" />
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
+    <configuration name="MakeOrderCommandTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Hotel" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="testCommand.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="testCommand" />
+      <option name="MAIN_CLASS_NAME" value="testCommand.MakeOrderCommandTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
-        <option name="BuildArtifacts" enabled="true">
-          <artifact name="Hotel:war" />
-        </option>
+      </method>
+    </configuration>
+    <configuration name="java in Hotel" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Hotel" />
+      <option name="TEST_OBJECT" value="directory" />
+      <dir value="$PROJECT_DIR$/src/test/java" />
+      <method v="2">
+        <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.ConnectDB" />
-      <item itemvalue="JAR Application.mysql-connector-java-8.0.11.jar" />
-      <item itemvalue="JavaScript Debug.orderTypeOfRoom.jsp" />
-      <item itemvalue="JUnit.All in Hotel" />
+      <item itemvalue="JUnit.CommandContainerTest" />
+      <item itemvalue="JUnit.DateCheckTest" />
+      <item itemvalue="JUnit.LocaleFilterTest" />
+      <item itemvalue="JUnit.MakeOrderCommandTest" />
+      <item itemvalue="JUnit.java in Hotel" />
       <item itemvalue="Tomcat Server.Tomcat 10.0.27" />
-      <item itemvalue="Tomcat Server.testlogin.jsp" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.All in Hotel" />
-        <item itemvalue="JavaScript Debug.orderTypeOfRoom.jsp" />
-        <item itemvalue="Tomcat Server.testlogin.jsp" />
-        <item itemvalue="Application.ConnectDB" />
-        <item itemvalue="JAR Application.mysql-connector-java-8.0.11.jar" />
+        <item itemvalue="JUnit.java in Hotel" />
+        <item itemvalue="JUnit.CommandContainerTest" />
+        <item itemvalue="JUnit.LocaleFilterTest" />
+        <item itemvalue="JUnit.DateCheckTest" />
+        <item itemvalue="JUnit.MakeOrderCommandTest" />
       </list>
     </recent_temporary>
   </component>
@@ -397,7 +428,21 @@
       <workItem from="1674781863885" duration="1304000" />
       <workItem from="1674806034276" duration="2797000" />
       <workItem from="1674808857314" duration="3157000" />
-      <workItem from="1674957658023" duration="825000" />
+      <workItem from="1674957658023" duration="2996000" />
+      <workItem from="1675011993184" duration="12693000" />
+      <workItem from="1675055159021" duration="5834000" />
+      <workItem from="1675095543173" duration="15183000" />
+      <workItem from="1675128222180" duration="2385000" />
+      <workItem from="1675137899871" duration="5792000" />
+      <workItem from="1675173573821" duration="722000" />
+      <workItem from="1675219877208" duration="6000" />
+      <workItem from="1675220950905" duration="15924000" />
+      <workItem from="1675285680614" duration="273000" />
+      <workItem from="1675286516638" duration="100000" />
+      <workItem from="1675291470223" duration="10513000" />
+      <workItem from="1675307009663" duration="6000" />
+      <workItem from="1675349685692" duration="2741000" />
+      <workItem from="1675384896487" duration="2372000" />
     </task>
     <task id="LOCAL-00001" summary="update1">
       <created>1673138251826</created>
@@ -448,7 +493,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674752174748</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="patch3">
+      <created>1674965613929</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1674965613929</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -471,12 +523,21 @@
     <MESSAGE value="update211" />
     <MESSAGE value="localisation and pagination" />
     <MESSAGE value="patch1" />
-    <MESSAGE value="patch2" />
     <MESSAGE value="Changes by levc4" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changes by levc4" />
+    <MESSAGE value="patch2" />
+    <MESSAGE value="patch3" />
+    <MESSAGE value="tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="tests" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
     <select />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Hotel$TestValidation.ic" NAME="TestValidation Coverage Results" MODIFIED="1675227042199" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>validation.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Hotel$java_in_Hotel.ic" NAME="java in Hotel Coverage Results" MODIFIED="1675352105918" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/Hotel$testCommand_in_Hotel.ic" NAME="testCommand in Hotel Coverage Results" MODIFIED="1675296760488" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

@@ -10,7 +10,8 @@ import model.dao.RoomDao;
 import java.io.IOException;
 import java.sql.SQLException;
 
-import static controller.Path.PAGE_ADMINRESERVE;
+import static controller.Path.PAGE_INDEX;
+
 @Log4j
 public class UpdateRoomStatusCommand extends Command {
     @Override
@@ -20,6 +21,6 @@ public class UpdateRoomStatusCommand extends Command {
         RoomDao roomDao = new RoomDao();
         roomDao.updateRoomStatusManager(idRoom,status);
 
-        return PAGE_ADMINRESERVE;
+        return PAGE_INDEX;
     }
 }

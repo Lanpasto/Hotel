@@ -33,8 +33,13 @@
             <thead class="table-dark ">
             <tr>
                 <th class="input-text ">
-                    <span> <fmt:message key="classSelect.numberOfPerson" bundle="${lang}"/></span>
-                    <label for="guest"></label><input list="guestForDataList" style="width: 30px" value="" name="guest" id="guest">
+                   <span> <fmt:message key="classSelect.numberOfPerson" bundle="${lang}"/></span>
+                    <label for="guest"></label>
+                        <%if (Objects.equals(guest, "0")) {%>
+                    <input list="guestForDataList" style="width: 30px" value="" name="guest" id="guest">
+                        <%} else {%>
+                    <input list="guestForDataList" style="width: 30px" value="${guest}" name="guest" id="guest">
+                        <%}%>
                     <datalist id="guestForDataList">
                         <option>1</option>
                         <option>2</option>
@@ -62,6 +67,7 @@
 
 
                 <th class="input-text">
+
                     <span> <fmt:message key="classSelect.class" bundle="${lang}"/></span>
                 <label for="classOfRoom"></label><input list="classOfRoomAb" value="" name="classOfRoom" id="classOfRoom" placeholder="Class">
                     <datalist id="classOfRoomAb">
@@ -70,8 +76,10 @@
                             <option id="${type_of_room.id}" value="${type_of_room.type_of_room}"></option>
                         </c:forEach>
                     </datalist>
-                </th>
+
+            </th>
                 <th class="text-end">
+                    <button type="button"  class="btn btn-outline-primary text-end" onclick="clearAllExceptOne()">Clear</button>
                     <button type="submit" name="searchRoom" class="btn btn-outline-primary text-end">
                         <fmt:message key="classSelect.search" bundle="${lang}"/>
                     </button>
@@ -79,6 +87,7 @@
             </tr>
             </thead>
             <tbody class="bg-opacity-25 bg-white ">
+            <div id="errorMessage" style="display:none; color:red;">Error: Invalid value</div>
             <%--@elvariable id="listOrders" type="java.util.List"--%>
             <c:forEach items="${listOrders}" var="room">
             <tr>
@@ -164,7 +173,16 @@
     </form>
 </div>
 </body>
-
+<script>
+    function clearAllExceptOne() {
+        const inputs = document.querySelectorAll("input");
+        inputs.forEach(input => {
+            if (input.id !== "datefilter") {
+                input.value = "";
+            }
+        });
+    }
+</script>
 <script type="text/javascript">
     $(function () {
 
@@ -186,3 +204,27 @@
 
     });
 </script>
+<script>
+    const inputField = document.getElementById("classOfRoom");
+    const errorMessage = document.getElementById("errorMessage");
+    const options = document.querySelectorAll("#classOfRoomAb option");
+
+    inputField.addEventListener("input", function() {
+        let isValid = false;
+
+        for (let i = 0; i < options.length; i++) {
+            if (options[i].value === inputField.value) {
+                isValid = true;
+                break;
+            }
+        }
+
+        if (!isValid) {
+            errorMessage.style.display = "block";
+        } else {
+            errorMessage.style.display = "none";
+        }
+    }
+    );
+</script>
+

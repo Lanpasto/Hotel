@@ -33,9 +33,6 @@ public class MakeOrderCommand extends Command {
         OrdersDao ordersdao = new OrdersDao();
         HttpSession session = request.getSession();
         String allDate = request.getParameter("datefilter");
-       // if(CheckDate(request,allDate)){
-           // return Path.PAGE_LOGIN;
-      //  }
         String delimiter = " - ";
         String[] temp = allDate.split(delimiter);
         String firstDate = temp[0];

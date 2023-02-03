@@ -67,8 +67,10 @@
                 </td>
                 <td>
                 </td>
-                <td>
-                    <div class="text-end">
+                <td><div class="text-end">
+                    <button type="button"
+                         style="background:#3630a3;color:white;"
+                            onclick="clearAllExceptOne()">Clear</button>
                         <button style="background:#3630a3;color:white;">
                             <fmt:message key="classSelect.search" bundle="${lang}"/>
                         </button>
@@ -180,4 +182,14 @@
     </form>
 </div>
 </body>
+<script>
+    function clearAllExceptOne() {
+        const inputs = document.querySelectorAll("input");
+        inputs.forEach(input => {
+            if (input.id !== "datefilter") {
+                input.value = "";
+            }
+        });
+    }
+</script>
 

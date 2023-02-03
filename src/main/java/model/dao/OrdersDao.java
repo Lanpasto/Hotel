@@ -196,7 +196,7 @@ public class OrdersDao {
             rs.close();
             con.close();
         } catch (SQLException e) {
-            log.error("order update Status For Payment error");
+            log.error("order find Orders By Room error");
             e.printStackTrace();
         }
         return newOrders;

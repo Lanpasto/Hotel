@@ -2,6 +2,7 @@ package utils;
 
 import jakarta.servlet.ServletContext;
 import jakarta.servlet.http.HttpSession;
+import jakarta.servlet.http.HttpSessionContext;
 
 import java.util.Enumeration;
 import java.util.HashMap;
@@ -17,10 +18,20 @@ public class MySession implements HttpSession {
         attributes.put(name, object);
     }
 
+    @Override
+    public void putValue(String name, Object value) {
+
+    }
+
 
     @Override
     public Object getAttribute(String name) {
         return attributes.get(name);
+    }
+
+    @Override
+    public Object getValue(String name) {
+        return null;
     }
 
 
@@ -29,6 +40,10 @@ public class MySession implements HttpSession {
         attributes.remove(name);
     }
 
+    @Override
+    public void removeValue(String name) {
+
+    }
 
 
     @Override
@@ -59,9 +74,20 @@ public class MySession implements HttpSession {
     public int getMaxInactiveInterval() {
         return 0;
     }
+
+    @Override
+    public HttpSessionContext getSessionContext() {
+        return null;
+    }
+
     @Override
     public Enumeration<String> getAttributeNames() {
         return null;
+    }
+
+    @Override
+    public String[] getValueNames() {
+        return new String[0];
     }
 
 }

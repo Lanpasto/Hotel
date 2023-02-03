@@ -1,3 +1,4 @@
+<%@ taglib prefix="tf" tagdir="/WEB-INF/tags" %>
 <%@include file="header.jsp" %>
 <%@include file="background.jsp" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -9,7 +10,7 @@
 <body>
 <html>
 <head>
-    <title>Title</title>
+
     <div class="p-3 bg-info bg-opacity-10 border border-info border-start-0 rounded-end text-white bg-dark">
        <fmt:message key="aboutUs.text"
                     bundle="${lang}"/>

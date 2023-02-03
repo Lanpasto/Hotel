@@ -41,7 +41,13 @@ public class RoomDao {
             ResultSet rs = pst.executeQuery();
 
             if (rs.next()) {
-                newRoom = Room.builder().id(rs.getInt("id")).typeId(rs.getInt("typeId")).guests(rs.getInt("guests")).price(rs.getInt("price")).status(rs.getString("status")).build();
+                newRoom = Room.builder().id(rs.getInt("id")).
+                        typeId(rs.getInt("typeId")).
+                        guests(rs.getInt("guests")).
+                        price(rs.getInt("price")).
+                        status(rs.getString("status"))
+
+                        .build();
             }
             rs.close();
             con.close();

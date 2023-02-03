@@ -60,7 +60,7 @@ public class OrdersDao {
     }
 
     public void checkOrderPaid() throws SQLException {//TODO ЗРОБИТИ ЛИСЕНЕР ЗАБОРГОВАНОСТІ
-        String query = "SEleCT from orders on orders.status='Waiting for paid' set orders.status = 'reject'" + " where  orders.dateOfCreateOrder = CURDATE()+2";
+        String query = "update orders set orders.status = 'reject' where orders.status ='Waiting for paid' and DATE_ADD(DATE(orders.dateOfCreateOrder), INTERVAL 2 DAY) = CURDATE();";
         Connection con = DBUtil.getConnection();
         PreparedStatement pst = con.prepareStatement(query);
         pst.executeUpdate();
@@ -183,7 +183,6 @@ public class OrdersDao {
                 " AND ( (orders.dateOfSettlement BETWEEN '" + Date + "' AND '" + Date1 + "') " +
                 "OR(orders.dateOfOut BETWEEN '" + Date + "' AND '" + Date1 + "') " +
                 "OR(orders.dateOfSettlement < '" + Date + "' AND orders.dateOfOut > '" + Date1 + "'))";
-        System.out.println(query);
         Orders newOrders = null;
         try {
             Connection con = DBUtil.getConnection();

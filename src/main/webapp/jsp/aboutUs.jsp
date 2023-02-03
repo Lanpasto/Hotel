@@ -2,8 +2,8 @@
 <%@include file="header.jsp" %>
 <%@include file="background.jsp" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ taglib prefix="tf" tagdir="/WEB-INF/tags"%>
-<tf:title titleName="AboutUs"/>
+<tf:title titleName="Change info"></tf:title>
+
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>

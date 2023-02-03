@@ -22,8 +22,6 @@ public class AdminRequestPageCommand extends Command {
         List<Orders_request> requestList = orderDao.requestList();
         request.setAttribute("requestList", requestList);
 
-
-     //   System.out.println(AllListRoom.get(0).getId());
         return PAGE_ADMINREQUEST;
     }
 }

@@ -17,7 +17,11 @@ public class DateCheck implements Job {
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
-
+        try {
+            orderDao.checkOrderPaid();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
 
     }
 

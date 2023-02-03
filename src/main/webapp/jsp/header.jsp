@@ -1,10 +1,10 @@
 <%@ taglib prefix="fmt" uri="jakarta.tags.fmt" %>
 <fmt:requestEncoding value="UTF-8"/>
 <fmt:setLocale value="${sessionScope.lang}"/>
-<%@ taglib prefix="tf" tagdir="/WEB-INF/tags"%>
 <fmt:setBundle basename="locale" var="lang"/>
-
 <%@ page contentType="text/html;charset=UTF-8" %>
+<%@ taglib uri="/WEB-INF/TLDs/message.tld" prefix="customtag" %>  <%--custom tag--%>
+
 
 <html lang="en">
 <link href="${pageContext.request.contextPath}/css/bootstrap.min.css" rel="stylesheet">
@@ -18,10 +18,11 @@
         <img src="${pageContext.request.contextPath}/images/hotel1.png"
              alt="Logo image" style="height:50px;width: 90px ">
         <div>
-            <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+           <%-- <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
                 <li><a href="controller?action=changeLang&lang=en" class="nav-link px-2 text-white" >en</a></li>
                 <li><a href="controller?action=changeLang&lang=ua" class="nav-link px-2 text-white" >ua</a></li>
-            </ul>
+            </ul>--%>
+            <customtag:message/>
         </div>
     </div>
     <div class="collapse navbar-collapse">

@@ -1,9 +1,16 @@
+<%@ page import="java.util.Objects" %>
 <%@ taglib prefix="c" uri="jakarta.tags.core" %>
 <%@include file="header.jsp" %>
 <%@include file="background.jsp" %>
 <%--
 <tf:title titleName="RoomList"/>
 --%>
+<%
+    String fromPrice = (String) session.getAttribute("fromPrice");
+    String priceTo = session.getAttribute("priceTo").toString();
+    String guest = session.getAttribute("guest").toString();
+    String classOfRoom = session.getAttribute("classOfRoom").toString();
+%>
 <head>
     <link href="${pageContext.request.contextPath}/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
@@ -16,17 +23,9 @@
     <title></title>
 </head>
 <body>
-<%
-    int fromPrice;
-    int priceTo;
-
-        fromPrice = (int) session.getAttribute("fromPrice");
-        priceTo = (int) session.getAttribute("priceTo");
-
-%>
 
 <div class="container mt-md-0">
-    <form method="post" id="search" action="controller?action=orderRoomPage&fromPrice=${fromPrice}&priceTo=${priceTo}" class="order">
+    <form method="post" id="search" action="controller?action=orderRoomPage" class="order">
         <table class="table table-secondary">
             <c:set var="message" value="${message}"/>
             <p style="font-size: 16px;font-style: italic;color: red" id="message">${message}</p>
@@ -49,27 +48,32 @@
                     <span> <fmt:message key="classSelect.price" bundle="${lang}"/></span>
 
 
-                    <label>
-                        <%if (fromPrice == 0) {%>
-                        <input type="text" name="fromPrice" id="fromPrice" style="width: 60px" placeholder="0$" value="">
+                        <%if (Objects.equals(fromPrice, "0")) {%>
+                    <input type="text" name="fromPrice" id="fromPrice" style="width: 60px" placeholder="0$" value="">
                         <%} else {%>
-                        <input type="text" name="fromPrice" id="fromPrice" style="width: 60px" placeholder="0$" value="${fromPrice}">
+                    <input type="text" name="fromPrice" id="fromPrice" style="width: 60px" placeholder="0$"
+                           value="${fromPrice}">
                         <%}%>
 
 
                         <%if (Objects.equals(priceTo, "0")) {%>
-                        <input type="text" name="priceTo" id="priceTo" style="width: 60px" placeholder="3000$" value="">
+                    <input type="text" name="priceTo" id="priceTo" style="width: 60px" placeholder="3000$" value="">
                         <%} else {%>
-                        <input type="text" name="priceTo" id="priceTo" style="width: 60px" placeholder="3000$" value="${priceTo}">
+                    <input type="text" name="priceTo" id="priceTo" style="width: 60px" placeholder="3000$"
+                           value="${priceTo}">
                         <%}%>
-
-
 
 
                 <th class="input-text">
 
                     <span> <fmt:message key="classSelect.class" bundle="${lang}"/></span>
-                <label for="classOfRoom"></label><input list="classOfRoomAb" value="" name="classOfRoom" id="classOfRoom" placeholder="Class">
+                    <label for="classOfRoom"></label>
+                    <%if (Objects.equals(classOfRoom, "0")) {%>
+                    <input list="classOfRoomAb" value="" name="classOfRoom" id="classOfRoom" placeholder="Class">
+                    <%} else {%>
+                    <input list="classOfRoomAb" value="${classOfRoom}" name="classOfRoom" id="classOfRoom"
+                           placeholder="Class">
+                    <%}%>
                     <datalist id="classOfRoomAb">
                         <%--@elvariable id="listCategoryForSorting" type="java.util.List"--%>
                         <c:forEach items="${listCategoryForSorting}" var="type_of_room">
@@ -91,30 +95,32 @@
             <%--@elvariable id="listOrders" type="java.util.List"--%>
             <c:forEach items="${listOrders}" var="room">
             <tr>
-                <td class="col-md-6"><img src="${pageContext.request.contextPath}${room.image}" style="height: 200px; width: 400px" alt="#"></td>
+                <td class="col-md-6"><img src="${pageContext.request.contextPath}${room.image}"
+                                          style="height: 200px; width: 400px" alt="#"></td>
                 <td class="col-md-5"><p class="bg-gradient" style="color: #06357a ">
                     <p style="margin-top: 20px; color: #06357a"> Class: ${room.typeName }</p>
                     <p class="bg-gradient" style="color: #06357a ">Number of quests: ${room.guests }</p>
                     <p class="bg-gradient" style="color: #06357a ">Price: ${room.price}</p></td>
 
 
-                    <div class="input-text">
-                        <td class="col-md-1">
-                            <form method="post" id="reserve1" action="controller?action=makeOrder" class="order">
-                        <span><fmt:message key="classSelect.stay" bundle="${lang}"/></span>
+                <div class="input-text">
+                    <td class="col-md-1">
+                        <form method="post" id="reserve1" action="controller?action=makeOrder" class="order">
+                            <span><fmt:message key="classSelect.stay" bundle="${lang}"/></span>
                             <input type="text" id="datefilter" name="datefilter" value=""
                                    placeholder="DD/MM/YY - DD/MM/YY">
                                 ${room.id}
                             <%if (userSession != null) {%>
-                            <button type="submit" name="room" style="margin-top: 150px" class="btn btn-success" value="${room.id}"><fmt:message key="classSelect.reserve" bundle="${lang}"/>
+                            <button type="submit" name="room" style="margin-top: 150px" class="btn btn-success"
+                                    value="${room.id}"><fmt:message key="classSelect.reserve" bundle="${lang}"/>
                             </button>
-                            <%--@elvariable id="message" type=""--%>
+                                <%--@elvariable id="message" type=""--%>
                             <c:set var="message" value="${message}"/>
                             <p style="font-size: 16px;font-style: italic;color: red" id="message">${message}</p>
                             <%}%>
-                            </form>
-                        </td>
-                    </div>
+                        </form>
+                    </td>
+                </div>
 
             </tr>
             </tbody>

@@ -21,7 +21,6 @@ public class RequestPageCommand extends Command {
         RoomDao orderDao = new RoomDao();
         List<Room_of_type> listCategory = orderDao.roomOfTypesList();
         request.setAttribute("listCategory", listCategory);
-       // System.out.println(listCategory.get(0).getType_of_room());
         return PAGE_REQUEST;
     }
 }

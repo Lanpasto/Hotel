@@ -29,14 +29,14 @@ public class AdminReservePageCommand extends Command {
             page = Integer.parseInt(
                     request.getParameter("page"));
 
-        String status = "";
+        String statusForSorting = "";
         Room room;
         if (request.getParameter("statusForSorting") != null && !request.getParameter("statusForSorting").isEmpty())
         {
-            status = request.getParameter("statusForSorting");
+            statusForSorting = request.getParameter("statusForSorting");
         }
         room = Room.builder()
-                .status(status)
+                .status(statusForSorting)
                 .build();
 
         List<Room> AllListRoom = roomDao.sortingRoomByStatus(room, 0, recordsPerPage);
@@ -47,7 +47,7 @@ public class AdminReservePageCommand extends Command {
 
         request.setAttribute("noOfPages", noOfPages);
         request.setAttribute("currentPage", page);
-        request.setAttribute("status", status);
+        session.setAttribute("statusForSorting", statusForSorting);
         AllListRoom = roomDao.sortingRoomByStatus(room, 0,
                 recordsPerPage);
         request.setAttribute("AllListRoom", AllListRoom);

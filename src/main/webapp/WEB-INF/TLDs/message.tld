@@ -11,7 +11,7 @@
 
     <tag>
         <name>message</name>
-        <tag-class>com.example.cargodelivery.controller.myTags.MessageTag</tag-class>
+        <tag-class>controller.tags.MessageTag</tag-class>
         <body-content>empty</body-content>
     </tag>
 </taglib>

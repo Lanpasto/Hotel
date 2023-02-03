@@ -66,11 +66,9 @@ public class MakeOrderCommand extends Command {
         String all=dateFlippers(firstDate);
         String all1=dateFlippers(secondDate);
         Orders dateCompare =ordersdao.findOrdersByRoom(idRoom,all,all1);
-        System.out.println(dateCompare);
         if(dateCompare == null){
             log.info("MakeOrdersCommand successfully added");
             ordersDao.addOrder(orders);
-            System.out.println("SASASa");
             return forward;
 
         }else{

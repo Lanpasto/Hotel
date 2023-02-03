@@ -46,38 +46,14 @@ public class UserDao {
                         .roleId(rs.getInt("roleId"))
                         .email(rs.getString("email"))
                         .password(rs.getString("password"))
+                        .first_name(rs.getString("first_name"))
+                        .last_name(rs.getString("last_name"))
                         .build();
             }
             rs.close();
             con.close();
         } catch (SQLException e) {
             log.error("find User error");
-            e.printStackTrace();
-        }
-        return newUser;
-    }
-    public User findUserById(int userId) {
-        String query = "select * from user where id = ?";
-        User newUser = null;
-        try{
-            Connection con = DBUtil.getConnection();
-            PreparedStatement pst = con.prepareStatement(query);
-            pst.setInt(1, userId);
-            ResultSet rs = pst.executeQuery();
-
-            if (rs.next()) {
-                newUser = User.builder()
-                        .id(rs.getInt("id"))
-                        .first_name(rs.getString("first_name"))
-                        .last_name(rs.getString("last_name"))
-                        .email(rs.getString("email"))
-                        .password(rs.getString("password"))
-                        .roleId(rs.getInt("roleId"))
-                        .build();
-            }
-            rs.close();
-            con.close();
-        } catch (SQLException e) {
             e.printStackTrace();
         }
         return newUser;

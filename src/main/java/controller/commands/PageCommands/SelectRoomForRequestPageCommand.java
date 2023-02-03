@@ -32,10 +32,6 @@ public class SelectRoomForRequestPageCommand extends Command {
         session.setAttribute("dateOfSettlement", dateOfSettlement);
         session.setAttribute("userId", userId);
         session.setAttribute("idRequest", idRequest);
-        System.out.println(dateOfOut);
-        System.out.println(dateOfSettlement);
-        System.out.println(userId);
-        System.out.println(idRequest);
         String dateOfOutCor = dateFlippers(dateOfOut);
         String dateOfSetCor = dateFlippers(dateOfSettlement);
         List<Room> AllListRoomForSelect = roomDao.roomAllAvailableRoomForRequest(dateOfSetCor,dateOfOutCor);

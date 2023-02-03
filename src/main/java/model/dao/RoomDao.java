@@ -74,27 +74,12 @@ public class RoomDao {
         }
     }
 
-    public void RequestManager(int id) {
-        String query = "UPDATE room SET status = 'Waiting for confirmation' WHERE id = ?";
-        try {
-            Connection con = DBUtil.getConnection();
-            PreparedStatement pst = con.prepareStatement(query);
-            pst.setInt(1, id);
-            pst.executeUpdate();
-            pst.close();
-            con.close();
-        } catch (SQLException e) {
-            log.error("cargo add order error");
-            e.printStackTrace();
-        }
-    }
-
 
     public List<Room> roomAllAvailableRoomForRequest(String DateOfSet, String DateOfOut){
-        String query = "SELECT * FROM room, orders where" +
-                " (room.id=orders.roomId AND ( (orders.dateOfSettlement BETWEEN '" + DateOfSet + "' AND '" + DateOfOut + "') " +
-                "OR(orders.dateOfOut BETWEEN '" + DateOfSet + "' AND '" + DateOfOut + "') " +
-                "OR(orders.dateOfSettlement < '" + DateOfSet + "' AND orders.dateOfOut > '" + DateOfOut + "'))";
+        String query = "SELECT * FROM room WHERE room.id NOT IN (SELECT orders.roomId FROM " +
+                "orders WHERE ( (orders.dateOfSettlement BETWEEN '" + DateOfSet + "' AND '" + DateOfOut + "')" +
+                " OR (orders.dateOfOut  BETWEEN '" + DateOfSet + "' AND '" + DateOfOut + "') " +
+                "OR (orders.dateOfSettlement < '" + DateOfSet + "' AND orders.dateOfOut > '" + DateOfOut + "')));";
         ArrayList<Room> list = null;
         try {
             list = new ArrayList<>();
@@ -115,7 +100,7 @@ public class RoomDao {
             rs.close();
             con.close();
         } catch (SQLException e) {
-           // log.error("room All Available Room For Request error");
+            log.error("room All Available Room For Request error");
             e.printStackTrace();
         }
         return list;

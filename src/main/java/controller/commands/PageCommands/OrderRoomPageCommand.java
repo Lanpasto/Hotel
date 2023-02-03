@@ -37,32 +37,31 @@ public class OrderRoomPageCommand extends Command {
 
 
         int guest = 0;
-        String classRoom = "";
-        int fromPrice = 0;
-        int priceTo = 0;
+        String classOfRoom = "";
+        String fromPrice = "0";
+        String priceTo = "0";
         Room room;
 
         if (request.getParameter("guest") != null && !request.getParameter("guest").isEmpty()) {
             guest = Integer.parseInt(request.getParameter("guest"));
         }
         if (request.getParameter("classOfRoom") != null && !request.getParameter("classOfRoom").isEmpty()) {
-            classRoom = request.getParameter("classOfRoom");
+            classOfRoom = request.getParameter("classOfRoom");
         }
-        System.out.println(request.getParameter("fromPrice")+"REQUEST PED" );
 
         if (request.getParameter("fromPrice") != null && !request.getParameter("fromPrice").isEmpty()) {
-            fromPrice = Integer.parseInt(request.getParameter("fromPrice"));
+            fromPrice = request.getParameter("fromPrice");
         }
         if (request.getParameter("priceTo") != null && !request.getParameter("priceTo").isEmpty()) {
-            priceTo = Integer.parseInt(request.getParameter("priceTo"));
+            priceTo = request.getParameter("priceTo");
         }
 
 
             room = Room.builder()
                     .guests(guest)
-                    .typeName(classRoom)
-                    .fromPrice((fromPrice))
-                    .byPrice(priceTo)
+                    .typeName(classOfRoom)
+                    .fromPrice(Integer.parseInt(fromPrice))
+                    .byPrice(Integer.parseInt(priceTo))
                     .build();
 
 
@@ -76,12 +75,10 @@ public class OrderRoomPageCommand extends Command {
         request.setAttribute("noOfPages", noOfPages);
         session.setAttribute("guest", guest);
         request.setAttribute("currentPage", page);
-        System.out.println(fromPrice);
-        session.setAttribute("classRoom", classRoom);
+        session.setAttribute("classOfRoom", classOfRoom);
         session.setAttribute("fromPrice", (fromPrice));
-        session.setAttribute("priceToParameter", (priceTo));
+        session.setAttribute("priceTo", (priceTo));
 
-        System.out.println(session.getAttribute("fromPrice") + " Atrribute");
 
         listOrders = roomDao.sortingRoomByClassGuestsPrice(room, 0,
                 recordsPerPage);

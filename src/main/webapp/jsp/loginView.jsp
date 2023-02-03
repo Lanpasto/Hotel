@@ -1,9 +1,9 @@
 <%@ taglib prefix="c" uri="jakarta.tags.core" %>
 <%@include file="header.jsp" %>
 <%@include file="background.jsp" %>
-<%--
+<%@ taglib prefix="tf" tagdir="/WEB-INF/tags"%>
 <tf:title titleName="Login"/>
---%>
+
 <section class="vh-100">
     <body class="text-center">
     <div class="container-fluid ">

@@ -1,3 +1,4 @@
+<%@ page import="java.util.Objects" %>
 <%@ taglib prefix="c" uri="jakarta.tags.core" %>
 <%@include file="header.jsp" %>
 <%@include file="background.jsp" %>
@@ -8,25 +9,9 @@
     <link href="${pageContext.request.contextPath}/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
-<%--<%
-    String status1 = session.getAttribute("status").toString();
+<%
+    String statusForSorting = (String) session.getAttribute("statusForSorting");
 %>
-<form method="post" id="receiveReportsForm" action="controller?action=adminReservePage">
-    <div class="container"
-         style="max-width: 1515px;padding:20px;width: 1515px;background: #fff;box-shadow: 0 5px 10px rgba(0,0,0,.1);">
-        <p style="display: inline-block; margin-right: 45px; font-size: 30px">bbbbbbbbbbbbbbb</p>
-            <%
-            String lang = "";
-            lang = lang + session.getAttribute("lang");
-        %>
-        <p style="display: inline-block; margin-right: 3px; font-size: 20px">aaaaaaaaaaaaa</p>
-            <%if (!status1.isEmpty()) {%>
-        <input list="classOfRoomAb" style="width: 150px" value="statusForSorting" name="sender" id="sender"
-               class="col-2   custom-select" size="1">
-            <%} else {%>
-        <input list="classOfRoomAb" style="width: 150px" value="" name="sender" id="sender" class="col-2   custom-select"
-               size="1">
-            <%}%>--%>
 <body>
 <div class="container mt-3">
     <form method="post" id="search" action="controller?action=adminReservePage" class="order">
@@ -52,10 +37,16 @@
             <tr>
                 <td>
                     <div>
-                        <fmt:message key="statusOrder.status" bundle="${lang}"/>:<input list="classOfRoomAb" value=""
-                                                                                        name="statusForSorting"
-                                                                                        id="statusForSorting">
-
+                        <fmt:message key="statusOrder.status" bundle="${lang}"/>:
+                        <%if (Objects.equals(statusForSorting, "0")) {%>
+                        <input list="classOfRoomAb" value=""
+                               name="statusForSorting"
+                               id="statusForSorting">
+                        <%} else {%>
+                        <input list="classOfRoomAb" value="${statusForSorting}"
+                               name="statusForSorting"
+                               id="statusForSorting">
+                        <%}%>
                         <datalist id="classOfRoomAb">
                             <option>available</option>
                             <option>booked</option>

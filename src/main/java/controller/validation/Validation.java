@@ -56,7 +56,7 @@ public class Validation {
             request.setAttribute("message", "Please write your name in correct way");
             return true;
         }
-        if (card.isEmpty() || !card.matches("^\\d{15}$")) {
+        if (card.isEmpty() || !card.matches("^([0-9]{4}[\s-]?){3}([0-9]{4})$")) {
             request.setAttribute("message", "Please write your card number in correct way");
             return true;
         }

@@ -9,30 +9,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9e1952fb-3c0a-4d5a-9a8f-e6cc31aa45f7" name="Changes" comment="Fix order and status">
-      <change afterPath="$PROJECT_DIR$/sql/hotel.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+    <list default="true" id="9e1952fb-3c0a-4d5a-9a8f-e6cc31aa45f7" name="Changes" comment="fix localization">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/locale_en.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/locale_en.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/locale_ua.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/locale_ua.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/aboutUs.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/aboutUs.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/adminRequestRooms.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/adminRequestRooms.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/adminReserveRooms.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/adminReserveRooms.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/header.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/listOfRequestRoom.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/listOfRequestRoom.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/listOfReserveRoom.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/listOfReserveRoom.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/loginView.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/loginView.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/orderRoom.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/orderRoom.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/payForm.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/payForm.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/register.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/register.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/request.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/request.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/selectRoomForRequest.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/selectRoomForRequest.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/Path.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/Path.java" afterDir="false" />
     </list>
-    <list id="4efdf5ce-cfd2-4410-b09f-e00e65973a64" name="Changes by levc4" comment="testsAll" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -152,7 +132,7 @@
       <recent name="controller.commands.User" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.java in Hotel">
+  <component name="RunManager" selected="Tomcat Server.Tomcat 10.0.27">
     <configuration name="CommandContainerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Hotel" />
       <extension name="coverage">
@@ -333,7 +313,8 @@
       <workItem from="1676627977601" duration="5202000" />
       <workItem from="1676741614998" duration="705000" />
       <workItem from="1676801013702" duration="1898000" />
-      <workItem from="1676811769426" duration="5377000" />
+      <workItem from="1676811769426" duration="6541000" />
+      <workItem from="1676823020275" duration="4847000" />
     </task>
     <task id="LOCAL-00001" summary="update1">
       <created>1673138251826</created>
@@ -412,7 +393,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676811853094</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="fix localization">
+      <created>1676817255198</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1676817255198</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -441,7 +429,8 @@
     <MESSAGE value="tests" />
     <MESSAGE value="testsAll" />
     <MESSAGE value="Fix order and status" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix order and status" />
+    <MESSAGE value="fix localization" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix localization" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
@@ -451,7 +440,7 @@
     <SUITE FILE_PATH="coverage/Hotel$TestValidation.ic" NAME="TestValidation Coverage Results" MODIFIED="1675227042199" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>validation.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/Hotel$java_in_Hotel.ic" NAME="java in Hotel Coverage Results" MODIFIED="1676247978933" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/Hotel$java_in_Hotel.ic" NAME="java in Hotel Coverage Results" MODIFIED="1676817181291" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/Hotel$testCommand_in_Hotel.ic" NAME="testCommand in Hotel Coverage Results" MODIFIED="1675296760488" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

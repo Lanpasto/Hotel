@@ -8,8 +8,6 @@ public class Path {
     public static final String PAGE_INDEX = "/jsp/index.jsp";
     public static final String PAGE_LISTOFRESERVE = "/jsp/listOfReserveRoom.jsp";
     public static final String PAGE_ORDERROOM = "/jsp/orderRoom.jsp";
-
-    public static final String page_t = "/jsp/1.jsp";
     public static final String PAGE_LISTOFREQUEST = "/jsp/listOfRequestRoom.jsp";
     public static final String PAGE_ADMINRESERVE = "/jsp/adminReserveRooms.jsp";
 

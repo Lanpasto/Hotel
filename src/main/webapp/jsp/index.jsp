@@ -11,7 +11,7 @@
             <img src='${pageContext.request.contextPath}/images/hilton-port-moresby.jpg' alt="">
         </div>
         <div class="content">
-            <h2>Family Rooms</h2>
+            <h2><fmt:message key="index.family" bundle="${lang}"/></h2>
         </div>
     </div>
     <div class="card d-flex position-relative flex-column">
@@ -19,7 +19,7 @@
             <img src='${pageContext.request.contextPath}/images/the-shady-rest-hotel.jpg' alt="">
         </div>
         <div class="content">
-            <h2>Cheep Rooms</h2>
+            <h2><fmt:message key="index.cheep" bundle="${lang}"/></h2>
         </div>
     </div>
     <div class="card d-flex position-relative flex-column">
@@ -27,7 +27,7 @@
             <img src='${pageContext.request.contextPath}/images/lux.jpg' alt="">
         </div>
         <div class="content">
-            <h2>Luxury Rooms</h2>
+            <h2><fmt:message key="index.luxury" bundle="${lang}"/></h2>
         </div>
     </div>
 </div>

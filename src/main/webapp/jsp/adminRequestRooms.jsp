@@ -1,4 +1,3 @@
-<%@ taglib prefix="c" uri="jakarta.tags.core" %>
 <%@include file="header.jsp" %>
 <%@include file="background.jsp" %>
 <tf:title titleName="RequestManger"/>
@@ -36,23 +35,22 @@
                     <tr>
                         <td>
 
-                            <div class="text-dark text-bg-success">Name:<input name="userId" value="${request.userId}"
+                            <div class="text-dark text-bg-success"><fmt:message key="request.name" bundle="${lang}"/>:<input name="userId" value="${request.userId}"
                                                                                hidden="hidden">${request.name} ${request.lastName}
                             </div>
-                            <div class="text-dark text-bg-success">Class:<input name="idRequest" value="${request.id}"
+                            <div class="text-dark text-bg-success"><fmt:message key="classSelect.class" bundle="${lang}"/>:<input name="idRequest" value="${request.id}"
                                                                                 hidden="hidden">${request.typeName}
                             </div>
-                            <div class="text-dark text-bg-success">Guests:${request.guests} </div>
+                            <div class="text-dark text-bg-success"><fmt:message key="classSelect.quest" bundle="${lang}"/>:${request.guests} </div>
                             <div class="text-dark text-bg-success">Email:${request.email}</div>
                         </td>
                         <td>
-                            <div>Length of reserve:
+                            <div><fmt:message key="classSelect.stay" bundle="${lang}"/>
                                 <div class="badge bg-primary text-wrap " id="dateOfRequest" name="dateOfRequest"
                                      value="${request.dateOfSettlement}">
                                     <input name="dateOfSettlement"
                                            value="<fmt:formatDate value="${request.dateOfSettlement}" pattern="MM/dd/yyyy"/>"
                                            hidden="hidden">    ${f:formatLocalDateTime(request.dateOfSettlement, " MM/dd/yyyy")} -
-
                                     <input name="dateOfOut"
                                            value="<fmt:formatDate value="${request.dateOfOut}" pattern="MM/dd/yyyy"/>"
                                            hidden="hidden"> ${f:formatLocalDateTime(request.dateOfOut, " MM/dd/yyyy")}</div>
@@ -63,11 +61,11 @@
                                 status = status + pageContext.getAttribute("status");
                             %>
                             <%if (status.equalsIgnoreCase("Pending")) {%>
-                            <div class="badge bg-danger text-wrap ">Status: ${request.status}</div>
+                            <div class="badge bg-danger text-wrap "><fmt:message key="statusOrder.status" bundle="${lang}"/> ${request.status}</div>
                             <%} else if (status.equalsIgnoreCase("Successful")) {%>
-                            <div class="badge bg-success text-wrap ">Status: ${request.status}</div>
+                            <div class="badge bg-success text-wrap "><fmt:message key="statusOrder.status" bundle="${lang}"/> ${request.status}</div>
                             <%} else {%>
-                            <div class="badge bg-warning text-wrap ">Status: ${request.status}</div>
+                            <div class="badge bg-warning text-wrap "><fmt:message key="statusOrder.status" bundle="${lang}"/> ${request.status}</div>
                             <%}%>
 
 

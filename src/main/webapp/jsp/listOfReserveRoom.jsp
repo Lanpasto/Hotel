@@ -1,4 +1,3 @@
-<%@ taglib prefix="c" uri="jakarta.tags.core" %>
 <%@include file="header.jsp" %>
 <%@include file="background.jsp" %>
 <tf:title titleName="MyReserve"/>
@@ -25,6 +24,7 @@
         </div>
 
         <table class="table table-success">
+            <%--@elvariable id="ordersRequestListUser" type="java.util.List"--%>
             <c:forEach items="${ordersRequestListUser}" var="orders">
                 <c:set var="status" value="${orders.status}"/>
                 <%

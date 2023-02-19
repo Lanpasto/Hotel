@@ -1,5 +1,4 @@
 <%@ page import="java.util.Objects" %>
-<%@ taglib prefix="c" uri="jakarta.tags.core" %>
 <%@include file="header.jsp" %>
 <%@include file="background.jsp" %>
 <tf:title titleName="RoomManger"/>
@@ -62,7 +61,7 @@
                     <div class="text-end">
                         <button type="button"
                                 style="background:#3630a3;color:white;"
-                                onclick="clearAllExceptOne()">Clear
+                                onclick="clearAllExceptOne()"><fmt:message key="settings.clear" bundle="${lang}"/>
                         </button>
                         <button style="background:#3630a3;color:white;">
                             <fmt:message key="classSelect.search" bundle="${lang}"/>
@@ -107,7 +106,8 @@
                         <td>
                             <div class="text-end">
                                 <select name="statusOfRoom" required="required">
-                                    <option disabled selected>Set status</option>
+                                    <option disabled selected><fmt:message key="reserve.listRoom"
+                                                                           bundle="${lang}"/></option>
                                     <option>available</option>
                                     <option>booked</option>
                                     <option>busy</option>
@@ -120,6 +120,7 @@
                                                                             bundle="${lang}"/>
                                     </button>
                                 </div>
+                            </div>
                 </form>
 
             </c:forEach>
@@ -163,6 +164,7 @@
                     </tr>
                 </table>
                 <%--For displaying Next link --%>
+                <%--@elvariable id="currentPage" type=""--%>
                 <c:if test="${currentPage lt noOfPages}">
                     <li class="page-item">
                         <button type="submit" name="action1" value="${currentPage + 1}" style=" color: black;"

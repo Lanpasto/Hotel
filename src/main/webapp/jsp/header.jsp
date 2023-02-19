@@ -1,4 +1,6 @@
-<%@ taglib prefix="fmt" uri="jakarta.tags.fmt" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib prefix="tf" tagdir="/WEB-INF/tags" %>
 <fmt:requestEncoding value="UTF-8"/>
 <fmt:setLocale value="${sessionScope.lang}"/>
 <fmt:setBundle basename="locale" var="lang"/>

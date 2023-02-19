@@ -1,7 +1,6 @@
-<%@ taglib prefix="tf" tagdir="/WEB-INF/tags" %>
 <%@include file="header.jsp" %>
 <%@include file="background.jsp" %>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html;charset=UTF-8" %>
 <tf:title titleName="Change info"></tf:title>
 
 
@@ -12,8 +11,8 @@
 <head>
 
     <div class="p-3 bg-info bg-opacity-10 border border-info border-start-0 rounded-end text-white bg-dark">
-       <fmt:message key="aboutUs.text"
-                    bundle="${lang}"/>
+        <fmt:message key="aboutUs.text"
+                     bundle="${lang}"/>
     </div>
     <div class="container mt-3">
         <button type="button" class="btn btn-dark col-3" style="margin-left: 37%;width: 420px" data-bs-toggle="modal"
@@ -46,8 +45,6 @@
 
         </div>
     </div>
-    </div>
-
 </head>
 </html>
 </body>

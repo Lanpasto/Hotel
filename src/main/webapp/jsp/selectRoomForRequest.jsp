@@ -1,4 +1,3 @@
-<%@ taglib prefix="c" uri="jakarta.tags.core" %>
 <%@include file="header.jsp" %>
 <%@include file="background.jsp" %>
 <tf:title titleName="Order"/>

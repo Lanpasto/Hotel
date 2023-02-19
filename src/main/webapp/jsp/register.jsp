@@ -1,6 +1,4 @@
 <%@include file="header.jsp" %>
-<%@ taglib prefix="c" uri="jakarta.tags.core" %>
-
 <tf:title titleName="Registration"/>
 
 <html lang="eng">
@@ -15,13 +13,13 @@
                                                                                                     bundle="${lang}"/></h2>
                         <form method="post" action="controller?action=registerCommand" class="register-form">
                             <div class="form-outline mb-4">
-                                <label for="firstName"></label><input type="firstName" placeholder="Danylo" id="firstName" name="firstName"
+                                <label for="firstName"></label><input  placeholder="Danylo" id="firstName" name="firstName"
                                                                       class="form-control form-control-lg"/>
                                 <label class="form-label text-white" for="password"><fmt:message key="register.fname"
                                                                                                  bundle="${lang}"/></label>
                             </div>
                             <div class="form-outline mb-4">
-                                <label for="lastName"></label><input type="lastName" placeholder="Vincent" id="lastName" name="lastName"
+                                <label for="lastName"></label><input  placeholder="Vincent" id="lastName" name="lastName"
                                                                      class="form-control form-control-lg"/>
                                 <label class="form-label text-white" for="password"><fmt:message key="register.lname"
                                                                                                  bundle="${lang}"/></label>

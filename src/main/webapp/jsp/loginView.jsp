@@ -1,4 +1,3 @@
-<%@ taglib prefix="c" uri="jakarta.tags.core" %>
 <%@include file="header.jsp" %>
 <%@include file="background.jsp" %>
 <%@ taglib prefix="tf" tagdir="/WEB-INF/tags"%>
@@ -35,6 +34,7 @@
                                                            bundle="${lang}"/> <a href="controller?action=registerPage"
                                                                         class="link-info"><fmt:message key="login.here"
                                                                                                        bundle="${lang}"/></a></p>
+                        <%--@elvariable id="message" type=""--%>
                         <c:set var="message" value="${message}"/>
                         <p style="font-size: 16px;font-style: italic;color: red" id="message">${message}</p>
                     </form>

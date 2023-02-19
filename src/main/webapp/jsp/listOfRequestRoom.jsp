@@ -1,4 +1,3 @@
-<%@ taglib prefix="c" uri="jakarta.tags.core" %>
 <%@include file="header.jsp" %>
 <%@include file="background.jsp" %>
 <tf:title titleName="MyRequest"/>
@@ -40,14 +39,14 @@
             <tr style="background: #ced4da; border-top-right-radius: 12px">
                 <%if (status.equalsIgnoreCase("Waiting for confirmation")) {%>
                 <td class="table-info">
-                    <div> CreateRequest  ${f:formatLocalDateTime(orders.dateOfCreateOrder, " MM/dd/yyyy")}</div>
-                    <div> dateOfSettlement  ${f:formatLocalDateTime(orders.dateOfSettlement, " MM/dd/yyyy")}</div>
-                    <div> dateOfOut  ${f:formatLocalDateTime(orders.dateOfOut, " MM/dd/yyyy")}</div>
+                    <div>  <fmt:message key="listRequest.create" bundle="${lang}"/>:  ${f:formatLocalDateTime(orders.dateOfCreateOrder, " MM/dd/yyyy")}</div>
+                    <div>  <fmt:message key="listRequest.settle" bundle="${lang}"/>:  ${f:formatLocalDateTime(orders.dateOfSettlement, " MM/dd/yyyy")}</div>
+                    <div>  <fmt:message key="listRequest.out" bundle="${lang}"/>:  ${f:formatLocalDateTime(orders.dateOfOut, " MM/dd/yyyy")}</div>
 
-                    <div>Price:${orders.totalPrice}</div>
+                    <div><fmt:message key="classSelect.price" bundle="${lang}"/>:${orders.totalPrice}$</div>
                 </td>
                 <td class="text-center">
-                    <div class="badge bg-warning text-wrap ">Status: ${orders.status}</div>
+                    <div class="badge bg-warning text-wrap "><fmt:message key="statusOrder.status" bundle="${lang}"/> : ${orders.status}</div>
                 </td>
                 <td class="text-center">
                     <div class="btn-group">

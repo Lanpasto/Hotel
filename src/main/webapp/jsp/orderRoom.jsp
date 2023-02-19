@@ -1,8 +1,6 @@
 <%@ page import="java.util.Objects" %>
-<%@ taglib prefix="c" uri="jakarta.tags.core" %>
 <%@include file="header.jsp" %>
 <%@include file="background.jsp" %>
-
 <tf:title titleName="RoomList"/>
 
 <%
@@ -27,17 +25,16 @@
 <div class="container mt-md-0">
     <form method="post" id="search2" action="controller?action=orderRoomPage" class="order">
         <table class="table table-secondary">
-            <c:set var="message" value="${message}"/>
-            <p style="font-size: 16px;font-style: italic;color: red" id="message">${message}</p>
             <thead class="table-dark ">
             <tr>
                 <th class="input-text ">
                     <span> <fmt:message key="classSelect.numberOfPerson" bundle="${lang}"/></span>
                     <label for="guest"></label>
                         <%if (Objects.equals(guest, "0")) {%>
-                    <input  type="number" list="guestForDataList" style="width: 30px" value="" name="guest" id="guest">
+                    <input type="number" list="guestForDataList" style="width: 30px" value="" name="guest" id="guest">
                         <%} else {%>
-                    <input type="number" list="guestForDataList" style="width: 30px" value="${guest}" name="guest" id="guest">
+                    <input type="number" list="guestForDataList" style="width: 30px" value="${guest}" name="guest"
+                           id="guest">
                         <%}%>
                     <datalist id="guestForDataList">
                         <option>1</option>
@@ -66,27 +63,31 @@
 
                 <th class="input-text">
 
-                <span><fmt:message key="classSelect.class" bundle="${lang}"/></span>
-                <label for="classOfRoom"></label>
-                <% if (Objects.equals(classOfRoom, "0")) { %>
-                <input list="classOfRoomAb" name="classOfRoom" id="classOfRoom" placeholder="Class" oninput="validateInput(event)">
-                <% } else { %>
-                <input list="classOfRoomAb" value="${classOfRoom}" name="classOfRoom" id="classOfRoom" placeholder="Class" oninput="validateInput(event)">
-                <% } %>
-                <datalist id="classOfRoomAb">
-                    <%--@elvariable id="listCategoryForSorting" type="java.util.List"--%>
-                    <c:forEach items="${listCategoryForSorting}" var="type_of_room">
-                        <option id="${type_of_room.id}" value="${type_of_room.type_of_room}"></option>
-                    </c:forEach>
-                </datalist>
+                    <span><fmt:message key="classSelect.class" bundle="${lang}"/></span>
+                    <label for="classOfRoom"></label>
+                    <% if (Objects.equals(classOfRoom, "0")) { %>
+                    <input list="classOfRoomAb" name="classOfRoom" id="classOfRoom" placeholder="Class"
+                           oninput="validateInput(event)">
+                    <% } else { %>
+                    <input list="classOfRoomAb" value="${classOfRoom}" name="classOfRoom" id="classOfRoom"
+                           placeholder="Class" oninput="validateInput(event)">
+                    <% } %>
+                    <datalist id="classOfRoomAb">
+                        <%--@elvariable id="listCategoryForSorting" type="java.util.List"--%>
+                        <c:forEach items="${listCategoryForSorting}" var="type_of_room">
+                            <option id="${type_of_room.id}" value="${type_of_room.type_of_room}"></option>
+                        </c:forEach>
+                    </datalist>
 
                 </th>
                 <th class="text-end">
                     <form method="post" id="search1" action="controller?action=orderRoomPage" class="order">
-                    <button type="button"  class="btn btn-outline-primary text-end" onclick="clearAllExceptOne()">Clear</button>
-                    <button type="submit" name="searchRoom" class="btn btn-outline-primary text-end">
-                        <fmt:message key="classSelect.search" bundle="${lang}"/>
-                    </button>
+                        <button type="button" class="btn btn-outline-primary text-end" onclick="clearAllExceptOne()">
+                            <fmt:message key="settings.clear" bundle="${lang}"/>
+                        </button>
+                        <button type="submit" name="searchRoom" class="btn btn-outline-primary text-end">
+                            <fmt:message key="classSelect.search" bundle="${lang}"/>
+                        </button>
                     </form>
                 </th>
             </tr>
@@ -98,9 +99,9 @@
                 <td class="col-md-6"><img src="${pageContext.request.contextPath}${room.image}"
                                           style="height: 200px; width: 400px" alt="#"></td>
                 <td class="col-md-5"><p class="bg-gradient" style="color: #06357a ">
-                    <p style="margin-top: 20px; color: #06357a"> Class: ${room.typeName }</p>
-                    <p class="bg-gradient" style="color: #06357a ">Number of quests: ${room.guests }</p>
-                    <p class="bg-gradient" style="color: #06357a ">Price: ${room.price}</p></td>
+                    <p style="margin-top: 20px; color: #06357a"> <fmt:message key="classSelect.class" bundle="${lang}"/>: ${room.typeName }</p>
+                    <p class="bg-gradient" style="color: #06357a "><fmt:message key="classSelect.numberOfPerson" bundle="${lang}"/>: ${room.guests }</p>
+                    <p class="bg-gradient" style="color: #06357a "><fmt:message key="classSelect.price" bundle="${lang}"/>: ${room.price}$</p></td>
 
 
                 <div class="input-text">
@@ -130,14 +131,14 @@
             <ul class="pagination justify-content-center">
                 <%--@elvariable id="currentPage" type=""--%>
                 <c:if test="${currentPage != 1}">
-                    <li class="page-item">
-                        <button type="submit" name="action1" value="${currentPage - 1}" style=" color: black;"
-                                formaction="controller?action=orderRoomPage&page=${currentPage - 1}" class="page-link">
-                            <fmt:message key="classSelect.previous"
-                                         bundle="${lang}"/>
-                        </button>
+                <li class="page-item">
+                    <button type="submit" name="action1" value="${currentPage - 1}" style=" color: black;"
+                            formaction="controller?action=orderRoomPage&page=${currentPage - 1}" class="page-link">
+                        <fmt:message key="classSelect.previous"
+                                     bundle="${lang}"/>
+                    </button>
 
-                    </li>
+                </li>
                 </c:if>
 
                 <%--For displaying Page numbers. The when condition does not display
@@ -168,17 +169,13 @@
                 </table>
                 <%--For displaying Next link --%>
                 <c:if test="${currentPage lt noOfPages}">
-                    <li class="page-item">
-                        <button type="submit" name="action1" value="${currentPage + 1}" style=" color: black;"
-                                formaction="controller?action=orderRoomPage&page=${currentPage + 1}"
-                                class="page-link"><fmt:message key="classSelect.next" bundle="${lang}"/>
-                        </button>
-                        </form>
-                    </li>
-                </c:if>
-            </ul>
-        </nav>
+                <li class="page-item">
+                    <button type="submit" name="action1" value="${currentPage + 1}" style=" color: black;"
+                            formaction="controller?action=orderRoomPage&page=${currentPage + 1}"
+                            class="page-link"><fmt:message key="classSelect.next" bundle="${lang}"/>
+                    </button>
     </form>
+    </c:if>
 </div>
 </body>
 <script>
@@ -255,7 +252,6 @@
             input.setCustomValidity('');
         }
     }
-
 </script>
 
 

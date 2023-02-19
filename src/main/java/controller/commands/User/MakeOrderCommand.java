@@ -27,59 +27,52 @@ public class MakeOrderCommand extends Command {
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException, SQLException {
         log.info("MakeOrderCommand started");
-        String forward;
-        forward = Path.PAGE_INDEX;
-        RoomDao roomDao = new RoomDao();
-        OrdersDao ordersdao = new OrdersDao();
+        String forward = Path.PAGE_INDEX;
+
         HttpSession session = request.getSession();
         String allDate = request.getParameter("datefilter");
-        String delimiter = " - ";
-        String[] temp = allDate.split(delimiter);
+        String[] temp = allDate.split(" - ");
         String firstDate = temp[0];
         String secondDate = temp[1];
-        int daysOfReserve = nDaysBetweenTwoDate(firstDate, secondDate);
+
         Timestamp DateOfSettlement = date(firstDate);
         Timestamp DateOfOut = date(secondDate);
         int idUser = (int) session.getAttribute("currentUserId");
         int idRoom = Integer.parseInt(request.getParameter("room"));
+
+        RoomDao roomDao = new RoomDao();
         Room room = roomDao.findRoomById(idRoom);
+        int daysOfReserve = nDaysBetweenTwoDate(firstDate, secondDate);
         int priceRoomForOneDay = room.getPrice();
         int TotalBill = daysOfReserve * priceRoomForOneDay;
+
         Orders orders = Orders.builder()
                 .userId(idUser)
-
                 .roomId(idRoom)
-
                 .dateOfSettlement(DateOfSettlement)
-
                 .dateOfOut(DateOfOut)
-
                 .dateOfCreateOrder(Timestamp.from(Instant.now()))
-
                 .totalPrice(TotalBill)
-
                 .status("Waiting for paid")
-
-
                 .build();
+
         OrdersDao ordersDao = new OrdersDao();
-        String all=dateFlippers(firstDate);
-        String all1=dateFlippers(secondDate);
-        Orders dateCompare =ordersdao.findOrdersByRoom(idRoom,all,all1);
-        if(dateCompare == null){
+        String all = dateFlippers(firstDate);
+        String all1 = dateFlippers(secondDate);
+        Orders dateCompare = ordersDao.findOrdersByRoom(idRoom, all, all1);
+
+        if (dateCompare == null) {
             log.info("MakeOrdersCommand successfully added");
             ordersDao.addOrder(orders);
             return forward;
-
-        }else{
+        } else {
             log.info("MakeOrdersCommand failed");
-                  request.setAttribute("message", "Wrong information please \n" +
-                    "check it out");
+            request.setAttribute("message", "Wrong information please check it out");
         }
         return forward;
     }
 
-    public static int nDaysBetweenTwoDate(String firstString, String secondString) {
+        public static int nDaysBetweenTwoDate(String firstString, String secondString) {
         SimpleDateFormat df = new SimpleDateFormat("MM/dd/yyyy");
         java.util.Date firstDate = null;
         java.util.Date secondDate = null;
@@ -104,14 +97,12 @@ public class MakeOrderCommand extends Command {
         } catch (ParseException e) {
             throw new RuntimeException(e);
         }
-        Timestamp timeStampDateFirst = new Timestamp(date.getTime());
-        return timeStampDateFirst;
+        return new Timestamp(date.getTime());
     }
     public static String dateFlippers(String startDateString){
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM/dd/yyyy");
         DateTimeFormatter formatter2 = DateTimeFormatter.ofPattern("yyyy/MM/dd");
-        String startDateBack = LocalDate.parse(startDateString, formatter).format(formatter2);
-        return startDateBack;
+        return LocalDate.parse(startDateString, formatter).format(formatter2);
     }
 }
 

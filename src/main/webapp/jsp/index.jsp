@@ -1,7 +1,7 @@
 <%@include file="header.jsp" %>
 <%@include file="background.jsp" %>
 <%@ taglib prefix="tf" tagdir="/WEB-INF/tags"%>
-<tf:title titleName="Home"/>
+<tf:title titleName="Hotel"/>
 <link href="${pageContext.request.contextPath}/css/homepage.css" rel="stylesheet">
 <html>
 <body >

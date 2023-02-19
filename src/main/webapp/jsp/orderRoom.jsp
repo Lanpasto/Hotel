@@ -2,9 +2,9 @@
 <%@ taglib prefix="c" uri="jakarta.tags.core" %>
 <%@include file="header.jsp" %>
 <%@include file="background.jsp" %>
-<%--
+
 <tf:title titleName="RoomList"/>
---%>
+
 <%
     String fromPrice = (String) session.getAttribute("fromPrice");
     String priceTo = session.getAttribute("priceTo").toString();
@@ -25,19 +25,19 @@
 <body>
 
 <div class="container mt-md-0">
-    <form method="post" id="search" action="controller?action=orderRoomPage" class="order">
+    <form method="post" id="search2" action="controller?action=orderRoomPage" class="order">
         <table class="table table-secondary">
             <c:set var="message" value="${message}"/>
             <p style="font-size: 16px;font-style: italic;color: red" id="message">${message}</p>
             <thead class="table-dark ">
             <tr>
                 <th class="input-text ">
-                   <span> <fmt:message key="classSelect.numberOfPerson" bundle="${lang}"/></span>
+                    <span> <fmt:message key="classSelect.numberOfPerson" bundle="${lang}"/></span>
                     <label for="guest"></label>
                         <%if (Objects.equals(guest, "0")) {%>
-                    <input list="guestForDataList" style="width: 30px" value="" name="guest" id="guest">
+                    <input  type="number" list="guestForDataList" style="width: 30px" value="" name="guest" id="guest">
                         <%} else {%>
-                    <input list="guestForDataList" style="width: 30px" value="${guest}" name="guest" id="guest">
+                    <input type="number" list="guestForDataList" style="width: 30px" value="${guest}" name="guest" id="guest">
                         <%}%>
                     <datalist id="guestForDataList">
                         <option>1</option>
@@ -49,49 +49,49 @@
 
 
                         <%if (Objects.equals(fromPrice, "0")) {%>
-                    <input type="text" name="fromPrice" id="fromPrice" style="width: 60px" placeholder="0$" value="">
+                    <input type="number" name="fromPrice" id="fromPrice" style="width: 60px" placeholder="0$" value="">
                         <%} else {%>
-                    <input type="text" name="fromPrice" id="fromPrice" style="width: 60px" placeholder="0$"
+                    <input type="number" name="fromPrice" id="fromPrice" style="width: 60px" placeholder="0$"
                            value="${fromPrice}">
                         <%}%>
 
 
                         <%if (Objects.equals(priceTo, "0")) {%>
-                    <input type="text" name="priceTo" id="priceTo" style="width: 60px" placeholder="3000$" value="">
+                    <input type="number" name="priceTo" id="priceTo" style="width: 60px" placeholder="3000$" value="">
                         <%} else {%>
-                    <input type="text" name="priceTo" id="priceTo" style="width: 60px" placeholder="3000$"
+                    <input type="number" name="priceTo" id="priceTo" style="width: 60px" placeholder="3000$"
                            value="${priceTo}">
                         <%}%>
 
 
                 <th class="input-text">
 
-                    <span> <fmt:message key="classSelect.class" bundle="${lang}"/></span>
-                    <label for="classOfRoom"></label>
-                    <%if (Objects.equals(classOfRoom, "0")) {%>
-                    <input list="classOfRoomAb" value="" name="classOfRoom" id="classOfRoom" placeholder="Class">
-                    <%} else {%>
-                    <input list="classOfRoomAb" value="${classOfRoom}" name="classOfRoom" id="classOfRoom"
-                           placeholder="Class">
-                    <%}%>
-                    <datalist id="classOfRoomAb">
-                        <%--@elvariable id="listCategoryForSorting" type="java.util.List"--%>
-                        <c:forEach items="${listCategoryForSorting}" var="type_of_room">
-                            <option id="${type_of_room.id}" value="${type_of_room.type_of_room}"></option>
-                        </c:forEach>
-                    </datalist>
+                <span><fmt:message key="classSelect.class" bundle="${lang}"/></span>
+                <label for="classOfRoom"></label>
+                <% if (Objects.equals(classOfRoom, "0")) { %>
+                <input list="classOfRoomAb" name="classOfRoom" id="classOfRoom" placeholder="Class" oninput="validateInput(event)">
+                <% } else { %>
+                <input list="classOfRoomAb" value="${classOfRoom}" name="classOfRoom" id="classOfRoom" placeholder="Class" oninput="validateInput(event)">
+                <% } %>
+                <datalist id="classOfRoomAb">
+                    <%--@elvariable id="listCategoryForSorting" type="java.util.List"--%>
+                    <c:forEach items="${listCategoryForSorting}" var="type_of_room">
+                        <option id="${type_of_room.id}" value="${type_of_room.type_of_room}"></option>
+                    </c:forEach>
+                </datalist>
 
-            </th>
+                </th>
                 <th class="text-end">
+                    <form method="post" id="search1" action="controller?action=orderRoomPage" class="order">
                     <button type="button"  class="btn btn-outline-primary text-end" onclick="clearAllExceptOne()">Clear</button>
                     <button type="submit" name="searchRoom" class="btn btn-outline-primary text-end">
                         <fmt:message key="classSelect.search" bundle="${lang}"/>
                     </button>
+                    </form>
                 </th>
             </tr>
             </thead>
             <tbody class="bg-opacity-25 bg-white ">
-            <div id="errorMessage" style="display:none; color:red;">Error: Invalid value</div>
             <%--@elvariable id="listOrders" type="java.util.List"--%>
             <c:forEach items="${listOrders}" var="room">
             <tr>
@@ -136,6 +136,7 @@
                             <fmt:message key="classSelect.previous"
                                          bundle="${lang}"/>
                         </button>
+
                     </li>
                 </c:if>
 
@@ -148,17 +149,17 @@
                             <c:choose>
                                 <c:when test="${currentPage eq i}">
                                     <li class="page-item">
-
                                         <button type="submit" name="action1" value="${i}"
                                                 class="page-link">${i}</button>
+
                                     </li>
                                 </c:when>
                                 <c:otherwise>
                                     <li class="page-item">
-
                                         <button type="submit" name="action1" value="${i}" style=" color: black;"
                                                 formaction="controller?action=orderRoomPage&page=${i}"
                                                 class="page-link">${i}</button>
+
                                     </li>
                                 </c:otherwise>
                             </c:choose>
@@ -172,6 +173,7 @@
                                 formaction="controller?action=orderRoomPage&page=${currentPage + 1}"
                                 class="page-link"><fmt:message key="classSelect.next" bundle="${lang}"/>
                         </button>
+                        </form>
                     </li>
                 </c:if>
             </ul>
@@ -211,26 +213,49 @@
     });
 </script>
 <script>
-    const inputField = document.getElementById("classOfRoom");
-    const errorMessage = document.getElementById("errorMessage");
-    const options = document.querySelectorAll("#classOfRoomAb option");
-
-    inputField.addEventListener("input", function() {
-        let isValid = false;
-
+    function validateInput(event) {
+        const input = event.target;
+        const value = input.value;
+        const options = document.getElementById('classOfRoomAb').options;
+        let valid = false;
         for (let i = 0; i < options.length; i++) {
-            if (options[i].value === inputField.value) {
-                isValid = true;
+            if (options[i].value === value) {
+                valid = true;
                 break;
             }
         }
-
-        if (!isValid) {
-            errorMessage.style.display = "block";
+        if (!valid) {
+            input.setCustomValidity('Please select a valid option from the list');
         } else {
-            errorMessage.style.display = "none";
+            input.setCustomValidity('');
         }
     }
-    );
+
+    function resetValidation(event) {
+        event.target.setCustomValidity('');
+    }
 </script>
+<script>
+    function validateInput(event) {
+        const input = event.target;
+        const value = input.value;
+        const options = document.getElementById('classOfRoomAb').options;
+        let valid = false;
+        for (let i = 0; i < options.length; i++) {
+            if (options[i].value === value) {
+                valid = true;
+                break;
+            }
+        }
+        if (value === '') {
+            input.setCustomValidity('');
+        } else if (!valid) {
+            input.setCustomValidity('Please select a valid option from the list');
+        } else {
+            input.setCustomValidity('');
+        }
+    }
+
+</script>
+
 

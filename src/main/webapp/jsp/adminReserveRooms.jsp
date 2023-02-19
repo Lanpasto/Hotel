@@ -2,9 +2,8 @@
 <%@ taglib prefix="c" uri="jakarta.tags.core" %>
 <%@include file="header.jsp" %>
 <%@include file="background.jsp" %>
-<%--
 <tf:title titleName="RoomManger"/>
---%>
+
 <head>
     <link href="${pageContext.request.contextPath}/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
@@ -58,14 +57,18 @@
                 </td>
                 <td>
                 </td>
-                <td><div class="text-end">
-                    <button type="button"
-                         style="background:#3630a3;color:white;"
-                            onclick="clearAllExceptOne()">Clear</button>
+                <td>
+                    <form method="post" id="search1" action="controller?action=adminReservePage" class="order">
+                    <div class="text-end">
+                        <button type="button"
+                                style="background:#3630a3;color:white;"
+                                onclick="clearAllExceptOne()">Clear
+                        </button>
                         <button style="background:#3630a3;color:white;">
                             <fmt:message key="classSelect.search" bundle="${lang}"/>
                         </button>
                     </div>
+                    </form>
                 </td>
             </tr>
 
@@ -104,18 +107,19 @@
                         <td>
                             <div class="text-end">
                                 <select name="statusOfRoom" required="required">
-                                    <option>Set status</option>
+                                    <option disabled selected>Set status</option>
                                     <option>available</option>
                                     <option>booked</option>
                                     <option>busy</option>
                                     <option>unavailable</option>
-                                </select></div>
-                            <div class="text-end">
-                                <button type="submit" name="room" style="margin-top: 150px" class="btn btn-success "
-                                        value="${room.id}"><fmt:message key="admin.submit"
-                                                                        bundle="${lang}"/>
-                                </button>
-                            </div>
+                                </select>
+                                <div class="text-end">
+
+                                    <button type="submit" name="room" style="margin-top: 150px" class="btn btn-success "
+                                            value="${room.id}"><fmt:message key="admin.submit"
+                                                                            bundle="${lang}"/>
+                                    </button>
+                                </div>
                 </form>
 
             </c:forEach>

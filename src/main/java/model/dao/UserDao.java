@@ -9,6 +9,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+
 @Log4j
 public class UserDao {
     public void insert(User user) {
@@ -87,4 +88,50 @@ public class UserDao {
         }
         return newUser;
     }
+    public String findEmailById(int id) {
+        String email = null;
+        try {
+            String query = "select email from users where id = ?";
+            Connection con = DBUtil.getConnection();
+            PreparedStatement pst = con.prepareStatement(query);
+            pst.setInt(1, id);
+            ResultSet rs = pst.executeQuery();
+
+            if (rs.next()) {
+                email = rs.getString("email");
+            }
+
+            rs.close();
+            con.close();
+        } catch (SQLException e) {
+            log.error("find email by id error");
+            e.printStackTrace();
+        }
+        return email;
+    }
+    public String findFullNameById(int id) {
+        String fullName = null;
+        try {
+            String query = "select first_name, last_name from users where id = ?";
+            Connection con = DBUtil.getConnection();
+            PreparedStatement pst = con.prepareStatement(query);
+            pst.setInt(1, id);
+            ResultSet rs = pst.executeQuery();
+
+            if (rs.next()) {
+                String firstName = rs.getString("first_name");
+                String lastName = rs.getString("last_name");
+                fullName = firstName + " " + lastName;
+            }
+
+            rs.close();
+            con.close();
+        } catch (SQLException e) {
+            log.error("find full name by id error");
+            e.printStackTrace();
+        }
+        return fullName;
+    }
+
+
 }

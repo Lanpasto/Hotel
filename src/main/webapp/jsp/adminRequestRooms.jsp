@@ -1,7 +1,7 @@
 <%@ taglib prefix="c" uri="jakarta.tags.core" %>
 <%@include file="header.jsp" %>
 <%@include file="background.jsp" %>
-<%--<tf:title titleName="RequestManger"/>--%>
+<tf:title titleName="RequestManger"/>
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -51,12 +51,11 @@
                                      value="${request.dateOfSettlement}">
                                     <input name="dateOfSettlement"
                                            value="<fmt:formatDate value="${request.dateOfSettlement}" pattern="MM/dd/yyyy"/>"
-                                           hidden="hidden"> <fmt:formatDate value="${request.dateOfSettlement}"
-                                                                            pattern=" MM/dd/yyyy"/> -
+                                           hidden="hidden">    ${f:formatLocalDateTime(request.dateOfSettlement, " MM/dd/yyyy")} -
+
                                     <input name="dateOfOut"
                                            value="<fmt:formatDate value="${request.dateOfOut}" pattern="MM/dd/yyyy"/>"
-                                           hidden="hidden"> <fmt:formatDate value="${request.dateOfOut}"
-                                                                            pattern="MM/dd/yyyy"/></div>
+                                           hidden="hidden"> ${f:formatLocalDateTime(request.dateOfOut, " MM/dd/yyyy")}</div>
                             </div>
                             <c:set var="status" value="${request.status}"/>
                             <%

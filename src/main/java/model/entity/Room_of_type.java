@@ -1,14 +1,17 @@
 package model.entity;
-import lombok.Builder;
-import lombok.Data;
+import lombok.*;
+import lombok.experimental.FieldDefaults;
 
 @Data
 @Builder
+@NoArgsConstructor
+@AllArgsConstructor
+@FieldDefaults(level = AccessLevel.PRIVATE)
 public class Room_of_type {
-    private int id;
-    private String type_of_room;
-    private String guests;
-    private String image;
+     int id;
+     String type_of_room;
+     String guests;
+     String image;
 
 
 }

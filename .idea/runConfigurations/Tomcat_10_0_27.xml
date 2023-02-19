@@ -9,7 +9,7 @@
     </deployment>
     <server-settings>
       <option name="BASE_DIRECTORY_NAME" value="c8887dea-581f-4476-9c45-89ed038ed920" />
-      <option name="JNDI_PORT" value="1088" />
+      <option name="JNDI_PORT" value="1077" />
     </server-settings>
     <log_file alias="Tomcat Manager Log" path="%IDEA_RUN:CATALINA_BASE%/logs/manager.*" />
     <log_file alias="Tomcat Host Manager Log" path="%IDEA_RUN:CATALINA_BASE%/logs/host-manager.*" />

@@ -1,8 +1,8 @@
 <%@include file="header.jsp" %>
 <%@ taglib prefix="c" uri="jakarta.tags.core" %>
-<%--
+
 <tf:title titleName="Registration"/>
---%>
+
 <html lang="eng">
 <body class="text-center">
 <div class="mask d-flex align-items-center h-100 gradient-custom-3">

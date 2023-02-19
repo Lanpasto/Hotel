@@ -9,74 +9,46 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9e1952fb-3c0a-4d5a-9a8f-e6cc31aa45f7" name="Changes" comment="tests">
-      <change afterPath="$PROJECT_DIR$/src/test/java/testCommand/CommandContainerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/testCommand/ListOfReserveRoomPageCommandTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/testCommand/PaymentCommandTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/testCommand/RoomReserveCommandTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/testCommand/TestChangeLanguageCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/testCommand/TestConfirmOrderCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/testCommand/TestRejectOrderCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/testCommand/UpdateRoomStatusCommandTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/utils/DateCheckTest.java" afterDir="false" />
+    <list default="true" id="9e1952fb-3c0a-4d5a-9a8f-e6cc31aa45f7" name="Changes" comment="testsAll">
+      <change afterPath="$PROJECT_DIR$/.idea/resourceBundles.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controller/tags/Dates.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/TLDs/functions.tld" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/resourceBundles.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/Tomcat_10_0_27.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations/Tomcat_10_0_27.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/META-INF/beans.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/beans.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/commands/Admin/UpdateRoomStatusCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/commands/Admin/UpdateRoomStatusCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/Path.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/Path.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/commands/CommandContainer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/commands/CommandContainer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/commands/User/ConfirmOrderCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/commands/User/ConfirmOrderCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/commands/User/MakeOrderCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/commands/User/MakeOrderCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/dao/OrdersDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/dao/OrdersDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/dao/RoomDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/dao/RoomDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/beans.xml" beforeDir="false" afterPath="$PROJECT_DIR$/META-INF/beans.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/META-INF/persistence.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/aboutUs.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/aboutUs.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/adminReserveRooms.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/adminReserveRooms.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/listOfRequestRoom.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/listOfRequestRoom.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/orderRoom.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/orderRoom.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/utils/MySession.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/utils/MySession.java" afterDir="false" />
-    </list>
-    <list id="4efdf5ce-cfd2-4410-b09f-e00e65973a64" name="Changes by levc4" comment="tests">
-      <change afterPath="$PROJECT_DIR$/src/main/java/controller/tags/MessageTag.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/testCommand/TestAboutUsPageCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/testCommand/TestAdminRequestPageCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/testCommand/TestIndexPageCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/testCommand/TestListOfRequestRoomPageCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/testCommand/TestLoginCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/testCommand/TestLoginPageCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/testCommand/TestLogoutCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/testCommand/TestPayFormPageCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/testCommand/TestRegisterCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/testCommand/TestRegisterPageCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/testCommand/TestRequestPageCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/testCommand/TestSelectRoomForRequestPageCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/testDao/TestOrdersDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/testDao/TestRoomDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/testDao/TestUserDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/validation/TestValidation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/commands/PageCommands/AdminRequestPageCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/commands/PageCommands/AdminRequestPageCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/commands/PageCommands/AdminReservePageCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/commands/PageCommands/AdminReservePageCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/commands/PageCommands/OrderRoomPageCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/commands/PageCommands/OrderRoomPageCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/commands/PageCommands/RequestPageCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/commands/PageCommands/RequestPageCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/commands/PageCommands/SelectRoomForRequestPageCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/commands/PageCommands/SelectRoomForRequestPageCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/commands/User/MakeOrderCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/commands/User/MakeOrderCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/listenerUtil/DateCheck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/listenerUtil/DateCheck.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/commands/User/PaymentCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/commands/User/PaymentCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/filters/SecurityFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/filters/SecurityFilter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/validation/Validation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/validation/Validation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/dao/OrdersDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/dao/OrdersDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/dao/RoomDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/dao/RoomDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/model/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/dao/UserDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/log4j.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/log4j.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/TLDs/message.tld" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/TLDs/message.tld" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/aboutUs.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/aboutUs.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/entity/Orders.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/entity/Orders.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/entity/Orders_request.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/entity/Orders_request.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/entity/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/entity/Room.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/entity/Room_of_type.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/entity/Room_of_type.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/locale_en.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/locale_en.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/locale_ua.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/locale_ua.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/adminRequestRooms.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/adminRequestRooms.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/adminReserveRooms.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/adminReserveRooms.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/header.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/loginView.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/loginView.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/listOfRequestRoom.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/listOfRequestRoom.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/listOfReserveRoom.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/listOfReserveRoom.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/orderRoom.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/orderRoom.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/filters/TestEncodingFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/filters/TestEncodingFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/register.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/register.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/request.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/request.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/selectRoomForRequest.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/selectRoomForRequest.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/utils/MySession.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/utils/MySession.java" afterDir="false" />
     </list>
+    <list id="4efdf5ce-cfd2-4410-b09f-e00e65973a64" name="Changes by levc4" comment="testsAll" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -110,90 +82,6 @@
   </component>
   <component name="JspContextManager">
     <jsp-to-context jsp-file="file://$PROJECT_DIR$/src/main/webapp/jsp/header.jsp" context-file="file://$PROJECT_DIR$/src/main/webapp/jsp/loginView.jsp" />
-  </component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/pom.xml">
-      <ranges>
-        <range start1="20" end1="20" start2="20" end2="25" changelist="9e1952fb-3c0a-4d5a-9a8f-e6cc31aa45f7" />
-        <range start1="21" end1="24" start2="26" end2="29" changelist="9e1952fb-3c0a-4d5a-9a8f-e6cc31aa45f7" />
-        <range start1="65" end1="77" start2="70" end2="70" changelist="4efdf5ce-cfd2-4410-b09f-e00e65973a64" />
-        <range start1="96" end1="102" start2="89" end2="89" changelist="4efdf5ce-cfd2-4410-b09f-e00e65973a64" />
-        <range start1="107" end1="107" start2="94" end2="127" changelist="4efdf5ce-cfd2-4410-b09f-e00e65973a64" />
-        <range start1="108" end1="108" start2="128" end2="164" changelist="9e1952fb-3c0a-4d5a-9a8f-e6cc31aa45f7" />
-        <range start1="164" end1="164" start2="220" end2="228" changelist="4efdf5ce-cfd2-4410-b09f-e00e65973a64" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml">
-      <ranges>
-        <range start1="3" end1="3" start2="3" end2="7" changelist="4efdf5ce-cfd2-4410-b09f-e00e65973a64" />
-        <range start1="31" end1="32" start2="35" end2="36" changelist="9e1952fb-3c0a-4d5a-9a8f-e6cc31aa45f7" />
-        <range start1="43" end1="43" start2="47" end2="48" changelist="9e1952fb-3c0a-4d5a-9a8f-e6cc31aa45f7" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/src/main/java/controller/commands/User/MakeOrderCommand.java">
-      <ranges>
-        <range start1="35" end1="38" start2="35" end2="35" changelist="9e1952fb-3c0a-4d5a-9a8f-e6cc31aa45f7" />
-        <range start1="71" end1="72" start2="68" end2="68" changelist="4efdf5ce-cfd2-4410-b09f-e00e65973a64" />
-        <range start1="75" end1="76" start2="71" end2="71" changelist="4efdf5ce-cfd2-4410-b09f-e00e65973a64" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/src/main/webapp/jsp/orderRoom.jsp">
-      <ranges>
-        <range start1="0" end1="0" start2="0" end2="1" changelist="4efdf5ce-cfd2-4410-b09f-e00e65973a64" />
-        <range start1="6" end1="6" start2="7" end2="13" changelist="4efdf5ce-cfd2-4410-b09f-e00e65973a64" />
-        <range start1="18" end1="26" start2="25" end2="25" changelist="4efdf5ce-cfd2-4410-b09f-e00e65973a64" />
-        <range start1="28" end1="29" start2="27" end2="28" changelist="4efdf5ce-cfd2-4410-b09f-e00e65973a64" />
-        <range start1="35" end1="37" start2="34" end2="41" changelist="9e1952fb-3c0a-4d5a-9a8f-e6cc31aa45f7" />
-        <range start1="46" end1="49" start2="50" end2="52" changelist="4efdf5ce-cfd2-4410-b09f-e00e65973a64" />
-        <range start1="50" end1="51" start2="53" end2="55" changelist="4efdf5ce-cfd2-4410-b09f-e00e65973a64" />
-        <range start1="55" end1="56" start2="59" end2="60" changelist="4efdf5ce-cfd2-4410-b09f-e00e65973a64" />
-        <range start1="57" end1="58" start2="61" end2="63" changelist="4efdf5ce-cfd2-4410-b09f-e00e65973a64" />
-        <range start1="61" end1="63" start2="66" end2="66" changelist="4efdf5ce-cfd2-4410-b09f-e00e65973a64" />
-        <range start1="64" end1="64" start2="67" end2="68" changelist="9e1952fb-3c0a-4d5a-9a8f-e6cc31aa45f7" />
-        <range start1="65" end1="66" start2="69" end2="76" changelist="4efdf5ce-cfd2-4410-b09f-e00e65973a64" />
-        <range start1="72" end1="73" start2="82" end2="84" changelist="9e1952fb-3c0a-4d5a-9a8f-e6cc31aa45f7" />
-        <range start1="74" end1="74" start2="85" end2="86" changelist="9e1952fb-3c0a-4d5a-9a8f-e6cc31aa45f7" />
-        <range start1="81" end1="81" start2="93" end2="94" changelist="9e1952fb-3c0a-4d5a-9a8f-e6cc31aa45f7" />
-        <range start1="84" end1="85" start2="97" end2="99" changelist="4efdf5ce-cfd2-4410-b09f-e00e65973a64" />
-        <range start1="91" end1="95" start2="105" end2="109" changelist="4efdf5ce-cfd2-4410-b09f-e00e65973a64" />
-        <range start1="99" end1="100" start2="113" end2="115" changelist="4efdf5ce-cfd2-4410-b09f-e00e65973a64" />
-        <range start1="101" end1="102" start2="116" end2="117" changelist="4efdf5ce-cfd2-4410-b09f-e00e65973a64" />
-        <range start1="105" end1="108" start2="120" end2="123" changelist="4efdf5ce-cfd2-4410-b09f-e00e65973a64" />
-        <range start1="166" end1="167" start2="181" end2="191" changelist="9e1952fb-3c0a-4d5a-9a8f-e6cc31aa45f7" />
-        <range start1="188" end1="188" start2="212" end2="236" changelist="9e1952fb-3c0a-4d5a-9a8f-e6cc31aa45f7" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/src/main/java/model/dao/RoomDao.java">
-      <ranges>
-        <range start1="43" end1="44" start2="43" end2="50" changelist="9e1952fb-3c0a-4d5a-9a8f-e6cc31aa45f7" />
-        <range start1="70" end1="85" start2="76" end2="76" changelist="4efdf5ce-cfd2-4410-b09f-e00e65973a64" />
-        <range start1="87" end1="91" start2="78" end2="82" changelist="4efdf5ce-cfd2-4410-b09f-e00e65973a64" />
-        <range start1="111" end1="112" start2="102" end2="103" changelist="4efdf5ce-cfd2-4410-b09f-e00e65973a64" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/src/main/webapp/jsp/aboutUs.jsp">
-      <ranges>
-        <range start1="0" end1="0" start2="0" end2="1" changelist="9e1952fb-3c0a-4d5a-9a8f-e6cc31aa45f7" />
-        <range start1="3" end1="5" start2="4" end2="6" changelist="4efdf5ce-cfd2-4410-b09f-e00e65973a64" />
-        <range start1="11" end1="12" start2="12" end2="13" changelist="9e1952fb-3c0a-4d5a-9a8f-e6cc31aa45f7" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/src/main/webapp/jsp/adminReserveRooms.jsp">
-      <ranges>
-        <range start1="0" end1="0" start2="0" end2="1" changelist="4efdf5ce-cfd2-4410-b09f-e00e65973a64" />
-        <range start1="10" end1="29" start2="11" end2="14" changelist="4efdf5ce-cfd2-4410-b09f-e00e65973a64" />
-        <range start1="54" end1="58" start2="39" end2="49" changelist="4efdf5ce-cfd2-4410-b09f-e00e65973a64" />
-        <range start1="69" end1="71" start2="60" end2="64" changelist="9e1952fb-3c0a-4d5a-9a8f-e6cc31aa45f7" />
-        <range start1="182" end1="182" start2="175" end2="185" changelist="9e1952fb-3c0a-4d5a-9a8f-e6cc31aa45f7" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/src/main/java/model/dao/OrdersDao.java">
-      <ranges>
-        <range start1="62" end1="63" start2="62" end2="63" changelist="4efdf5ce-cfd2-4410-b09f-e00e65973a64" />
-        <range start1="185" end1="186" start2="185" end2="185" changelist="4efdf5ce-cfd2-4410-b09f-e00e65973a64" />
-        <range start1="198" end1="199" start2="197" end2="198" changelist="9e1952fb-3c0a-4d5a-9a8f-e6cc31aa45f7" />
-      </ranges>
-    </file>
   </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
@@ -234,7 +122,7 @@
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
     &quot;extract.method.default.visibility&quot;: &quot;private&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/artem/IdeaProjects/Hotel&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/artem/IdeaProjects/cargoDelivery&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -250,6 +138,9 @@
   &quot;keyToStringList&quot;: {
     &quot;DatabaseDriversLRU&quot;: [
       &quot;mysql&quot;
+    ],
+    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
+      &quot;Properties&quot;
     ]
   }
 }</component>
@@ -267,9 +158,9 @@
       <recent name="C:\Users\artem\IdeaProjects\Hotel\src\main\java\controller\servlets" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\artem\IdeaProjects\Hotel\src\main\resources" />
       <recent name="C:\Users\artem\IdeaProjects\Hotel" />
       <recent name="C:\Users\artem\IdeaProjects\Hotel\src\main\java\controller" />
-      <recent name="C:\Users\artem\IdeaProjects\Hotel\src\main\resources" />
       <recent name="C:\Users\artem\IdeaProjects\Hotel\src\main\resources\META-INF" />
       <recent name="C:\Users\artem\IdeaProjects\Hotel\src\main\webapp\images" />
     </key>
@@ -442,7 +333,22 @@
       <workItem from="1675291470223" duration="10513000" />
       <workItem from="1675307009663" duration="6000" />
       <workItem from="1675349685692" duration="2741000" />
-      <workItem from="1675384896487" duration="2372000" />
+      <workItem from="1675384896487" duration="3620000" />
+      <workItem from="1675390236689" duration="5004000" />
+      <workItem from="1675795357409" duration="14000" />
+      <workItem from="1675901842426" duration="600000" />
+      <workItem from="1675954958659" duration="601000" />
+      <workItem from="1675975749120" duration="8263000" />
+      <workItem from="1676060053644" duration="33970000" />
+      <workItem from="1676240988589" duration="6579000" />
+      <workItem from="1676312653816" duration="4952000" />
+      <workItem from="1676403900245" duration="944000" />
+      <workItem from="1676406258126" duration="3578000" />
+      <workItem from="1676559988150" duration="448000" />
+      <workItem from="1676584824787" duration="4156000" />
+      <workItem from="1676627977601" duration="5202000" />
+      <workItem from="1676741614998" duration="705000" />
+      <workItem from="1676801013702" duration="1898000" />
     </task>
     <task id="LOCAL-00001" summary="update1">
       <created>1673138251826</created>
@@ -500,7 +406,21 @@
       <option name="project" value="LOCAL" />
       <updated>1674965613929</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="testsAll">
+      <created>1675387319293</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1675387319293</updated>
+    </task>
+    <task id="LOCAL-00010" summary="testsAll">
+      <created>1675387409868</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1675387409868</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -527,7 +447,8 @@
     <MESSAGE value="patch2" />
     <MESSAGE value="patch3" />
     <MESSAGE value="tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="tests" />
+    <MESSAGE value="testsAll" />
+    <option name="LAST_COMMIT_MESSAGE" value="testsAll" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
@@ -537,7 +458,7 @@
     <SUITE FILE_PATH="coverage/Hotel$TestValidation.ic" NAME="TestValidation Coverage Results" MODIFIED="1675227042199" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>validation.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/Hotel$java_in_Hotel.ic" NAME="java in Hotel Coverage Results" MODIFIED="1675352105918" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/Hotel$java_in_Hotel.ic" NAME="java in Hotel Coverage Results" MODIFIED="1676247978933" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/Hotel$testCommand_in_Hotel.ic" NAME="testCommand in Hotel Coverage Results" MODIFIED="1675296760488" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

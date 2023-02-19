@@ -19,10 +19,9 @@ public class MySession implements HttpSession {
     }
 
     @Override
-    public void putValue(String name, Object value) {
+    public void putValue(String s, Object o) {
 
     }
-
 
     @Override
     public Object getAttribute(String name) {
@@ -30,10 +29,9 @@ public class MySession implements HttpSession {
     }
 
     @Override
-    public Object getValue(String name) {
+    public Object getValue(String s) {
         return null;
     }
-
 
     @Override
     public void removeAttribute(String name) {
@@ -41,10 +39,9 @@ public class MySession implements HttpSession {
     }
 
     @Override
-    public void removeValue(String name) {
+    public void removeValue(String s) {
 
     }
-
 
     @Override
     public void invalidate() {}

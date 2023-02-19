@@ -71,33 +71,4 @@ public class Validation {
         return false;
     }
 
-    public static boolean CheckDate(HttpServletRequest request, String date) {
-        if (date.isEmpty() || !date.matches("^(0?[1-9]|[12][0-9]|3[01])[ /](0?[1-9]|1[012])[ /](19|20)?[0-9]{2}-(0?[1-9]|[12][0-9]|3[01])[ /](0?[1-9]|1[012])[ /](19|20)?[0-9]{2}$")) {
-            request.setAttribute("message", "User with same email already exists");
-            return true;
-        }
-        return false;
-    }
-
-    public static boolean SearchRoomValid(HttpServletRequest request, String guest, String classOfRoom,
-                                          String fromPrice, String priceTo) {
-
-        if ( !guest.matches("^[0-9]*$")) {
-            request.setAttribute("message", "Please select correct number of person");
-            return true;
-        }
-        if (!classOfRoom.matches("^[A-Za-z]+$")) {
-            request.setAttribute("message", "Please select class of room");
-            return true;
-        }
-        if ( !fromPrice.matches("^[0-9]*$")) {
-            request.setAttribute("message", "Please write correct price");
-            return true;
-        }
-        if ( !priceTo.matches("^^[0-9]*$")) {
-            request.setAttribute("message", "Please write correct price");
-            return true;
-        }
-        return false;
-    }
 }

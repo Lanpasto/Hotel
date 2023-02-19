@@ -1,32 +1,35 @@
 package model.entity;
 
-import lombok.Builder;
-import lombok.Data;
+import lombok.*;
+import lombok.experimental.FieldDefaults;
 
 import java.sql.Timestamp;
 
 @Data
 @Builder
+@NoArgsConstructor
+@AllArgsConstructor
+@FieldDefaults(level = AccessLevel.PRIVATE)
 public class Orders_request {
 
-    private int id;
-    private String type_of_room;
+    int id;
+    String type_of_room;
 
-    private int guests;
+    int guests;
 
-    private Timestamp dateOfSettlement;
+    Timestamp dateOfSettlement;
 
-    private Timestamp dateOfOut;
+    Timestamp dateOfOut;
 
-    private Timestamp dateOfCreateRequest;
-    private int userId;
-    private String email;
-    private String name;
+    Timestamp dateOfCreateRequest;
+    int userId;
+    String email;
+    String name;
 
-    private String lastName;
-    private String status;
-    private String typeName;
+    String lastName;
+    String status;
+    String typeName;
 
-    private int idRoom;
+    int idRoom;
 
 }

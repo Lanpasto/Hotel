@@ -1,7 +1,7 @@
 <%@ taglib prefix="c" uri="jakarta.tags.core" %>
 <%@include file="header.jsp" %>
 <%@include file="background.jsp" %>
-<%--<tf:title titleName="MyReserve"/>--%>
+<tf:title titleName="MyReserve"/>
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,76 +11,106 @@
 </head>
 <body>
 <div class="container mt-3">
-        <div class="bg-warning">
+    <div style="background-color: rgba(72, 191, 128, 0.3); padding: 20px; border-radius: 10px;">
+        <div class="navbar-nav">
             <div class="navbar-nav">
-                <div class="navbar-nav">
-                    <label class="text-dark border-0 h1 text-center"> <fmt:message key="reserveUser.yourReserve"
-                                                                                   bundle="${lang}"/></label></div>
-                <div class="navbar-nav"><a class="text-white text-end" href="controller?action=ListOfRequest">
-                    <h3 class="badge text-white  bg-danger text-wrap fs-5"><fmt:message key="reserveUser.myRequest"
-                                                                                        bundle="${lang}"/></h3>
-                </a>
-                </div>
+                <label class="text-white h1 text-center"> <fmt:message key="reserveUser.yourReserve" bundle="${lang}"/></label>
             </div>
-            <tbody class="">
-            <table class="table">
-                <c:forEach items="${ordersRequestListUser}" var="orders">
-                    <c:set var="status" value="${orders.status}"/>
-                        <%
-                            String status = "";
-                            status = status + pageContext.getAttribute("status");
-                        %>
-                        <%if (status.equals("Waiting for confirmation")) {%>
+            <div class="navbar-nav">
+                <a class="text-white text-end" href="controller?action=ListOfRequest">
+                    <h3 class="badge text-white text-wrap fs-5 p-3" style="background-color: rgba(40, 167, 69, 0.7); border-radius: 10px;">
+                        <fmt:message key="reserveUser.myRequest" bundle="${lang}"/></h3>
+                </a>
+            </div>
+        </div>
 
-                            <%}if(status.equalsIgnoreCase("Waiting for paid")){%>
-                    <tr class="table table-warning">
-                    <td><img src="${pageContext.request.contextPath}${orders.image}"
-                             style="height: 200px; width: 400px" alt="#"></td>
-                    <td class="text-bg-primary">
-                        <div><fmt:message key="reserveUser.price"
-                                          bundle="${lang}"/>${orders.totalPrice}$
-                        </div>
-                        <div><fmt:message key="reserveUser.reservedate"
-                                          bundle="${lang}"/><fmt:formatDate
-                                value="${orders.dateOfSettlement}" pattern=" MM/dd/yyyy"/> -
-                            <fmt:formatDate value="${orders.dateOfOut}" pattern="MM/dd/yyyy"/></div>
-                        <div>${orders.status}</div>
-                    </td>
-
-                    <td class="text-end">
-                        <form method="post" action="controller?action=payForm">
-                            <button style="width: 100px" class="bg-success" name="roomId" value="${orders.roomId}"><fmt:message key="payment.paid" bundle="${lang}"/></button>
-                            <label>
-                                <input name="orderIdForConfirm" value="${orders.id}" hidden="hidden">
-                            </label>
-                            <label>
-                                <input name="statusPay" value="process" hidden="hidden">
-                            </label>
-                        </form>
-                    </td>
+        <table class="table table-success">
+            <c:forEach items="${ordersRequestListUser}" var="orders">
+                <c:set var="status" value="${orders.status}"/>
+                <%
+                    String status = "";
+                    status = status + pageContext.getAttribute("status");
+                %>
+    <%if(status.equalsIgnoreCase("Waiting for paid")){%>
+                <table class="table table-warning">
+                    <tr>
+                        <th>Room Image</th>
+                        <th>Details</th>
+                        <th></th>
                     </tr>
-                        <%} if (status.equals("Paid")){%>
+                    <tr>
+                        <td>
+                            <img src="${pageContext.request.contextPath}${orders.image}"
+                                 style="height: 200px; width: 400px" alt="#">
+                        </td>
+                        <td>
+                            <div style="background-color: rgba(182,39,39,0.5); padding: 20px; border-radius: 10px;">
+                                <p style="font-size: 20px; font-weight: bold; color: #0e0e0e;">
+                                    <fmt:message key="reserveUser.price" bundle="${lang}"/>: ${orders.totalPrice}$
+                                </p>
+                                <p style="font-size: 16px; color: #343a40;">
+                                    <fmt:message key="reserveUser.reservedate" bundle="${lang}"/>:
+                                        ${f:formatLocalDateTime(orders.dateOfSettlement, " MM/dd/yyyy")} -
+                                        ${f:formatLocalDateTime(orders.dateOfOut, " MM/dd/yyyy")}
+                                </p>
+                                <p style="font-size: 26px; color: #842029;">
+                                        ${orders.status}
+                                </p>
+                            </div>
+                        </td>
+                        <td class="text-center">
+                            <form method="post" action="controller?action=payForm">
+                                <br><br>
+                                <button style="width: 100px; border: 1px solid black; font-size: 16px;" class="btn btn-success" name="roomId" value="${orders.roomId}">
+                                    <fmt:message key="payment.paid" bundle="${lang}"/>
+                                </button>
+                                <br><br>
+                                <input name="orderIdForConfirm" value="${orders.id}" type="hidden">
+                                <input name="statusPay" value="process" type="hidden">
+                            </form>
+                        </td>
+                    </tr>
+                </table>
 
-                <tr class="table table-warning">
-                    <td><img src="${pageContext.request.contextPath}${orders.image}"
-                             style="height: 200px; width: 400px" alt="#"></td>
-                    <td class="text-bg-danger">
-                        <div><fmt:message key="reserveUser.price"
-                                          bundle="${lang}"/>${orders.totalPrice}$
-                        </div>
-                        <div><fmt:message key="reserveUser.reservedate"
-                                          bundle="${lang}"/><fmt:formatDate
-                                value="${orders.dateOfSettlement}" pattern=" MM/dd/yyyy"/> -
-                            <fmt:formatDate value="${orders.dateOfOut}" pattern="MM/dd/yyyy"/></div>
-                        <div>${orders.status}</div>
-                    </td>
 
-                    <td>
-                    </td>
-                </tr>
-                        <%}%>
+                <%} if (status.equals("Paid")){%>
+
+                <table class="table table-primary">
+                    <tr>
+                        <th>Room Image</th>
+                        <th>Details</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="${pageContext.request.contextPath}${orders.image}"
+                                 style="height: 200px; width: 400px" alt="#">
+                        </td>
+
+                        <td>
+                            <div style="background-color: rgb(87,229,248); padding: 20px; border-radius: 10px;">
+                                <p style="font-size: 20px; font-weight: bold; color: #111111;">
+                                    <fmt:message key="reserveUser.price" bundle="${lang}"/>: ${orders.totalPrice}$
+                                </p>
+                                <p style="font-size: 16px; color: #6c757d;">
+                                    <fmt:message key="reserveUser.reservedate" bundle="${lang}"/>:
+                                        ${f:formatLocalDateTime(orders.dateOfSettlement, " MM/dd/yyyy")} -
+                                        ${f:formatLocalDateTime(orders.dateOfOut, " MM/dd/yyyy")}
+                                </p>
+                                <p style="font-size: 26px; color: #28a745;">
+                                        ${orders.status}
+                                </p>
+                            </div>
+                        </td>
+
+
+                    </tr>
+                </table>
+
+                <%}%>
 
                 </c:forEach>
+    </table>
 </div>
 </div>
+
 </body>

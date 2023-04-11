@@ -9,9 +9,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9e1952fb-3c0a-4d5a-9a8f-e6cc31aa45f7" name="Changes" comment="fix localization">
+    <list default="true" id="9e1952fb-3c0a-4d5a-9a8f-e6cc31aa45f7" name="Changes" comment="fix1">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/Path.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/Path.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sql/hotel.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sql/hotel.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/commands/User/MakeOrderCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/commands/User/MakeOrderCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/commands/User/MakeOrderRequestCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/commands/User/MakeOrderRequestCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/validation/Validation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/validation/Validation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/dao/UserDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/adminRequestRooms.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/adminRequestRooms.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/request.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/request.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -314,7 +320,12 @@
       <workItem from="1676741614998" duration="705000" />
       <workItem from="1676801013702" duration="1898000" />
       <workItem from="1676811769426" duration="6541000" />
-      <workItem from="1676823020275" duration="4847000" />
+      <workItem from="1676823020275" duration="5634000" />
+      <workItem from="1676843070422" duration="1384000" />
+      <workItem from="1676845056354" duration="10000" />
+      <workItem from="1676891140889" duration="4845000" />
+      <workItem from="1681156018146" duration="2509000" />
+      <workItem from="1681236469368" duration="1556000" />
     </task>
     <task id="LOCAL-00001" summary="update1">
       <created>1673138251826</created>
@@ -400,7 +411,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676817255198</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="fix1">
+      <created>1676828503453</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1676828503453</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -430,7 +448,8 @@
     <MESSAGE value="testsAll" />
     <MESSAGE value="Fix order and status" />
     <MESSAGE value="fix localization" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix localization" />
+    <MESSAGE value="fix1" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix1" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
@@ -440,7 +459,8 @@
     <SUITE FILE_PATH="coverage/Hotel$TestValidation.ic" NAME="TestValidation Coverage Results" MODIFIED="1675227042199" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>validation.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/Hotel$java_in_Hotel.ic" NAME="java in Hotel Coverage Results" MODIFIED="1676817181291" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/Hotel$Tomcat_10_0_27.ic" NAME="Tomcat 10.0.27 Coverage Results" MODIFIED="1681156167076" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/Hotel$java_in_Hotel.ic" NAME="java in Hotel Coverage Results" MODIFIED="1681156257522" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/Hotel$testCommand_in_Hotel.ic" NAME="testCommand in Hotel Coverage Results" MODIFIED="1675296760488" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

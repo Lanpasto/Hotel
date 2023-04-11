@@ -17,7 +17,7 @@
                                    bundle="${lang}"/></span>
 
                     <select name="classOfRoom">
-                        <option><fmt:message key="classSelect.class"
+                        <option disabled selected><fmt:message key="classSelect.class"
                                              bundle="${lang}"/></option>
                         <%--@elvariable id="listCategory" type="java.util.List"--%>
                         <c:forEach items="${listCategory}" var="type_of_room">
@@ -32,7 +32,7 @@
             <div class="billing">
 
                 <select name="numberOfPerson">
-                    <option><fmt:message key="classSelect.numberOfPerson" bundle="${lang}"/></option>
+                    <option disabled selected><fmt:message key="classSelect.numberOfPerson" bundle="${lang}"/></option>
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>

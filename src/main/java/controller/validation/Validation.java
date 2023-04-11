@@ -71,4 +71,40 @@ public class Validation {
         return false;
     }
 
+    public static boolean OrderRequestValidator(HttpServletRequest request, String guests, String date, String roomClass) {
+        boolean hasErrors = false;
+
+        if (roomClass == null || roomClass.isEmpty()) {
+            request.setAttribute("classError", "Room class cannot be empty");
+            hasErrors = true;
+        }
+
+        if (date == null || date.isEmpty()) {
+            request.setAttribute("dateError", "Date cannot be empty");
+            hasErrors = true;
+        }
+
+        if (guests == null || guests.isEmpty()) {
+            request.setAttribute("guestsError", "Number of guests cannot be empty");
+            hasErrors = true;
+        }
+        return hasErrors;
+    }
+    public static boolean OrderReserveValidator(HttpServletRequest request, String date) {
+        boolean hasErrors = false;
+
+        if (date == null || date.isEmpty()) {
+            request.setAttribute("dateError", "Date cannot be empty");
+            hasErrors = true;
+        }
+
+        return hasErrors;
+    }
+
 }
+
+
+
+
+
+

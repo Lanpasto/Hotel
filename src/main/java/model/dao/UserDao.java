@@ -4,6 +4,7 @@ package model.dao;
 import database.DBUtil;
 import lombok.extern.log4j.Log4j;
 import model.entity.User;
+import org.mindrot.jbcrypt.BCrypt;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -14,34 +15,33 @@ import java.sql.SQLException;
 public class UserDao {
     public void insert(User user) {
         try {
-        String query = "insert into users(email, password, first_name, last_name,roleId) values (?,?,?,?,?)";
-        Connection con = DBUtil.getConnection();
-        PreparedStatement pst = con.prepareStatement(query);
-        pst.setString(1, user.getEmail());
-        pst.setString(2, user.getPassword());
-        pst.setString(3, user.getFirst_name());
-        pst.setString(4, user.getLast_name());
-        pst.setInt(5, 1);
-        pst.executeUpdate();
-        pst.close();
-        con.close();
-    } catch (SQLException e) {
-        log.error("insert user error");
-        e.printStackTrace();
-    }
+            String query = "insert into users(email, password, first_name, last_name,roleId) values (?,?,?,?,?)";
+            Connection con = DBUtil.getConnection();
+            PreparedStatement pst = con.prepareStatement(query);
+            pst.setString(1, user.getEmail());
+            pst.setString(2, BCrypt.hashpw(user.getPassword(), BCrypt.gensalt()));
+            pst.setString(3, user.getFirst_name());
+            pst.setString(4, user.getLast_name());
+            pst.setInt(5, 1);
+            pst.executeUpdate();
+            pst.close();
+            con.close();
+        } catch (SQLException e) {
+            log.error("insert user error");
+            e.printStackTrace();
+        }
     }
 
     public User findUser(User user) {
         User newUser = null;
         try {
-            String query = "select * from users where email = ? and password = ?";
+            String query = "SELECT * FROM users WHERE email = ?";
             Connection con = DBUtil.getConnection();
             PreparedStatement pst = con.prepareStatement(query);
             pst.setString(1, user.getEmail());
-            pst.setString(2, user.getPassword());
             ResultSet rs = pst.executeQuery();
 
-            if (rs.next()) {
+            if (rs.next() && BCrypt.checkpw(user.getPassword(), rs.getString("password"))) {
                 newUser = User.builder()
                         .id(rs.getInt("id"))
                         .roleId(rs.getInt("roleId"))
@@ -52,6 +52,7 @@ public class UserDao {
                         .build();
             }
             rs.close();
+            pst.close();
             con.close();
         } catch (SQLException e) {
             log.error("find User error");
@@ -59,6 +60,9 @@ public class UserDao {
         }
         return newUser;
     }
+
+
+
 
     public User findUserByEmail(String email) {
         User newUser = null;
@@ -88,6 +92,7 @@ public class UserDao {
         }
         return newUser;
     }
+
     public String findEmailById(int id) {
         String email = null;
         try {
@@ -109,6 +114,7 @@ public class UserDao {
         }
         return email;
     }
+
     public String findFullNameById(int id) {
         String fullName = null;
         try {

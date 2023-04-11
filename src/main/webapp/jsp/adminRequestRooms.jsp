@@ -49,11 +49,11 @@
                                 <div class="badge bg-primary text-wrap " id="dateOfRequest" name="dateOfRequest"
                                      value="${request.dateOfSettlement}">
                                     <input name="dateOfSettlement"
-                                           value="<fmt:formatDate value="${request.dateOfSettlement}" pattern="MM/dd/yyyy"/>"
-                                           hidden="hidden">    ${f:formatLocalDateTime(request.dateOfSettlement, " MM/dd/yyyy")} -
+                                           value="${f:formatLocalDateTime(request.dateOfSettlement, "MM/dd/yyyy")}"
+                                           hidden="hidden">    ${f:formatLocalDateTime(request.dateOfSettlement, "MM/dd/yyyy")} -
                                     <input name="dateOfOut"
-                                           value="<fmt:formatDate value="${request.dateOfOut}" pattern="MM/dd/yyyy"/>"
-                                           hidden="hidden"> ${f:formatLocalDateTime(request.dateOfOut, " MM/dd/yyyy")}</div>
+                                           value="${f:formatLocalDateTime(request.dateOfOut, "MM/dd/yyyy")}"
+                                           hidden="hidden"> ${f:formatLocalDateTime(request.dateOfOut, "MM/dd/yyyy")}</div>
                             </div>
                             <c:set var="status" value="${request.status}"/>
                             <%
@@ -72,7 +72,7 @@
                         </td>
                         <td>
                             <%if (status.equalsIgnoreCase("Pending")) {%>
-                            <button type="submit">Selects room</button>
+                            <button type="submit"><fmt:message key="header.chooseRoom" bundle="${lang}"/></button>
 
                             <%}%>
                         </td>

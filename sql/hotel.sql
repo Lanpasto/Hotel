@@ -145,7 +145,7 @@ DROP TABLE IF EXISTS `users`;
 CREATE TABLE `users` (
                          `id` int NOT NULL AUTO_INCREMENT,
                          `email` varchar(45) NOT NULL,
-                         `password` varchar(45) NOT NULL,
+                         `password` varchar(250) NOT NULL,
                          `roleId` int NOT NULL,
                          `first_name` varchar(45) NOT NULL,
                          `last_name` varchar(45) NOT NULL,

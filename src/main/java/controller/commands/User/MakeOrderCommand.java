@@ -22,15 +22,21 @@ import java.time.Instant;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.Date;
+
+import static controller.validation.Validation.OrderReserveValidator;
+
 @Log4j
 public class MakeOrderCommand extends Command {
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException, SQLException {
         log.info("MakeOrderCommand started");
         String forward = Path.PAGE_INDEX;
-
         HttpSession session = request.getSession();
         String allDate = request.getParameter("datefilter");
+        if (OrderReserveValidator(request, allDate)) {
+            log.info("MakeOrderRequestCommand validation failed");
+            return forward;
+        }
         String[] temp = allDate.split(" - ");
         String firstDate = temp[0];
         String secondDate = temp[1];
@@ -87,7 +93,6 @@ public class MakeOrderCommand extends Command {
             return 1;
         return days;
     }
-
 
     public static Timestamp date(String firstDate) {
         DateFormat formatter = new SimpleDateFormat("MM/dd/yyyy");
